@@ -7,6 +7,9 @@
 \usepackage{listings}
 \usepackage[margin=1in]{geometry}
 \usepackage{xcolor}
+\usepackage{glossaries}
+
+
 \newcounter{countCode}
 \lstnewenvironment{code} [1][caption=Ponme caption, label=default]{%
 	\renewcommand*{\lstlistingname}{Listado} 
@@ -64,8 +67,19 @@ some side-lining will be done, with the aim to explore some of these new concept
 diving back in the proof of the inequalities.
 \end{abstract}
 
-\section{Definitions}
-En matemáticas, una matriz es todo conjunto de números o expresiones dispuestos en forma \textbf{rectangular}, formando filas y columnas. Una matriz se representa por medio de una letra mayúscula( A, B. ...).
+\section*{Notation}
+\begin{itemize}
+	\item $P(\mathcal X)$ - S
+	Most of the content regarding transportation inequality is from
+
+\end{itemize}
+\section{Introduction}
+	\citet{gozlan2010transport}
+
+Given two probability distributions $\mu,\nu \in P(\mathcal X)$, there are many situations
+where one is interested in defining a metric between them. The Wasserstein distance is a
+metric that arises from the idea of optimal transport, and which has being
+gaining attention in Statistics and Machine Learning.
 
 % \begin{equation}
 % \textbf{A} = \left[
@@ -194,6 +208,6 @@ En matemáticas, una matriz es todo conjunto de números o expresiones dispuesto
   % \bibliographystyle{plainnat}
   % \bibliographystyle{plain}
   % \bibliographystyle{abbrv}
-  \bibliographystyle{apa}
+  \bibliographystyle{plainnat}
 \end{document}
 

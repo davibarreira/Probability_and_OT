@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.8.25)  7 SEP 2020 23:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.9.8)  8 SEP 2020 17:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -208,43 +208,211 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 )
-\c@countCode=\count199
+(/usr/share/texlive/texmf-dist/tex/latex/glossaries/base/glossaries.sty
+Package: glossaries 2020/02/13 v4.45 (NLCT)
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
+
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks31
+\XKV@tempa@toks=\toks32
+)
+\XKV@depth=\count199
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/mfirstuc/mfirstuc.sty
+Package: mfirstuc 2017/11/14 v2.06 (NLCT)
+
+(/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2019/09/21 v2.5h e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count266
+)
+\@glsmfirst=\toks33
+\@glsmrest=\toks34
+)
+(/usr/share/texlive/texmf-dist/tex/latex/textcase/textcase.sty
+Package: textcase 2019/09/14 v1.00 Text only upper/lower case changing (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/xfor/xfor.sty
+Package: xfor 2009/02/05 v1.05 (NLCT)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/datatool/datatool-base.sty
+Package: datatool-base 2019/09/27 v2.32 (NLCT)
+
+(/usr/share/texlive/texmf-dist/tex/latex/substr/substr.sty
+Package: substr 2009/10/20 v1.2 Handle substrings
+\c@su@anzahl=\count267
+)
+(/usr/share/texlive/texmf-dist/tex/latex/datatool/datatool-fp.sty
+Package: datatool-fp 2019/09/27 v2.32 (NLCT)
+
+(/usr/share/texlive/texmf-dist/tex/latex/fp/fp.sty
+Package: fp 1995/04/02
+
+`Fixed Point Package', Version 0.8, April 2, 1995 (C) Michael Mehlich
+(/usr/share/texlive/texmf-dist/tex/latex/fp/defpattern.sty
+Package: defpattern 1994/10/12
+\actioncount=\count268
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fp/fp-basic.sty
+Package: fp-basic 1996/05/13
+\FP@xs=\count269
+\FP@xia=\count270
+\FP@xib=\count271
+\FP@xfa=\count272
+\FP@xfb=\count273
+\FP@rega=\count274
+\FP@regb=\count275
+\FP@regs=\count276
+\FP@times=\count277
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fp/fp-addons.sty
+Package: fp-addons 1995/03/15
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fp/fp-snap.sty
+Package: fp-snap 1995/04/05
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fp/fp-exp.sty
+Package: fp-exp 1995/04/03
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fp/fp-trigo.sty
+Package: fp-trigo 1995/04/14
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fp/fp-pas.sty
+Package: fp-pas 1994/08/29
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fp/fp-random.sty
+Package: fp-random 1995/02/23
+\FPseed=\count278
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fp/fp-eqn.sty
+Package: fp-eqn 1995/04/03
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fp/fp-upn.sty
+Package: fp-upn 1996/10/21
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fp/fp-eval.sty
+Package: fp-eval 1995/04/03
+)))
+\@dtl@toks=\toks35
+\@dtl@tmpcount=\count279
+\dtl@tmplength=\skip57
+\dtl@sortresult=\count280
+\@dtl@numgrpsepcount=\count281
+\@dtl@datatype=\count282
+\dtl@codeA=\count283
+\dtl@codeB=\count284
+\@dtl@foreach@level=\count285
+)
+(/usr/share/texlive/texmf-dist/tex/latex/glossaries/base/glossaries-compatible-
+307.sty
+Package: glossaries-compatible-307 2020/02/13 v4.45 (NLCT)
+)
+\gls@level=\count286
+\@gls@tmpb=\toks36
+\gls@tmplen=\skip58
+\glskeylisttok=\toks37
+\glslabeltok=\toks38
+\glsshorttok=\toks39
+\glslongtok=\toks40
+
+(/usr/share/texlive/texmf-dist/tex/latex/glossaries/styles/glossary-hypernav.st
+y
+Package: glossary-hypernav 2020/02/13 v4.45 (NLCT)
+) (/usr/share/texlive/texmf-dist/tex/latex/glossaries/styles/glossary-list.sty
+Package: glossary-list 2020/02/13 v4.45 (NLCT)
+\glslistdottedwidth=\skip59
+) (/usr/share/texlive/texmf-dist/tex/latex/glossaries/styles/glossary-long.sty
+Package: glossary-long 2020/02/13 v4.45 (NLCT)
+
+(/usr/share/texlive/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2020/01/07 v4.13 Multi-page Table package (DPC)
+\LTleft=\skip60
+\LTright=\skip61
+\LTpre=\skip62
+\LTpost=\skip63
+\LTchunksize=\count287
+\LTcapwidth=\dimen158
+\LT@head=\box49
+\LT@firsthead=\box50
+\LT@foot=\box51
+\LT@lastfoot=\box52
+\LT@cols=\count288
+\LT@rows=\count289
+\c@LT@tables=\count290
+\c@LT@chunks=\count291
+\LT@p@ftn=\toks41
+)
+\glsdescwidth=\skip64
+\glspagelistwidth=\skip65
+)
+(/usr/share/texlive/texmf-dist/tex/latex/glossaries/styles/glossary-super.sty
+Package: glossary-super 2020/02/13 v4.45 (NLCT)
+
+(/usr/share/texlive/texmf-dist/tex/latex/supertabular/supertabular.sty
+Package: supertabular 2020/02/02 v4.1g the supertabular environment
+\c@tracingst=\count292
+\ST@wd=\dimen159
+\ST@rightskip=\skip66
+\ST@leftskip=\skip67
+\ST@parfillskip=\skip68
+\ST@pageleft=\dimen160
+\ST@headht=\dimen161
+\ST@tailht=\dimen162
+\ST@pagesofar=\dimen163
+\ST@pboxht=\dimen164
+\ST@lineht=\dimen165
+\ST@prevht=\dimen166
+\ST@toadd=\dimen167
+\ST@dimen=\dimen168
+\ST@pbox=\box53
+))
+(/usr/share/texlive/texmf-dist/tex/latex/glossaries/styles/glossary-tree.sty
+Package: glossary-tree 2020/02/13 v4.45 (NLCT)
+\glstreeindent=\skip69
+))
+\c@countCode=\count293
 
 (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
 File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
-\l__kernel_color_stack_int=\count266
-\l__pdf_internal_box=\box49
+\l__kernel_color_stack_int=\count294
+\l__pdf_internal_box=\box54
 )
 (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 58.
+LaTeX Font Info:    ... okay on input line 58.
  (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count267
-\scratchdimen=\dimen158
-\scratchbox=\box50
-\nofMPsegments=\count268
-\nofMParguments=\count269
-\everyMPshowfont=\toks31
-\MPscratchCnt=\count270
-\MPscratchDim=\dimen159
-\MPnumerator=\count271
-\makeMPintoPDFobject=\count272
-\everyMPtoPDFconversion=\toks32
+\scratchcounter=\count295
+\scratchdimen=\dimen169
+\scratchbox=\box55
+\nofMPsegments=\count296
+\nofMParguments=\count297
+\everyMPshowfont=\toks42
+\MPscratchCnt=\count298
+\MPscratchDim=\dimen170
+\MPnumerator=\count299
+\makeMPintoPDFobject=\count300
+\everyMPtoPDFconversion=\toks43
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -254,7 +422,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\c@lstlisting=\count273
+\c@lstlisting=\count301
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -290,12 +458,12 @@ e
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 56.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 59.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 56.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 59.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -309,25 +477,29 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./main.aux) ) 
 Here is how much of TeX's memory you used:
- 5256 strings out of 483183
- 67692 string characters out of 5966292
- 311019 words of memory out of 5000000
- 20224 multiletter control sequences out of 15000+600000
- 538802 words of font info for 48 fonts, out of 8000000 for 9000
+ 9244 strings out of 483183
+ 128888 string characters out of 5966293
+ 432698 words of memory out of 5000000
+ 24099 multiletter control sequences out of 15000+600000
+ 541182 words of font info for 58 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 30i,6n,37p,324b,217s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/
+ 51i,6n,37p,984b,217s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </home/davi
+/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk></usr/share/
 texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmr9.pfb>
-Output written on main.pdf (1 page, 81434 bytes).
+fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
+10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb
+>
+Output written on main.pdf (1 page, 111234 bytes).
 PDF statistics:
- 36 PDF objects out of 1000 (max. 8388607)
- 25 compressed objects within 1 object stream
+ 53 PDF objects out of 1000 (max. 8388607)
+ 38 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

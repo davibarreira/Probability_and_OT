@@ -2,6 +2,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[OT1]{fontenc}
 \usepackage{amsfonts, amsmath, amsthm, amssymb}
+\usepackage{natbib}
 \usepackage{graphicx}
 \usepackage{listings}
 \usepackage[margin=1in]{geometry}
@@ -56,11 +57,14 @@
 
 
 \begin{abstract}
-These notes are an heterogenous collection of topics in probability theory and
-optimal transport, and their relation. It starts with a brief introduction on 
+The main goal of these notes is to present an introduction to the transport inequalities,
+which consist of methods of using Optimal Transport Theory to obtain concentration
+inequalities in high-dimensional probability. Along the way, as new concepts are presented,
+some side-lining will be done, with the aim to explore some of these new concepts, before
+diving back in the proof of the inequalities.
 \end{abstract}
 
-\section{Definiciones}
+\section{Definitions}
 En matemáticas, una matriz es todo conjunto de números o expresiones dispuestos en forma \textbf{rectangular}, formando filas y columnas. Una matriz se representa por medio de una letra mayúscula( A, B. ...).
 
 % \begin{equation}
@@ -184,5 +188,12 @@ En matemáticas, una matriz es todo conjunto de números o expresiones dispuesto
 % \noindent \textbf{Definición}
 
 % Se define la operación de suma o adición de matrices como una operación binaria
-% \end{document}
+\section*{References}
+\addcontentsline{toc}{section}{References}
+  \bibliography{probability_ot}
+  % \bibliographystyle{plainnat}
+  % \bibliographystyle{plain}
+  % \bibliographystyle{abbrv}
+  \bibliographystyle{apa}
+\end{document}
 

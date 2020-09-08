@@ -7,6 +7,7 @@
 \usepackage{listings}
 \usepackage[margin=1in]{geometry}
 \usepackage{xcolor}
+\usepackage{bigints}
 \usepackage{glossaries}
 
 
@@ -74,12 +75,35 @@ diving back in the proof of the inequalities.
 
 \end{itemize}
 \section{Introduction}
-	\citet{gozlan2010transport}
-
-Given two probability distributions $\mu,\nu \in P(\mathcal X)$, there are many situations
-where one is interested in defining a metric between them. The Wasserstein distance is a
+Given two probability distributions $\mu,\nu$, there are many situations
+where one is interested in defining a way of measuring the
+distance between them. The Wasserstein distance is a
 metric that arises from the idea of optimal transport, and which has being
-gaining attention in Statistics and Machine Learning.
+gaining attention in Statistics and Machine Learning. One prominent example is the so
+called Wasserstein Generative Adversarial Network (WGAN), which uses this metric to evaluate
+how well the model generated distribution approximates the "real" distribution of the
+data. As will be shown shortly, the Wasserstein metric has several advantages compared to
+other metrics.
+
+There are several ways of defining distances between two
+probability measures. Let's assume that $\nu, \mu$ are defined on 
+$(\Omega, \mathcal F)$ and that $\nu \ll \lambda$,
+$\mu \ll \lambda$ , for $\lambda$ representing the Lebesgue measure. Below
+we present some example of distances:
+
+\begin{align*} 
+\text{Total Variation} &: || \mu - \nu ||_{TV} =
+\sup_{A \in \mathcal F} |\mu (A) - \nu(A)| = 
+\frac{1}{2}\int_\Omega \left | \frac{d\mu}{d\lambda} - \frac{d\nu}{d\lambda} \right
+|d\lambda \\
+\\
+\text{Hellinger} &: \sqrt{\bigintss_\Omega \left(\sqrt{\frac{d\mu}{d\lambda}} -
+\sqrt{\frac{d\nu}{d\lambda}} \right )^2d\lambda}
+\end{align*}
+	
+
+
+
 
 % \begin{equation}
 % \textbf{A} = \left[
@@ -202,12 +226,12 @@ gaining attention in Statistics and Machine Learning.
 % \noindent \textbf{Definición}
 
 % Se define la operación de suma o adición de matrices como una operación binaria
-\section*{References}
-\addcontentsline{toc}{section}{References}
+% \section*{References}
+% \addcontentsline{toc}{section}{References}
   \bibliography{probability_ot}
+  \bibliographystyle{plainnat}
   % \bibliographystyle{plainnat}
   % \bibliographystyle{plain}
   % \bibliographystyle{abbrv}
-  \bibliographystyle{plainnat}
 \end{document}
 

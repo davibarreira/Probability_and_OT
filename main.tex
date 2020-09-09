@@ -2,6 +2,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[OT1]{fontenc}
 \usepackage{amsfonts, amsmath, amsthm, amssymb}
+\usepackage{mathtools}
 \usepackage{natbib}
 \usepackage{graphicx}
 \usepackage{listings}
@@ -250,7 +251,27 @@ $$
 $$
 \end{definition}
 
-When $J  = H$, one also calls these transport-entropy inequalities.
+When $J  = H$, one also calls these transport-entropy inequalities. Among the family
+of transport inequalities, two classical ones are the $\textbf T_1$ and $\textbf T_2$. We
+say that $\mu \in P_p(\mathcal X)
+:= \{ \nu \in P(\mathcal X): \int d(x_o, \cdot)^p d\nu < \infty\}$ satisfies
+$\textbf T_p(C)$, for $C > 0$ if
+
+\begin{equation}
+	W_p^2(\nu,\mu) \leq C H(\nu \mid \mu)
+\end{equation}
+
+Note that $\textbf T_1(C)$ is weaker than $\textbf T_2(C)$, because, if $\mu$ satisfies
+$\textbf T_2(C)$, then
+\begin{align*}
+W_2^2(\nu,\mu) \leq C H(\nu \mid \mu) &\implies C^{-1}(T_{d^2}(\nu,\mu)^{1/2})^2 \leq H
+\\
+&\xRightarrow{Jensen}
+C^{-1}(T_{d})^2(\nu,\mu) \leq 
+C^{-1}T_{d^2}(\nu,\mu) \leq H(\nu \mid \mu)
+\end{align*}
+$$
+$$
 
 % section  (end)
 

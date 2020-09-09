@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex main"] 1599653629 "main.aux" "main.bbl" "main" 1599653703
+["bibtex main"] 1599654888 "main.aux" "main.bbl" "main" 1599655747
   "/usr/share/texlive/texmf-dist/bibtex/bst/natbib/plainnat.bst" 1233624470 26816 ffe5423d2019860bad9f54bc402fac15 ""
-  "main.aux" 1599653703 1676 8b6666db81040ed0bd13f7a2fdeff7b2 "pdflatex"
+  "main.aux" 1599655747 1676 3810fb1cff115b331e2999dcd4ce9887 "pdflatex"
   "probability_ot.bib" 1599653040 1247 49bc0a761b30f2088107af7812b3daa8 ""
   (generated)
   "main.blg"
   "main.bbl"
-["pdflatex"] 1599653703 "main.tex" "main.pdf" "main" 1599653703
+["pdflatex"] 1599655746 "main.tex" "main.pdf" "main" 1599655747
   "/etc/texmf/web2c/texmf.cnf" 1598377671 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/home/davi/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk" 1599520565 11524 0f8e1157bd7b94044cb481b26d5a4e5a ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -21,6 +21,8 @@
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm" 1246382020 940 228d6584342e91276bf566bcf9716b83 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1136768653 1328 c834bbb027764024c09d3d2bf908b5f0 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1136768653 1324 c910af8c371558dc20f2d7822f66fe64 ""
+  "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx5.tfm" 1136768653 1332 f817c21a1ba54560425663374f1b651a ""
+  "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx7.tfm" 1136768653 1336 3125ccb448c1a09074e3aa4a9832f130 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx9.tfm" 1136768653 1328 5442e22a7072966dbaf88ca900acf3f0 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmex10.tfm" 1136768653 992 662f679a0b3d2d53c1b94050fdaa3f50 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm" 1136768653 1524 4414a8315f39513458b80dfc63bff03a ""
@@ -109,11 +111,14 @@
   "/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg" 1568236792 1830 bbaba8afaf42cc048ec4d4ff73467521 ""
   "/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty" 1568236792 80511 830f3f1d3ab7448dd84233e9c2f6462c ""
   "/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty" 1568236792 77022 32914f01b528131c47be2a1040d3856d ""
+  "/usr/share/texlive/texmf-dist/tex/latex/mathtools/mathtools.sty" 1579298046 55081 be7d8405cd93834f75bdf98c6521d2a0 ""
+  "/usr/share/texlive/texmf-dist/tex/latex/mathtools/mhsetup.sty" 1496786006 5317 cf75154a8a7e6436f05a5be497f0b05e ""
   "/usr/share/texlive/texmf-dist/tex/latex/mfirstuc/mfirstuc.sty" 1510693693 12293 1ffb9177486ec6129ddddbf1de7b2220 ""
   "/usr/share/texlive/texmf-dist/tex/latex/natbib/natbib.sty" 1581979058 45458 f1c6cb3edd91174e966cbbaf88993bcf ""
   "/usr/share/texlive/texmf-dist/tex/latex/substr/substr.sty" 1258848659 5724 d3505925e87b345f11a5f17d58550dea ""
   "/usr/share/texlive/texmf-dist/tex/latex/supertabular/supertabular.sty" 1580769125 15405 31e477e611bb77761a134e5593e8119d ""
   "/usr/share/texlive/texmf-dist/tex/latex/textcase/textcase.sty" 1568497026 2156 a092fd3ecd0a13fd597725ee6894b032 ""
+  "/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty" 1580683321 10216 5efd55f2010055e7b7875afd6a75be82 ""
   "/usr/share/texlive/texmf-dist/tex/latex/tools/longtable.sty" 1580683321 12133 b1e3e65b69714dbfcc5e6c0b19d66b50 ""
   "/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty" 1463002160 55589 34128738f682d033422ca125f82e5d62 ""
   "/usr/share/texlive/texmf-dist/tex/latex/xfor/xfor.sty" 1233902931 2689 44855b72da58344b1c1d9b3087bce6ca ""
@@ -124,12 +129,12 @@
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1599590274 4791331 307d30906e0cb0bfa67ed463e5a7cb9d ""
   "images/Barycenter.png" 1599645259 60268 493982ec2d37dd80c318713e49da60d7 ""
   "images/Distributions_Distances.png" 1599620396 13107 d7b4493391f2b58a8bfdeb38587e5b4f ""
-  "main.aux" 1599653703 1676 8b6666db81040ed0bd13f7a2fdeff7b2 "pdflatex"
-  "main.bbl" 1599653629 1476 61334c9238387e2d0fc05588ae260001 "bibtex main"
-  "main.tex" 1599653703 11434 8063c2754931306b70c610c7a1a8fbe0 ""
-  "main.toc" 1599653703 233 d8e83e9cbae02a832c0bfd1e8697b5b7 "pdflatex"
+  "main.aux" 1599655747 1676 3810fb1cff115b331e2999dcd4ce9887 "pdflatex"
+  "main.bbl" 1599654888 1476 61334c9238387e2d0fc05588ae260001 "bibtex main"
+  "main.tex" 1599655745 12114 534ed9732ebad6766e67d85c97fed060 ""
+  "main.toc" 1599655747 233 d8e83e9cbae02a832c0bfd1e8697b5b7 "pdflatex"
   (generated)
   "main.log"
-  "main.pdf"
   "main.toc"
+  "main.pdf"
   "main.aux"

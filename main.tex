@@ -565,7 +565,45 @@ Let's consider two polish spaces $\mathcal X_1, \mathcal X_2$, with $\mu_1\in
 P(\mathcal X_1)$ and $\mu_2 \in P(\mathcal X_2)$. Consider $c_1(x_1,y_1)$ and
 $c_2(x_2,y_2)$ defined on
 $\mathcal X_1 \times \mathcal X_1$ and
-$\mathcal X_2 \times \mathcal X_2$, respectively.
+$\mathcal X_2 \times \mathcal X_2$, respectively. For $\mu_1 \otimes \mu_2$ we then
+define
+\begin{equation}
+	c_1 \otimes c_2 ((x_1,y_1),(x_2,y_2)) := c_1(x_1,y_1)+c_2(x_2,y_2)
+\end{equation}
+
+Let $\nu$ be a probability measure on $\mathcal X_1 \times \mathcal X_2$. We write
+the disintegration of $\nu$ as
+\begin{equation}
+	d\nu(x_1,x_2)	 = d\nu_1(x_1)d\nu_2^{x_1}(x_2)
+\end{equation}
+
+The above definition of disintegration can be thought of a rigorous way of defining
+the conditional probability measures. For example, if $(X,Y) \sim \nu$,
+then $X \sim \nu_1$, and 
+$\nu_2^{x_1}$ is $P(Y \in \cdot \mid X = x_1)$.
+
+It is possible to prove that
+\begin{equation}
+	T_{c_1 \otimes c_2}	(\nu, \mu_1 \otimes \mu_2) \leq
+	T_{c_1}	(\nu_1, \mu_1) + \int_{\mathcal X_1} T_{c_2}(\nu_2^{x_1},\mu_2)d\nu_1(x_1)
+\end{equation}
+For a proof of the inequality above, look the Appendix 1 of \citet{gozlan2010transport}.
+
+Another result stated without proof is the following:
+\begin{equation}
+	H(\nu\mid \mu_1 \otimes \mu_2)	= H(\nu_1 \mid \mu_1)
+	+ \int_{\mathcal X_1} H(\nu_2^{x_1}\mid \mu_2)d\nu_1(x_1)
+\end{equation}
+
+This is known as the chain rule for relative entropy. A proof can be found on
+\citet{van2014probability} Lemma 4.18.
+
+We need one more definition
+$$
+\alpha_1
+% \msquare \alpha_2
+$$
+
 
 
   \bibliography{probability_ot}

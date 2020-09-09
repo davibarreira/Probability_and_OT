@@ -1,4 +1,4 @@
-\begin{thebibliography}{3}
+\begin{thebibliography}{6}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -10,10 +10,28 @@ Nathael Gozlan and Christian L{\'e}onard.
 \newblock Transport inequalities. a survey.
 \newblock \emph{arXiv preprint arXiv:1003.3852}, 2010.
 
+\bibitem[Marton(1986)]{marton1986simple}
+Katalin Marton.
+\newblock A simple proof of the blowing-up lemma (corresp.).
+\newblock \emph{IEEE Transactions on Information Theory}, 32\penalty0
+  (3):\penalty0 445--446, 1986.
+
+\bibitem[Panaretos and Zemel(2019)]{panaretos2019statistical}
+Victor~M Panaretos and Yoav Zemel.
+\newblock Statistical aspects of wasserstein distances.
+\newblock \emph{Annual review of statistics and its application}, 6:\penalty0
+  405--431, 2019.
+
 \bibitem[van Handel(2014)]{van2014probability}
 Ramon van Handel.
 \newblock Probability in high dimension.
 \newblock Technical report, PRINCETON UNIV NJ, 2014.
+
+\bibitem[Vershynin(2018)]{vershynin2018high}
+Roman Vershynin.
+\newblock \emph{High-dimensional probability: An introduction with applications
+  in data science}, volume~47.
+\newblock Cambridge university press, 2018.
 
 \bibitem[Wasserman(2018)]{wassermanStatisicalMethods2018}
 Larry Wasserman.

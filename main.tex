@@ -150,7 +150,7 @@ although such distances are useful, there are drawbacks:
     \label{fig:barycenter}
 \end{figure}
 
-\section{Optimal Transport}
+\section{Optimal Transport and the Wasserstein Distance}
 
 Let $\mathcal X$ be a polish space, and define a function
 $c: \mathcal X \times \mathcal X \rightarrow [0,\infty)$, where $c$ is a lower semicontinuous function and $\mu,\nu \in P(\mathcal)$ (this means that $\mu$ and $\nu$ are
@@ -189,8 +189,9 @@ is $L$-Lipschitz if
 \end{equation}
 
 We will use $||f||_{Lip}$ to denote the smallest $L$ for which this inequality holds.
+Also, denote $P_1(\mathcal X)$ the space of probability measures with finite first moment.
 
-The Wasserstein distance is then defined as 
+Therefore, for $\mu,\nu \in P_1(\mathcal X)$, the Wasserstein distance is then defined as 
 $$
 W_d(\nu, \mu) := \sup_{||f||_{Lip}\leq 1} \left |
 \int f d\nu - \int f d\mu	
@@ -211,6 +212,45 @@ the reference, the Wasserstein distance might be first defined as a transport co
 simple proof for this duality in the discrete setting 
 is present in the lecture notes by \citet{van2014probability}.
 
+Note that $W_p$ are proper metrics (positive, symmetric and satisfy the triangle inequality)
+in the space of probability measures. Also, the spaces with $p$-th moments finite, the
+metric space $(P_p(\mathcal X), W_p)$ is complete and separable if so is $\mathcal X$ \citep{panaretos2019statistical}. Hence, the Wasserstein distance has the interesting features
+already presented, such as incorporating the geometry of the "ground space", and allowing
+the comparison between discrete and continuous distributions. Another interesting aspect,
+is that convergence of r.v $X_n$ to $X$ in $W_p$ distance is equivalent to convergence in
+distribution with $E|X_n|^p \rightarrow E |X|^p$ \citep{panaretos2019statistical}.
+
+\section{Transport Inequalities and Concentration}
+
+In the literature, there are a range of different methods for obtaining inequalities
+concerning the phenomenon of concentration of measure. The use of transport inequalities
+is a more recent endeavor and usually not present in more basic texts concerning
+high-dimensional probability, such as the book by \citet{vershynin2018high}.
+The relation of optimal transport to concentration inequalities was first pointed out by \citet{marton1986simple},  and advanced through the nineties, with advances in optimal
+transport theory. Take a look at \citet{gozlan2010transport} for a more complete overview
+on the topic.
+
+\begin{definition}[Transport Inequalities]
+	Let $J(\cdot \mid \mu): P(\mathcal X)$ and
+	$\alpha:[0,\infty) \rightarrow [0,\infty)$ an increasing function with $\alpha(0)=0$.
+	One says that $\mu \in P(\mathcal X)$ satisfy the transport inequality
+	$\alpha(T_c) \leq J$ if
+	$$
+	\alpha(T_c(\nu,\mu)) \leq J(\nu \mid \mu) , \quad \forall \nu \in P(\mathcal X)
+	$$
+\end{definition}
+\begin{definition}[Relative Entropy]
+$$
+	H(\nu \mid \mu) =
+	\left\{
+	  \begin{array}{@{}ll@{}}
+	    \int_\mathcal X \log(\frac{d\nu}{d\mu})d\nu, & \text{if}\ \nu \ll\mu \\
+	    +\infty, & \text{otherwise}
+	  \end{array}\right.
+$$
+\end{definition}
+
+When $J  = H$, one also calls these transport-entropy inequalities.
 
 % section  (end)
 

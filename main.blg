@@ -3,44 +3,44 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: main.aux
 The style file: plainnat.bst
 Database file #1: probability_ot.bib
-You've used 3 entries,
+You've used 6 entries,
             2773 wiz_defined-function locations,
-            607 strings with 5181 characters,
-and the built_in function-call counts, 955 in all, are:
-= -- 82
-> -- 41
-< -- 3
-+ -- 15
-- -- 12
-* -- 52
-:= -- 160
-add.period$ -- 8
-call.type$ -- 3
-change.case$ -- 14
-chr.to.int$ -- 3
-cite$ -- 6
-duplicate$ -- 49
-empty$ -- 86
-format.name$ -- 17
-if$ -- 193
+            628 strings with 5635 characters,
+and the built_in function-call counts, 2100 in all, are:
+= -- 187
+> -- 82
+< -- 7
++ -- 30
+- -- 24
+* -- 133
+:= -- 336
+add.period$ -- 17
+call.type$ -- 6
+change.case$ -- 26
+chr.to.int$ -- 6
+cite$ -- 12
+duplicate$ -- 109
+empty$ -- 197
+format.name$ -- 34
+if$ -- 433
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 1
-newline$ -- 22
-num.names$ -- 12
-pop$ -- 29
+missing$ -- 5
+newline$ -- 37
+num.names$ -- 24
+pop$ -- 55
 preamble$ -- 1
-purify$ -- 10
+purify$ -- 20
 quote$ -- 0
-skip$ -- 42
+skip$ -- 84
 stack$ -- 0
-substring$ -- 6
-swap$ -- 2
-text.length$ -- 0
+substring$ -- 62
+swap$ -- 6
+text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 33
+type$ -- 61
 warning$ -- 0
-while$ -- 9
+while$ -- 22
 width$ -- 0
-write$ -- 42
+write$ -- 81

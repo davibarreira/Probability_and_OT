@@ -553,8 +553,20 @@ works for a single random variable. One is usually interested in studying concen
 for several random variables, usually independent or with some kind of weak dependence (e.g: Markov).
 
 To extend what we have proved so far to several random variables, we need to obtain
-estimates no only to $\mu$, but to $\mu^n = \mu \otimes ... \otimes \mu \in \mathcal X^n$.
+estimates no only to $\mu$, but to $\mu^n = \mu \otimes ... \otimes \mu \in \mathcal X^n$
+(this is just the product measure. Some authors use $\mu_1 \times \mu_2$ instead of
+$\mu_1 \otimes \mu_2$).
 This is called the \textit{tensorization of transportation cost}.
+
+Here we will deal with only the product space of two probability measures. But the 
+extension for $n$ cases follows directly from induction.
+
+Let's consider two polish spaces $\mathcal X_1, \mathcal X_2$, with $\mu_1\in
+P(\mathcal X_1)$ and $\mu_2 \in P(\mathcal X_2)$. Consider $c_1(x_1,y_1)$ and
+$c_2(x_2,y_2)$ defined on
+$\mathcal X_1 \times \mathcal X_1$ and
+$\mathcal X_2 \times \mathcal X_2$, respectively.
+
 
   \bibliography{probability_ot}
   \bibliographystyle{plainnat}

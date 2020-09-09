@@ -70,7 +70,8 @@ The main goal of these notes is to present an introduction to the transport ineq
 which consist of methods of using Optimal Transport Theory to obtain concentration
 inequalities in high-dimensional probability. Along the way, as new concepts are presented,
 some side-lining will be done, with the aim to explore some of these new concepts, before
-diving back in the proof of the inequalities.
+diving back in the proof of the inequalities. The core of these notes are base on the
+excellent paper "Transport Inequalities. A Survey" by \cite{gozlan2010transport}.
 \end{abstract}
 
 % \section*{Notation}
@@ -179,6 +180,29 @@ From solving the above problem, one obtains the optimal transport cost, given by
 		\int_{\mathcal X^2} c(x,y) d\pi(x,y) \ ; \pi_1 = \nu, \pi_2 = \mu
 	\right\}
 \end{equation}
+
+Now, given a metric space $(\mathcal X, d)$, we say that $f: \mathcal X \rightarrow \mathbb R$
+is $L$-Lipschitz if
+\begin{equation}
+	\mid f(x) - f(y) \mid \leq L d(x,y) \quad \forall x,y \in \mathcal X
+\end{equation}
+
+We will use $||f||_{Lip}$ to denote the smallest $L$ for which this inequality holds.
+
+The Wasserstein distance is then defined as 
+$$
+W_d(\nu, \mu) := \sup_{||f||_{Lip}\leq 1} \left |
+\int f d\nu - \int f d\mu	
+\right |
+$$
+
+
+obtained by setting $c = d^p$ where , where $d$ is a metric
+on $\mathcal X$ and $p \geq 1$,
+$$
+W_p(\nu,\mu):= T_{d^p}(\nu,\mu)^{\frac{1}{p}}
+$$
+Under some conditions, 
 
 
 

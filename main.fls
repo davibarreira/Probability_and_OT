@@ -186,6 +186,9 @@ INPUT /var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map
 INPUT images/Distributions_Distances.png
 INPUT ./images/Distributions_Distances.png
 INPUT ./images/Distributions_Distances.png
+INPUT images/Barycenter.png
+INPUT ./images/Barycenter.png
+INPUT ./images/Barycenter.png
 INPUT main.bbl
 INPUT main.bbl
 INPUT main.aux

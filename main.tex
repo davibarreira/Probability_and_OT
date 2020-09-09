@@ -124,15 +124,26 @@ although such distances are useful, there are drawbacks:
 	the maximum value). The Wasserstein distance is $1/N$, which is reasonable.
 	\item These distances ignore the "geometry of the underlying space", while the
 	Wasserstein distance preserves it, as shown in Figure~\ref{fig:distances}.
+	\item When "averaging" different distributions, one might be interested in obtaining
+	a similar distribution, avoiding smoothing. This can be done using the Wasserstein
+	barycenter, as shown in Figure~\ref{fig:barycenter}.
 \end{itemize}
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=10cm]{images/Distributions_Distances.png}
+	\includegraphics[width=8cm]{images/Distributions_Distances.png}
     \caption{Each pair has the same distance in $L_2$, Hellinger and TV. But using
     Wasserstein, $X_1$ is closer to $X_2$ than to $X_3$.}
     \label{fig:distances}
 \end{figure}
 
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=14cm]{images/Barycenter.png}
+    \caption{In the left you have different distributions, and in the right,
+    there is a comparison between averaging these distribution versus finding the
+    Wasserstein barycenter.}
+    \label{fig:barycenter}
+\end{figure}
 
 
 % \begin{equation}

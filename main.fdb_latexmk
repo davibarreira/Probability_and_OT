@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex main"] 1599647825 "main.aux" "main.bbl" "main" 1599648819
+["bibtex main"] 1599651226 "main.aux" "main.bbl" "main" 1599651265
   "/usr/share/texlive/texmf-dist/bibtex/bst/natbib/plainnat.bst" 1233624470 26816 ffe5423d2019860bad9f54bc402fac15 ""
-  "main.aux" 1599648819 1092 9b41d881613f86efc34ad08f1f61dfe9 "pdflatex"
-  "probability_ot.bib" 1599647820 340 69e8a555a58581221e1feee64230fa09 ""
+  "main.aux" 1599651265 1180 423099819266831fd060d492a64592fc "pdflatex"
+  "probability_ot.bib" 1599651202 493 d38b9133602231b5837623f44df0231e ""
   (generated)
-  "main.bbl"
   "main.blg"
-["pdflatex"] 1599648818 "main.tex" "main.pdf" "main" 1599648819
+  "main.bbl"
+["pdflatex"] 1599651265 "main.tex" "main.pdf" "main" 1599651265
   "/etc/texmf/web2c/texmf.cnf" 1598377671 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/home/davi/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk" 1599520565 11524 0f8e1157bd7b94044cb481b26d5a4e5a ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -124,12 +124,12 @@
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1599590274 4791331 307d30906e0cb0bfa67ed463e5a7cb9d ""
   "images/Barycenter.png" 1599645259 60268 493982ec2d37dd80c318713e49da60d7 ""
   "images/Distributions_Distances.png" 1599620396 13107 d7b4493391f2b58a8bfdeb38587e5b4f ""
-  "main.aux" 1599648819 1092 9b41d881613f86efc34ad08f1f61dfe9 "pdflatex"
-  "main.bbl" 1599647825 627 d4aea37b7fdc18a2ee05cc670e87e15b "bibtex main"
-  "main.tex" 1599648818 8643 bd28a8be8d802afc06eaff77f1be1508 ""
-  "main.toc" 1599648819 119 3e1a7db8cfd05d39aebd6af30312ee0c "pdflatex"
+  "main.aux" 1599651265 1180 423099819266831fd060d492a64592fc "pdflatex"
+  "main.bbl" 1599651226 787 6ad8df0624d2aac7fda2c8effc64bb38 "bibtex main"
+  "main.tex" 1599651264 9195 be1cc7a4a45d3d6073322e5b5a4d760f ""
+  "main.toc" 1599651265 119 3e1a7db8cfd05d39aebd6af30312ee0c "pdflatex"
   (generated)
+  "main.pdf"
   "main.log"
   "main.aux"
-  "main.pdf"
   "main.toc"

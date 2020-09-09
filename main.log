@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.9.8)  9 SEP 2020 07:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.9.8)  9 SEP 2020 08:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -381,42 +381,43 @@ Package: glossary-tree 2020/02/13 v4.45 (NLCT)
 \glstreeindent=\skip69
 ))
 \c@definition=\count293
-\c@countCode=\count294
+\c@theorem=\count294
+\c@countCode=\count295
 
 (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
 File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
-\l__kernel_color_stack_int=\count295
+\l__kernel_color_stack_int=\count296
 \l__pdf_internal_box=\box54
 )
 (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
  (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count296
+\scratchcounter=\count297
 \scratchdimen=\dimen169
 \scratchbox=\box55
-\nofMPsegments=\count297
-\nofMParguments=\count298
+\nofMPsegments=\count298
+\nofMParguments=\count299
 \everyMPshowfont=\toks42
-\MPscratchCnt=\count299
+\MPscratchCnt=\count300
 \MPscratchDim=\dimen170
-\MPnumerator=\count300
-\makeMPintoPDFobject=\count301
+\MPnumerator=\count301
+\makeMPintoPDFobject=\count302
 \everyMPtoPDFconversion=\toks43
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -427,7 +428,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\c@lstlisting=\count302
+\c@lstlisting=\count303
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -463,12 +464,12 @@ e
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 65.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 66.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 65.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 66.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -485,20 +486,20 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 File: images/Distributions_Distances.png Graphic file (type png)
 <use images/Distributions_Distances.png>
 Package pdftex.def Info: images/Distributions_Distances.png  used on input line
- 137.
+ 138.
 (pdftex.def)             Requested size: 227.62204pt x 136.57558pt.
 <images/Barycenter.png, id=20, 803.0pt x 301.125pt>
 File: images/Barycenter.png Graphic file (type png)
 <use images/Barycenter.png>
-Package pdftex.def Info: images/Barycenter.png  used on input line 145.
+Package pdftex.def Info: images/Barycenter.png  used on input line 146.
 (pdftex.def)             Requested size: 398.33858pt x 149.38126pt.
  [2 <./images/Distributions_Distances.png> <./images/Barycenter.png>] (./main.b
 bl) [3] (./main.aux) ) 
 Here is how much of TeX's memory you used:
- 9362 strings out of 483183
- 130955 string characters out of 5966293
- 438220 words of memory out of 5000000
- 24209 multiletter control sequences out of 15000+600000
+ 9371 strings out of 483183
+ 131088 string characters out of 5966293
+ 438287 words of memory out of 5000000
+ 24218 multiletter control sequences out of 15000+600000
  542429 words of font info for 63 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  51i,20n,37p,1005b,283s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -519,7 +520,7 @@ m/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10
 .pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></
 usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/sh
 are/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (3 pages, 249279 bytes).
+Output written on main.pdf (3 pages, 252611 bytes).
 PDF statistics:
  89 PDF objects out of 1000 (max. 8388607)
  63 compressed objects within 1 object stream

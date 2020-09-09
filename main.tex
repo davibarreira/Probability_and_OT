@@ -15,6 +15,7 @@
 \theoremstyle{definition}
 \newtheorem{definition}{Definition}[section]
 
+\newtheorem{theorem}{Theorem}
 
 \newcounter{countCode}
 \lstnewenvironment{code} [1][caption=Ponme caption, label=default]{%
@@ -196,14 +197,19 @@ W_d(\nu, \mu) := \sup_{||f||_{Lip}\leq 1} \left |
 \right |
 $$
 
-
-obtained by setting $c = d^p$ where , where $d$ is a metric
+A classical results in the optimal transport theory, called
+\textit{Kantorovich-Rubinstein duality} (which will not be proved here),
+guarantees the equivalence between the Wasserstein distance and the optimal transport cost.
+Hence, by setting $c = d^p$ where , where $d$ is a metric
 on $\mathcal X$ and $p \geq 1$,
-$$
-W_p(\nu,\mu):= T_{d^p}(\nu,\mu)^{\frac{1}{p}}
-$$
-Under some conditions, 
+\begin{equation}
+W_{d^p}(\nu,\mu):= T_{d^p}(\nu,\mu)^{\frac{1}{p}}
+\end{equation}
 
+When the context allows, we will write $W_p$ instead of $W_{d^p}$. Note that depending on
+the reference, the Wasserstein distance might be first defined as a transport cost. A
+simple proof for this duality in the discrete setting 
+is present in the lecture notes by \citet{van2014probability}.
 
 
 % section  (end)

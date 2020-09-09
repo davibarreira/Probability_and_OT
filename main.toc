@@ -1,3 +1,3 @@
-\contentsline {section}{\numberline {1}introduction}{1}%
+\contentsline {section}{\numberline {1}Introduction}{1}%
 \contentsline {section}{\numberline {2}Optimal Transport and the Wasserstein Distance}{2}%
 \contentsline {section}{\numberline {3}Transport Inequalities and Concentration}{3}%

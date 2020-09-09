@@ -12,12 +12,14 @@
 \usepackage{bigints}
 \usepackage{glossaries}
 \usepackage{graphicx}
+\usepackage{enumerate}
 % \graphicspath{ {./images/} }
 
 \theoremstyle{definition}
 \newtheorem{definition}{Definition}[section]
 
 \newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
 
 \newcounter{countCode}
 \lstnewenvironment{code} [1][caption=Ponme caption, label=default]{%
@@ -83,7 +85,7 @@ excellent paper "Transport Inequalities. A Survey" by \cite{gozlan2010transport}
 % 	Most of the content regarding transportation inequality is from
 % \end{itemize}
 
-\section{introduction}
+\section{Introduction}
 Given two probability distributions $\mu,\nu$, there are many situations
 where one is interested in defining a way of measuring the
 distance between them. The Wasserstein distance is a
@@ -387,8 +389,57 @@ concentration inequality with profile $\beta$ if,
 $$
 \mu(A^r) \geq 1 - \beta(r)
 $$
-\end{definition}
 for all measurable $A \in \mathcal X$ and $\mu(A) \geq 1/2$ .
+\end{definition}
+
+The relation of measure concentration with deviations of Lipschitz functions
+from their medians is established in the following proposition.
+
+\begin{proposition}
+	Let $(\mathcal X, d)$ be a metric space with $\mu \in P(\mathcal X)$ and
+	$\beta: [0, \infty) \rightarrow [0,1]$. The following statements are equivalent:
+	\begin{enumerate}[(i)]
+		\item 
+		$
+		\mu(A^r) \geq 1 - \beta(r), \quad r \geq 0
+		$ for all measurable $A \subset \mathcal X$ with $\mu(A) \geq 1/2$;
+		\item For $f:\mathcal X \rightarrow \mathbb R$, with $f$ being $1$-Lipschitz,
+		$$
+		\mu(f > m_f + r) \leq \beta(r), \quad r \geq 0
+		$$
+		where $m_f$ is the median of $f$.
+	\end{enumerate}
+\begin{proof}
+	$(i) \implies (ii)$. If $x \in A^r$, then $d(x,A) \leq r$. Therefore, for any
+	$y \in A$, $d(x,y) \leq r$. Also, note that since $A = \{y: f(y) \leq m_f\}$,
+	then $f(y) \leq m_f$, for all $y \in A$.
+
+	For all $f$ 1-Lipschitz, we then have that
+	$$
+	f(x) - f(y) \leq d(x,y) \implies f(x) \leq f(y) + r \leq m_f + r
+	$$
+
+	Therefore, $x \in \{f \leq m_f + r\}$. We then obtained that
+	$A^r \subset \{ f \leq m_f + r\}$. Since $\mu(A) \geq 1/2$, then
+	$\mu(f \leq m_f + r) \geq \mu(A^r) \geq 1 - \beta(r)$.
+	
+	$(ii) \implies (i)$ Note that for any $A \subset \mathcal X$, $f_A(x) = d(x,A) \leq
+	d(x,y)$, hence, it is 1-Lipschitz. Now, consider only the sets $A$ such that
+	$\mu(A) \geq 1/2$.
+	$$
+	\mu(f_A \leq 0) = \mu(d(x,A) \leq 0) = \mu(x \in A) = \mu(A) = 1/2
+	$$
+	Therefore, $m_{f_A} = 0$. Note that
+	$A^r = \{ f_A \leq r\} = \{x \in \mathcal X: d(x,A) \leq r\}$. Finally,
+	$$\mu(A^r) \geq 1 - \mu(f_A > r) \geq 1 - \beta(r)$$
+
+\end{proof}
+\end{proposition}
+
+From the proposition above applied to $\pm f$, we have that
+\begin{equation}
+	\mu(\mid f - m_f \mid > r) \leq 2\beta(r), \quad r\geq 0
+\end{equation}
 % section  (end)
 
 % \section*{References}

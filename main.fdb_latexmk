@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex main"] 1599658025 "main.aux" "main.bbl" "main" 1599662054
+["bibtex main"] 1599663900 "main.aux" "main.bbl" "main" 1599663901
   "/usr/share/texlive/texmf-dist/bibtex/bst/natbib/plainnat.bst" 1233624470 26816 ffe5423d2019860bad9f54bc402fac15 ""
-  "main.aux" 1599662054 1737 01997a6ddfd536204f96d5ed13dca7dd "pdflatex"
+  "main.aux" 1599663901 1737 697d1c648c4dcc0497f7726b70191682 "pdflatex"
   "probability_ot.bib" 1599653040 1247 49bc0a761b30f2088107af7812b3daa8 ""
   (generated)
   "main.blg"
   "main.bbl"
-["pdflatex"] 1599662054 "main.tex" "main.pdf" "main" 1599662054
+["pdflatex"] 1599663900 "main.tex" "main.pdf" "main" 1599663901
   "/etc/texmf/web2c/texmf.cnf" 1598377671 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/home/davi/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk" 1599520565 11524 0f8e1157bd7b94044cb481b26d5a4e5a ""
   "/home/davi/.texlive2019/texmf-var/fonts/pk/ljfour/public/bbm/bbm10.600pk" 1599656855 6964 5207e3f00e83a382e94528ddd713a816 ""
@@ -125,6 +125,7 @@
   "/usr/share/texlive/texmf-dist/tex/latex/supertabular/supertabular.sty" 1580769125 15405 31e477e611bb77761a134e5593e8119d ""
   "/usr/share/texlive/texmf-dist/tex/latex/textcase/textcase.sty" 1568497026 2156 a092fd3ecd0a13fd597725ee6894b032 ""
   "/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty" 1580683321 10216 5efd55f2010055e7b7875afd6a75be82 ""
+  "/usr/share/texlive/texmf-dist/tex/latex/tools/enumerate.sty" 1580683321 3469 19b6cb25f21abe53fb90b9fe27615441 ""
   "/usr/share/texlive/texmf-dist/tex/latex/tools/longtable.sty" 1580683321 12133 b1e3e65b69714dbfcc5e6c0b19d66b50 ""
   "/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty" 1463002160 55589 34128738f682d033422ca125f82e5d62 ""
   "/usr/share/texlive/texmf-dist/tex/latex/xfor/xfor.sty" 1233902931 2689 44855b72da58344b1c1d9b3087bce6ca ""
@@ -135,12 +136,12 @@
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1599590274 4791331 307d30906e0cb0bfa67ed463e5a7cb9d ""
   "images/Barycenter.png" 1599645259 60268 493982ec2d37dd80c318713e49da60d7 ""
   "images/Distributions_Distances.png" 1599620396 13107 d7b4493391f2b58a8bfdeb38587e5b4f ""
-  "main.aux" 1599662054 1737 01997a6ddfd536204f96d5ed13dca7dd "pdflatex"
-  "main.bbl" 1599658025 1476 61334c9238387e2d0fc05588ae260001 "bibtex main"
-  "main.tex" 1599662053 16000 a29e06341d95a28aa77230ccb365c418 ""
-  "main.toc" 1599662054 233 d8e83e9cbae02a832c0bfd1e8697b5b7 "pdflatex"
+  "main.aux" 1599663901 1737 697d1c648c4dcc0497f7726b70191682 "pdflatex"
+  "main.bbl" 1599663900 1476 61334c9238387e2d0fc05588ae260001 "bibtex main"
+  "main.tex" 1599663900 17849 d41c51d82c9b193aa04765b4b89f24aa ""
+  "main.toc" 1599663901 233 532b04aed1156c507e1d85adcb469338 "pdflatex"
   (generated)
-  "main.pdf"
   "main.aux"
   "main.toc"
+  "main.pdf"
   "main.log"

@@ -10,7 +10,10 @@
 \usepackage{bigints}
 \usepackage{glossaries}
 \usepackage{graphicx}
-\graphicspath{ {./images/} }
+% \graphicspath{ {./images/} }
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
 
 
 \newcounter{countCode}
@@ -55,7 +58,7 @@
 
 
 
-\title{A Pot-Pourri of Probability \& Optimal Transport}
+\title{Probability \& Optimal Transport}
 \author{Davi Sales Barreira}
 \date{\today}
 \begin{document}
@@ -70,13 +73,13 @@ some side-lining will be done, with the aim to explore some of these new concept
 diving back in the proof of the inequalities.
 \end{abstract}
 
-\section*{Notation}
-\begin{itemize}
-	\item $P(\mathcal X)$ - S
-	Most of the content regarding transportation inequality is from
+% \section*{Notation}
+% \begin{itemize}
+% 	\item $P(\mathcal X)$ - S
+% 	Most of the content regarding transportation inequality is from
+% \end{itemize}
 
-\end{itemize}
-\section{Introduction}
+\section{introduction}
 Given two probability distributions $\mu,\nu$, there are many situations
 where one is interested in defining a way of measuring the
 distance between them. The Wasserstein distance is a
@@ -145,128 +148,42 @@ although such distances are useful, there are drawbacks:
     \label{fig:barycenter}
 \end{figure}
 
+\section{Optimal Transport}
 
-% \begin{equation}
-% \textbf{A} = \left[
-% \begin{array}{cccc}
-% a_{11} & a_{12} & \cdots & a_{1m} \\
-% a_{21} & a_{22} & \cdots & a_{2m} \\
-% \vdots & \vdots & \ddots & \vdots \\
-% a_{n1} & a_{n2} & \cdots & a_{nm} \\
-% \end{array}
-% \right]
-% \end{equation}
+Let $\mathcal X$ be a polish space, and define a function
+$c: \mathcal X \times \mathcal X \rightarrow [0,\infty)$, where $c$ is a lower semicontinuous function and $\mu,\nu \in P(\mathcal)$ (this means that $\mu$ and $\nu$ are
+probability measures on $X$). Function $c$ is usually called the \textit{cost function}.
+The Wasserstein distance arises from the Monge-Kantorovich optimal transport problem, which
+seeks to find a map
+$\pi: \mathcal X \times \mathcal X \rightarrow \mathcal X \times \mathcal X$, that
+transport $\mu$ to $\nu$ with minimum cost.
 
-% \begin{itemize}
-%  \item Cada uno de los números de que consta la matriz se denomina \textbf{elemento}. Un elemento se distingue de otro por la posición que ocupa, es decir, la fila y la columna a la que pertenece. Para ello se usa un doble subíndice donde el primero indica la fila y el segundo la columna a la que pertenece.
- 
-%  Una forma simplificada de representar una matriz es $A:= ((a_{ij}))$
-%  \item El número de filas y columnas de una matriz se denomina \textbf{dimensión de una matriz}. A una matriz con n filas y m columnas se le denomina matriz n-por-m (escrito $n\times{m}$) donde n, m $\in{\mathbb{N}} - \{0\}$.
-%  \item Si la matriz tiene el mismo número de filas que de columnas, y es $n$, se dice que es de \textbf{orden} $n$.
-%  \item Dos matrices son \textbf{iguales} cuando tienen la misma dimensión y los elementos que ocupan el mismo lugar en ambas, son iguales.
-%  \item El conjunto de las matrices de tamaño $n \times{m}$ se representa como $\mathcal{M}_{n\times {m}}(\mathbb{K})$ donde $\mathbb{K}$ es el campo al cual pertenecen las entradas. El tamaño de una matriz siempre se da con el número de filas primero y el número de columnas después.
-%  \end {itemize}
- 
-% \section{Tipos de Matrices}
+\theoremstyle{definition}
+\begin{definition}{Coupling}
+A probability measure $\pi \in P(\mathcal X \times \mathcal Y)$ is called a coupling of
+$\mu \in P(\mathcal X)$ and $\nu \in P(\mathcal Y)$ if it's marginal distributions
+$\pi_1$ and $\pi_2$ are
+$\mu$ and $\nu$.
+\end{definition}
 
-% \noindent\textbf{Matriz fila:} Una matriz fila está constituida por una sola fila.
+\begin{equation*}
+	(MK) \quad \text{Minimize} \pi \in P(\mathcal X^2) \mapsto
+	\int_{\mathcal X^2} c(x,y) d\pi(x,y) \ \text{subject to } \pi
+	\text{coupling of } (\nu,\mu)
+\end{equation*}
 
-% \[\begin{bmatrix}
-% a_{11} & a_{12} & \cdots & a_{1m} \\
-% \end{bmatrix}\]
-
-% \noindent\textbf{Matriz columna:} La matriz columna tiene una sola columna.
-
-% \[\begin{bmatrix}
-% a_{11} \\
-% a_{21} \\
-% \vdots \\
-% a_{n1} \\
-% \end{bmatrix}\]
-
-% \textbf{Matriz rectangular:} La matriz rectangular tiene distinto número de filas que de columnas, siendo su dimensión $n\times {m}$. (Ver expresión (1)).
-
-% \textbf{Matriz traspuesta:} Dada una matriz $A$, se llama matriz traspuesta de A a la matriz que se obtiene cambiando ordenadamente las filas por las columnas y se denota por $A^t$.
-
-% Si A = (($a_{ij}$)), entonces $A^t$ = (($a_{ji}$))
-
-% Cumplen las siguiente propiedades:
-
-% \begin{itemize}
-% \item $(A^t)^t = A$.
-% \item $(A + B)^t = A^t + B^t$.
-% \item $(\alpha \cdot )^t = \alpha \cdot {A^t}$
-% \item $(A\times B)^t = B^t\times A^t$.
-% \end{itemize}
-% Las operaciones con matrices se definen en el apartado 3. \\
+From solving the above problem, one obtains the optimal transport cost, given by:
+\begin{equation}
+	T_c(\nu, \mu) :=
+	\inf \left\{
+		\int_{\mathcal X^2} c(x,y) d\pi(x,y) \ ; \pi_1 = \nu, \pi_2 = \mu
+	\right\}
+\end{equation}
 
 
-% \textbf{Matriz nula:} En una matriz nula todos los elementos son ceros. $A = ((a_{ij})) = ((0))$ \\
 
-% \textbf{Matriz cuadrada:} La matriz cuadrada tiene el mismo número de filas que de columnas.
+% section  (end)
 
-% \begin{itemize}
-% \item Los elementos de la forma $((a_{ii}))$ constituyen \textbf{la diagonal principal}.
-% \item La \textbf{diagonal secundaria} la forman los elementos con $i + j = n + 1$, siendo $n$ el orden de la matriz.
-% \item Existen los siguientes tipos de matrices cuadradas\footnote{Las operaciones con matrices se definen en el apartado 3.}
-
-% \textit{Matriz triangular superior:} En una matriz triangular superior los elementos situados por debajo de la diagonal principal son ceros.
-
-% $$\textbf{A=}\begin{bmatrix}
-% a_{11} & a_{12} & \cdots & a_{1m} \\
-% 0 & a_{22} & \cdots & a_{2m} \\
-% \vdots & \vdots & \ddots & \vdots \\
-% 0 & 0 & \cdots & a_{nm}
-% \end{bmatrix}
-% $$
-
-% \textit{Matriz triangular inferior:} En una matriz triangular inferior los elementos situados por encima de la diagonal principal son ceros.
-
-% $$\textbf{A=}\begin{bmatrix}
-% a_{11} & 0 & \cdots & 0 \\
-% a_{21} & a_{22} & \cdots & 0 \\
-% \vdots & \vdots & \ddots & \vdots \\
-% a_{n1} & a_{n2} & \cdots & a_{nm}
-% \end{bmatrix}
-% $$
-
-% \textit{Matriz diagonal:} En una matriz diagonal todos los elementos que no están situados en la diagonal principal son nulos.
-
-% $$\textbf{A=}\begin{bmatrix}
-% a_{11} & 0 & \cdots & 0 \\
-% 0 & a_{22}  & \cdots & 0 \\
-% \vdots & \vdots & \ddots & \vdots \\
-% 0 & 0 & \cdots & a_{nm}
-% \end{bmatrix}
-% $$
-
-% \textit{Matriz escalar:} Una matriz  escalar es una matriz diagonal en la que los elementos de la diagonal principal son iguales.
-
-% \textit{Matriz identidad o unidad:} Una matriz  identidad es una matriz diagonal en la que los elementos de la diagonal principal son iguales a 1.
-
-% \textit{Matriz regular:} Una matriz  regular es una matriz cuadrada que tiene inversa.
-
-% \textit{Matriz singular:} Una matriz  singular no tiene matriz inversa.
-
-% \textit{Matriz indempotente:} Una matriz, $A$, es indempotente si: $A^2 = A$.
-
-% \textit{Matriz involutiva:} Una matriz, $A$, es involutiva si: $A^2 = I$.
-
-% \textit{Matriz simétrica:} Una matriz simétrica es una matriz cuadrada que verifica: $A = A^t$.
-% \textit{Matriz antisimétrica o hemisimétrica:} Una matriz antisimétrica o hermisimétrica es una matriz cuadrada que verifica $A = -A^t$.
-
-% \textit{Matriz ortogonal:} Una matriz es ortogonal si verifica que: $A\times {A^t} = I$
-
-% \end{itemize}
-
-% \section{Operaciones con Matrices}
-% Las operaciones que se pueden hacer con matrices provienen de sus aplicaciones, sobre todo de las aplicaciones en álgebra lineal. De ese modo las operaciones, o su forma muy particular de ser implementadas, no son únicas.
-
-% \subsection{Suma o adición}
-
-% \noindent \textbf{Definición}
-
-% Se define la operación de suma o adición de matrices como una operación binaria
 % \section*{References}
 % \addcontentsline{toc}{section}{References}
   \bibliography{probability_ot}

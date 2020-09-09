@@ -92,14 +92,35 @@ $\mu \ll \lambda$ , for $\lambda$ representing the Lebesgue measure. Below
 we present some example of distances:
 
 \begin{align*} 
-\text{Total Variation} &: || \mu - \nu ||_{TV} =
+\text{Total Variation} &: \quad || \mu - \nu ||_{TV} =
 \sup_{A \in \mathcal F} |\mu (A) - \nu(A)| = 
 \frac{1}{2}\int_\Omega \left | \frac{d\mu}{d\lambda} - \frac{d\nu}{d\lambda} \right
 |d\lambda \\
 \\
-\text{Hellinger} &: \sqrt{\bigintss_\Omega \left(\sqrt{\frac{d\mu}{d\lambda}} -
-\sqrt{\frac{d\nu}{d\lambda}} \right )^2d\lambda}
+\text{Hellinger} &: \quad \sqrt{\bigintss_\Omega \left(\sqrt{\frac{d\mu}{d\lambda}} -
+\sqrt{\frac{d\nu}{d\lambda}} \right )^2d\lambda} \\
+\\
+L_2 &: \quad \int_\Omega \left(\frac{d\mu}{d\lambda} - \frac{d\nu}{d\lambda}\right)^2
+d\lambda \\
+% \text{Relative Entropy} &: \quad
+% H(\nu \mid \mu) =
+% \left\{
+%   \begin{array}{@{}ll@{}}
+%     \int_\mathcal X \log(\frac{d\nu}{d\mu})d\nu, & \text{if}\ \nu \ll\mu \\
+%     +\infty, & \text{otherwise}
+%   \end{array}\right.
+%   \\
+%   \\
 \end{align*}
+
+As pointed out by \citet{wassermanStatisicalMethods2018} in his lecture notes,
+although such distances are useful, there are drawbacks:
+\begin{itemize}
+	\item If one distribution is discrete and the other is continuous,  they cannot
+	be compared. If $X \sim U(0,1)$ and $Y$ is uniform on $\{0,1/N, 2/N,...,1\}$,
+	although this distributions are very similar, their total variation is 1 (which is
+	the maximum value).
+\end{itemize}
 	
 
 

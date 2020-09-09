@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex main"] 1599602239 "main.aux" "main.bbl" "main" 1599603181
+["bibtex main"] 1599608298 "main.aux" "main.bbl" "main" 1599608416
   "/usr/share/texlive/texmf-dist/bibtex/bst/natbib/plainnat.bst" 1233624470 26816 ffe5423d2019860bad9f54bc402fac15 ""
-  "main.aux" 1599603181 220 845d7529ea181903a5cd6563d1bc51ee "pdflatex"
+  "main.aux" 1599608416 331 42847b49215d66b70d25e95af6565c32 "pdflatex"
   "probability_ot.bib" 1599598921 340 69e8a555a58581221e1feee64230fa09 ""
   (generated)
   "main.bbl"
   "main.blg"
-["pdflatex"] 1599603181 "main.tex" "main.pdf" "main" 1599603181
+["pdflatex"] 1599608415 "main.tex" "main.pdf" "main" 1599608416
   "/etc/texmf/web2c/texmf.cnf" 1598377671 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/home/davi/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk" 1599520565 11524 0f8e1157bd7b94044cb481b26d5a4e5a ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -117,10 +117,10 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1581979058 38841 ce3692aa899bb693b90b87eaa5d4d84e ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1599590265 128028 f533b797fba58d231669ea19e894e23e ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1599590274 4791331 307d30906e0cb0bfa67ed463e5a7cb9d ""
-  "main.aux" 1599603181 220 845d7529ea181903a5cd6563d1bc51ee "pdflatex"
-  "main.bbl" 1599602239 275 de5ffaf5b665b622658d80bed97ba2a5 "bibtex main"
-  "main.tex" 1599603180 10433 3b99ac0e06dbd498d50e993c7c0843fd ""
-  "main.toc" 1599603181 57 d0fd2421c33c3018b5a551709e24d634 "pdflatex"
+  "main.aux" 1599608416 331 42847b49215d66b70d25e95af6565c32 "pdflatex"
+  "main.bbl" 1599608298 425 b8910f833a267f0e24552ec34818b395 "bibtex main"
+  "main.tex" 1599608415 10887 01f8d79d7a1252e0a2aca14b8570ec8c ""
+  "main.toc" 1599608416 57 d0fd2421c33c3018b5a551709e24d634 "pdflatex"
   (generated)
   "main.toc"
   "main.log"

@@ -598,11 +598,49 @@ Another result stated without proof is the following:
 This is known as the chain rule for relative entropy. A proof can be found on
 \citet{van2014probability} Lemma 4.18.
 
-We need one more definition
+We need one more definition. The inf-convolution of two functions on $[0,\infty)$ is
 $$
-\alpha_1
-% \msquare \alpha_2
+\alpha_1 * \alpha_2(t) := \inf\{
+\alpha_1(t_1) + \alpha_2(t_2) ; t_1, t_2 \geq 0: t_1 + t_2 = t
+\}, \quad t\geq 0
 $$
+
+\begin{proposition}
+	Suppose that the transport-entropy inequalities are satisfied
+	$$
+	\alpha_1(T_{c_1}(\nu_1,\mu_1)) \leq H(\nu_1 \mid \mu_1)
+	\alpha_2(T_{c_2}(\nu_2,\mu_2)) \leq H(\nu_1 \mid \mu_1)
+	$$
+	for $\alpha_1, \alpha_2 : [0,\infty) \rightarrow [0.\infty)$ convex increasing
+	Then, on the product space we have
+	$$
+	\alpha_1*\alpha_2(T_{c_1\otimes c_2}(\nu,\mu_1\otimes \mu_2))
+	\leq H(\nu \mid \mu_1 \otimes \mu_2)
+	$$
+\end{proposition}
+
+We can extend this proposition for the case of $n$ product spaces such that $\mu^n$
+then verifies
+$$
+\alpha^{*n}(T_{c^{\otimes n}}) \leq H
+$$
+
+\begin{proposition} Suppose that $\mu \in P(\mathcal X)$ satisfies the
+transport-entropy inequality, for the $\alpha$ increasing and convex. Then,
+$\mu^n$ satisfies
+$$
+n\alpha
+\left(\frac{T_{c^{\otimes n}}}{n}
+\right) \leq H(\nu \mid \mu^n)
+$$
+\end{proposition}
+This proposition follows directly from the previous one.
+
+Finally, we can go back to our example, and conclude that if $X_1,...,X_n \in [a,b]$ are
+$i.i.d$. Then, for $S_n = X_1 + ... + X_n$, we have
+	$$
+	\mu^n(|S_n - m_{S_n} | > r + r_o) \leq 2 e^{\frac{- 2r^2}{n L^2}}
+	$$
 
 
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.9.8)  9 SEP 2020 14:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.9.8)  9 SEP 2020 14:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -546,7 +546,7 @@ LaTeX Font Info:    Trying to load font information for U+bbm on input line 353
 (/usr/share/texlive/texmf-dist/tex/latex/bbm-macros/ubbm.fd
 File: ubbm.fd 1999/03/15 V 1.2 Font definition for bbm font - TH
 ) [4] [5] [6]
-(./main.bbl [7]) [8] (./main.aux) ) 
+[7] (./main.bbl) [8] (./main.aux) ) 
 Here is how much of TeX's memory you used:
  10006 strings out of 483183
  142427 string characters out of 5966293
@@ -575,7 +575,7 @@ y5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/
 share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/s
 hare/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (8 pages, 306027 bytes).
+Output written on main.pdf (8 pages, 309781 bytes).
 PDF statistics:
  119 PDF objects out of 1000 (max. 8388607)
  85 compressed objects within 1 object stream

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.9.8)  8 SEP 2020 22:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.9.8)  8 SEP 2020 23:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -488,13 +488,13 @@ Package pdftex.def Info: images/Distributions_Distances.png  used on input line
 (pdftex.def)             Requested size: 284.52756pt x 189.69136pt.
  (./main.bbl) [2 <./images/Distributions_Distances.png>] (./main.aux) ) 
 Here is how much of TeX's memory you used:
- 9342 strings out of 483183
- 130603 string characters out of 5966293
- 437107 words of memory out of 5000000
- 24191 multiletter control sequences out of 15000+600000
+ 9343 strings out of 483183
+ 130618 string characters out of 5966293
+ 437115 words of memory out of 5000000
+ 24192 multiletter control sequences out of 15000+600000
  542083 words of font info for 62 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 51i,20n,37p,1005b,286s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 51i,20n,37p,1005b,284s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/
 davi/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk></usr/sh
 are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/te
@@ -509,7 +509,7 @@ m/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.
 pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on main.pdf (2 pages, 152142 bytes).
+Output written on main.pdf (2 pages, 152130 bytes).
 PDF statistics:
  69 PDF objects out of 1000 (max. 8388607)
  49 compressed objects within 1 object stream

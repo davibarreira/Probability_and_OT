@@ -123,13 +123,14 @@ although such distances are useful, there are drawbacks:
 	although this distributions are very similar, their total variation is 1 (which is
 	the maximum value). The Wasserstein distance is $1/N$, which is reasonable.
 	\item These distances ignore the "geometry of the underlying space", while the
-	Wasserstein distance preserves it, as shown in 
+	Wasserstein distance preserves it, as shown in Figure~\ref{fig:distances}.
 \end{itemize}
-\begin{figure}
+\begin{figure}[h]
 	\centering
 	\includegraphics[width=10cm]{images/Distributions_Distances.png}
     \caption{Each pair has the same distance in $L_2$, Hellinger and TV. But using
-    Wasserstein, one has that $X_1$ is closer to $X_2$ than to $X_3$.}
+    Wasserstein, $X_1$ is closer to $X_2$ than to $X_3$.}
+    \label{fig:distances}
 \end{figure}
 
 

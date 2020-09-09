@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex main"] 1599615095 "main.aux" "main.bbl" "main" 1599615110
+["bibtex main"] 1599617807 "main.aux" "main.bbl" "main" 1599617960
   "/usr/share/texlive/texmf-dist/bibtex/bst/natbib/plainnat.bst" 1233624470 26816 ffe5423d2019860bad9f54bc402fac15 ""
-  "main.aux" 1599615110 567 84b43a8a97d1b4a6838ef49e8a7ace95 "pdflatex"
+  "main.aux" 1599617959 587 b2e25f2e39be264530dd2ac5e588f3ec "pdflatex"
   "probability_ot.bib" 1599598921 340 69e8a555a58581221e1feee64230fa09 ""
   (generated)
   "main.blg"
   "main.bbl"
-["pdflatex"] 1599615110 "main.tex" "main.pdf" "main" 1599615110
+["pdflatex"] 1599617959 "main.tex" "main.pdf" "main" 1599617960
   "/etc/texmf/web2c/texmf.cnf" 1598377671 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/home/davi/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk" 1599520565 11524 0f8e1157bd7b94044cb481b26d5a4e5a ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -118,12 +118,12 @@
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1599590265 128028 f533b797fba58d231669ea19e894e23e ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1599590274 4791331 307d30906e0cb0bfa67ed463e5a7cb9d ""
   "images/Distributions_Distances.png" 1599614918 14128 08d2c2358e764351386c3160a6773a76 ""
-  "main.aux" 1599615110 567 84b43a8a97d1b4a6838ef49e8a7ace95 "pdflatex"
-  "main.bbl" 1599615095 425 b8910f833a267f0e24552ec34818b395 "bibtex main"
-  "main.tex" 1599615110 11380 9c96c7548f10cea0a91c43df72593cff ""
-  "main.toc" 1599615110 57 d0fd2421c33c3018b5a551709e24d634 "pdflatex"
+  "main.aux" 1599617959 587 b2e25f2e39be264530dd2ac5e588f3ec "pdflatex"
+  "main.bbl" 1599617807 425 b8910f833a267f0e24552ec34818b395 "bibtex main"
+  "main.tex" 1599617959 11423 bfc6108006b052845ba1c658e63b3175 ""
+  "main.toc" 1599617959 57 d0fd2421c33c3018b5a551709e24d634 "pdflatex"
   (generated)
-  "main.pdf"
-  "main.log"
-  "main.aux"
   "main.toc"
+  "main.log"
+  "main.pdf"
+  "main.aux"

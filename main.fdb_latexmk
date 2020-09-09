@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex main"] 1599657542 "main.aux" "main.bbl" "main" 1599657726
+["bibtex main"] 1599658025 "main.aux" "main.bbl" "main" 1599662054
   "/usr/share/texlive/texmf-dist/bibtex/bst/natbib/plainnat.bst" 1233624470 26816 ffe5423d2019860bad9f54bc402fac15 ""
-  "main.aux" 1599657708 1706 b7ed3a72cb8ed8a749fb510f0882a3df "pdflatex"
+  "main.aux" 1599662054 1737 01997a6ddfd536204f96d5ed13dca7dd "pdflatex"
   "probability_ot.bib" 1599653040 1247 49bc0a761b30f2088107af7812b3daa8 ""
   (generated)
   "main.blg"
   "main.bbl"
-["pdflatex"] 1599657708 "main.tex" "main.pdf" "main" 1599657726
+["pdflatex"] 1599662054 "main.tex" "main.pdf" "main" 1599662054
   "/etc/texmf/web2c/texmf.cnf" 1598377671 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/home/davi/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk" 1599520565 11524 0f8e1157bd7b94044cb481b26d5a4e5a ""
   "/home/davi/.texlive2019/texmf-var/fonts/pk/ljfour/public/bbm/bbm10.600pk" 1599656855 6964 5207e3f00e83a382e94528ddd713a816 ""
@@ -135,12 +135,12 @@
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1599590274 4791331 307d30906e0cb0bfa67ed463e5a7cb9d ""
   "images/Barycenter.png" 1599645259 60268 493982ec2d37dd80c318713e49da60d7 ""
   "images/Distributions_Distances.png" 1599620396 13107 d7b4493391f2b58a8bfdeb38587e5b4f ""
-  "main.aux" 1599657708 1706 b7ed3a72cb8ed8a749fb510f0882a3df "pdflatex"
-  "main.bbl" 1599657542 1476 61334c9238387e2d0fc05588ae260001 "bibtex main"
-  "main.tex" 1599657707 13407 596bf110aa6eeb88fbde7a751498af4d ""
-  "main.toc" 1599657708 233 d8e83e9cbae02a832c0bfd1e8697b5b7 "pdflatex"
+  "main.aux" 1599662054 1737 01997a6ddfd536204f96d5ed13dca7dd "pdflatex"
+  "main.bbl" 1599658025 1476 61334c9238387e2d0fc05588ae260001 "bibtex main"
+  "main.tex" 1599662053 16000 a29e06341d95a28aa77230ccb365c418 ""
+  "main.toc" 1599662054 233 d8e83e9cbae02a832c0bfd1e8697b5b7 "pdflatex"
   (generated)
-  "main.toc"
   "main.pdf"
   "main.aux"
+  "main.toc"
   "main.log"

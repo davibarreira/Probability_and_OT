@@ -250,7 +250,9 @@ $$
 	H(\nu \mid \mu) =
 	\left\{
 	  \begin{array}{@{}ll@{}}
-	    \int_\mathcal X \log(\frac{d\nu}{d\mu})d\nu, & \text{if}\ \nu \ll\mu \\
+	    \int_\mathcal X \log(\frac{d\nu}{d\mu})d\nu =
+	    \int_\mathcal X \frac{d\nu}{d\mu}\log(\frac{d\nu}{d\mu})d\mu
+	    , & \text{if}\ \nu \ll\mu \\
 	    +\infty, & \text{otherwise}
 	  \end{array}\right.
 $$
@@ -285,6 +287,64 @@ $$
 for all $\mu,\nu \in P(\mathcal X)$.
 \end{theorem}
 
+\begin{proof}
+	This proof is taken from \citet{gozlan2010transport} and is originally attributed
+	to Talagrand. Suppose $H(\nu \mid \mu) < \infty$ (otherwise we are done). Let
+	$f = \frac{d\nu}{d\mu}$ and $u = f - 1$, which implies $\int u d\mu = 0$
+	$$
+	H(\nu \mid \mu) = \int_\mathcal X f \log f d\mu  =
+	\int_\mathcal X (1+u) \log(1+u) - u \ d\mu
+	$$
+
+	For $\phi(u) = (1+u)\log(1+u) - u$, one can do some manipulations to obtain:
+	$$
+	\phi(u) = \int_0^y \frac{(u-x)}{1+u} dx = u^2 \int^1_0 \frac{1-s}{1+su} ds,
+	\quad u > -1
+	$$
+
+	Then, substituting in the relative entropy equation
+
+	$$
+	H(\nu \mid \mu) = \int_\mathcal X \phi(u) du  =
+	\int_\mathcal X u^2
+	\int_0^1 \frac{1-s}{1+su} \ ds \ d\mu =
+	\int_{\mathcal X \times [0,1]} u(x)^2\frac{1-s}{1+su(x)} \ ds \ d\mu(x)
+	$$
+
+	We can rewrite some equations and apply Cauchy-Schwarz inequality, to obtain the
+	following
+	\begin{align*}
+		\left(\int_{\mathcal X \times [0,1]} |u(x)|(1-s)d\mu(x) \ ds
+		\right)^2
+		&\leq 
+		\int_{\mathcal X \times [0,1]} u(x)^2\frac{1-s}{1+su(x)} \mu(x) \ ds \ \cdot \\
+		&\int_{\mathcal X \times [0,1]} (1-s)(1+su(x))d\mu(x) \ ds
+	\end{align*}
+
+
+	Noting that:
+	\begin{align*}
+		\int_{\mathcal X \times [0,1]} |u(x)|(1-s)d\mu(x) \ ds
+		&=
+		\frac{1}{2}\int_\mathcal X |1 - f| d\mu
+		\\
+		&= \frac{1}{2}\int_\mathcal X \left|\frac{d\mu}{d\mu} - \frac{d\nu}{d\mu}
+		\right| d\mu = || \nu - \mu ||_{TV}
+	\end{align*}
+	And that
+	\begin{align*}
+		\int_{\mathcal X \times [0,1]} u(x)^2\frac{1-s}{1+su(x)} \mu(x) \ ds \ \cdot \int_{\mathcal X \times [0,1]} (1-s)(1+su(x))d\mu(x) \ ds = 
+		H(\nu \mid \mu) \cdot \frac{1}{2}
+	\end{align*}
+
+	We conclude that
+$$
+|| \nu - \mu ||^2_{TV} \leq \frac{1}{2}H(\nu \mid \mu),
+$$
+
+
+\end{proof}
+
 The connection with the transport cost is made by defining the Hamming metric
 \begin{definition}[Hamming metric]
 $$d_H(x,y) = \mathbbm 1_{x \neq y}, \quad x,y \in \mathcal X$$
@@ -304,6 +364,31 @@ that indeed the duality is still valid for this metric. The proof for this asser
 is present in Example 4.14 at \citet{van2014probability}. Briefly, the proof consists
 of explicitly constructing the optimal coupling, and showing that $|| \mu - \nu ||_{TV}$
 coincides with $T_{d_H}(\nu,\mu)$.
+Therefore, a probability measure $\mu$ defined in the metric space $(\mathcal X, d_H)$
+satisfies the $\textbf T_1(1/2)$ inequality.
+
+Before showing how this entails a
+concentration inequality, one needs a little more results.
+
+\begin{definition}[Concentration of measure]
+For a metric space $(\mathcal X, d)$ and $r \geq 0$. The $r$-neighborhood of
+$A \subset \mathcal X$ is
+
+$$
+A^r := \{
+x \in \mathcal X: \ d(x,A) \leq r
+\},
+\quad d(x,A) := \inf_{y \in A} d(x,y)
+$$
+
+Hence, for $\beta: [0,\infty) \rightarrow \mathbb R_+$ such that $\beta(r) \rightarrow 0$
+when $r \rightarrow \infty$. One says that the probability measure $\mu$ satisfies the
+concentration inequality with profile $\beta$ if,
+$$
+\mu(A^r) \geq 1 - \beta(r)
+$$
+\end{definition}
+for all measurable $A \in \mathcal X$ and $\mu(A) \geq 1/2$ .
 % section  (end)
 
 % \section*{References}

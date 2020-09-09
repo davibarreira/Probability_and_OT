@@ -524,6 +524,38 @@ $$
 
 Let's use everything we proved so far in an example, so we can better understand how
 these inequalities relate to concentration.
+
+\begin{example}
+	Assume that $X \in [a,b]$ is a random variable and make $L = b-a$. It is clear that
+	using the Hamming metric $d_H$, that $X$ is $L$-Lipschitz. Next,
+	define $T_{d_{H_L}}(\mu,\nu) = L \cdot || \mu - \nu||_{TV}$
+
+	Using Pinkser's inequality
+	$$
+	||\mu - \nu||^2_{TV} \leq H(\mu \mid \nu)/2 \iff 
+	L ^2||\mu - \nu||^2_{TV} \leq L^2 H(\mu \mid \nu)/2 \therefore \
+ 	T_{d_{H_L}} ^2(\mu,\nu) \leq \frac{L ^2 H(\mu \mid \nu)}{2}
+	$$
+
+	Therefore, for $\alpha(x) = \frac{2}{L^2}x^2$, we have
+	$\alpha(T_{d_{H_L}}) \leq H$
+
+	We then conclude that
+	$$
+	\mu(|X - m_X | > r + r_o) \leq 2 e^{- 2r^2/ L^2}
+	$$
+
+	Which is very similar to Hoeffding's inequality for bounded random variables.
+\end{example}
+
+From this example, it becomes quite clear what we still have to prove. Our results just
+works for a single random variable. One is usually interested in studying concentration
+for several random variables, usually independent or with some kind of weak dependence (e.g: Markov).
+
+To extend what we have proved so far to several random variables, we need to obtain
+estimates no only to $\mu$, but to $\mu^n = \mu \otimes ... \otimes \mu \in \mathcal X^n$.
+This is called the \textit{tensorization of transportation cost}.
+
   \bibliography{probability_ot}
   \bibliographystyle{plainnat}
 \end{document}

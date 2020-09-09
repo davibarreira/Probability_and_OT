@@ -183,6 +183,9 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 OUTPUT main.pdf
 INPUT /var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map
+INPUT images/Distributions_Distances.png
+INPUT ./images/Distributions_Distances.png
+INPUT ./images/Distributions_Distances.png
 INPUT main.bbl
 INPUT main.bbl
 INPUT main.aux

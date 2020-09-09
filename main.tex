@@ -9,6 +9,8 @@
 \usepackage{xcolor}
 \usepackage{bigints}
 \usepackage{glossaries}
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
 
 
 \newcounter{countCode}
@@ -119,10 +121,16 @@ although such distances are useful, there are drawbacks:
 	\item If one distribution is discrete and the other is continuous,  they cannot
 	be compared. If $X \sim U(0,1)$ and $Y$ is uniform on $\{0,1/N, 2/N,...,1\}$,
 	although this distributions are very similar, their total variation is 1 (which is
-	the maximum value).
+	the maximum value). The Wasserstein distance is $1/N$, which is reasonable.
+	\item These distances ignore the "geometry of the underlying space", while the
+	Wasserstein distance preserves it, as shown in 
 \end{itemize}
-	
-
+\begin{figure}
+	\centering
+	\includegraphics[width=10cm]{images/Distributions_Distances.png}
+    \caption{Each pair has the same distance in $L_2$, Hellinger and TV. But using
+    Wasserstein, one has that $X_1$ is closer to $X_2$ than to $X_3$.}
+\end{figure}
 
 
 

@@ -2,6 +2,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[OT1]{fontenc}
 \usepackage{amsfonts, amsmath, amsthm, amssymb}
+\usepackage{bbm}
 \usepackage{mathtools}
 \usepackage{natbib}
 \usepackage{graphicx}
@@ -103,7 +104,10 @@ we present some example of distances:
 \text{Total Variation} &: \quad || \mu - \nu ||_{TV} =
 \sup_{A \in \mathcal F} |\mu (A) - \nu(A)| = 
 \frac{1}{2}\int_\Omega \left | \frac{d\mu}{d\lambda} - \frac{d\nu}{d\lambda} \right
-|d\lambda \\
+|d\lambda
+= \sup_{|f|\leq 1} \left |
+\int f (d\nu - d\mu)\right|
+\\
 \\
 \text{Hellinger} &: \quad \sqrt{\bigintss_\Omega \left(\sqrt{\frac{d\mu}{d\lambda}} -
 \sqrt{\frac{d\nu}{d\lambda}} \right )^2d\lambda} \\
@@ -201,7 +205,8 @@ $$
 
 A classical results in the optimal transport theory, called
 \textit{Kantorovich-Rubinstein duality} (which will not be proved here),
-guarantees the equivalence between the Wasserstein distance and the optimal transport cost.
+guarantees the equivalence between the Wasserstein distance and the optimal transport cost
+when the underlying metric space is separable.
 Hence, by setting $c = d^p$ where , where $d$ is a metric
 on $\mathcal X$ and $p \geq 1$,
 \begin{equation}
@@ -270,9 +275,35 @@ W_2^2(\nu,\mu) \leq C H(\nu \mid \mu) &\implies C^{-1}(T_{d^2}(\nu,\mu)^{1/2})^2
 C^{-1}(T_{d})^2(\nu,\mu) \leq 
 C^{-1}T_{d^2}(\nu,\mu) \leq H(\nu \mid \mu)
 \end{align*}
+
+The following inequality is a classical result in information theory.
+\begin{theorem}[Pinsker-Csiszár-Kullback inequality]
 $$
+|| \nu - \mu ||^2_{TV} \leq \frac{1}{2}H(\nu \mid \mu),
 $$
 
+for all $\mu,\nu \in P(\mathcal X)$.
+\end{theorem}
+
+The connection with the transport cost is made by defining the Hamming metric
+\begin{definition}[Hamming metric]
+$$d_H(x,y) = \mathbbm 1_{x \neq y}, \quad x,y \in \mathcal X$$
+\end{definition}
+
+Now, observe that using $d_H$, then $|f(x) - f(y)| \leq d_H(x,y) \leq 1$, hence
+\begin{equation}
+W_{d_h}(\nu, \mu) = \sup_{|f|\leq 1} \left |
+\int f d\nu - \int f d\mu	
+\right | = || \mu - \nu ||_{TV}
+\end{equation}
+
+Using the Kantorovich-Rubinstein duality, one would then obtain that
+$T_{d_H}(\mu,\nu) =|| \mu - \nu ||_{TV} $. The problem is that $(\mathcal X, d_H)$
+is not separable, unless $\mathcal X$ is discrete. Fortunately, one can still prove
+that indeed the duality is still valid for this metric. The proof for this assertion
+is present in Example 4.14 at \citet{van2014probability}. Briefly, the proof consists
+of explicitly constructing the optimal coupling, and showing that $|| \mu - \nu ||_{TV}$
+coincides with $T_{d_H}(\nu,\mu)$.
 % section  (end)
 
 % \section*{References}

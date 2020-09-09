@@ -20,6 +20,7 @@
 
 \newtheorem{theorem}{Theorem}
 \newtheorem{proposition}{Proposition}
+\newtheorem{example}{Example}
 
 \newcounter{countCode}
 \lstnewenvironment{code} [1][caption=Ponme caption, label=default]{%
@@ -440,14 +441,90 @@ From the proposition above applied to $\pm f$, we have that
 \begin{equation}
 	\mu(\mid f - m_f \mid > r) \leq 2\beta(r), \quad r\geq 0
 \end{equation}
-% section  (end)
 
-% \section*{References}
-% \addcontentsline{toc}{section}{References}
+We finally tie the transport-entropy inequality $\alpha(T_d) \leq H$ with
+concentration measures by using the so called "Marton's argument" presented in
+\cite{marton1986simple}.
+
+\begin{theorem}[Marton's Argument] Let $(\mathcal X, d)$ be a metric space with
+$\alpha: \mathbb R_+ \rightarrow \mathbb R_+$
+be a bijection, and suppose that $\mu \in P(\mathcal X)$ satisfies the
+transport-entropy inequality. Then, for all measurable $A \subset \mathcal X$ such
+that $\mu(A) \geq 1/2$, the following can be asserted
+$$
+\mu(A^r) \geq 1 - e^{-\alpha (r - r_o)}, \quad r \geq r_o := \alpha^{-1}(\log 2)
+$$
+In an equivalent manner, for all 1-Lipschitz $f:\mathcal X \rightarrow \mathbb R$,
+$$
+\mu(f - m_f > r + r_o) \leq e ^{-\alpha(r)}, \quad r \geq 0
+$$
+
+\begin{proof}
+	Take a measurable $A \subset \mathcal X$ such that $\mu(A) \geq 1/2$ and set
+	$B = \mathcal X \setminus A^r$. Next, define the following uniform 
+	probability measures in each of these sets:
+	$$
+	d\mu_A(x) = \frac{d\mu(x)}{\mu(A)}\mathbbm 1_A(x)
+	,\quad  d\mu_B(x) = \frac{d\mu(x)}{\mu(B)}\mathbbm 1_B(x)
+	$$
+	For $x \in A$ and $y \in B$, it is easy to see that $d(x,y) \geq r$. Also,
+	if $\pi$ is a coupling of $\mu_A, \mu_B$, then
+	$$
+	\int_{\mathcal X^2} d(x,y) d\pi \geq 
+	\int_{\mathcal X^2} r d\pi = r \int_{\mathcal X^2} d\pi = r
+	$$
+	Since we used an arbitrary coupling $\pi$, we showed that for
+	$\mathcal C(\mu_A,\mu_B) := \{\pi \in P(\mathcal X^2);
+	\pi_1 = \mu_A, \pi_2 = \mu_B\}$
+	$$
+	\inf_{\pi \in \mathcal C(\mu_A,\mu_B)}\int_{\mathcal X^2} d(x,y) d\pi = 
+	T_d(\mu_A,\mu_B)\geq  r
+	$$
+
+	Using the triangle inequality
+	\begin{align*}
+		r \leq T_d(\mu_A, \mu_B) &\leq T_d(\mu_A,\mu) + T_d(\mu_B,\mu) \\
+		&\leq
+		\alpha^{-1}(H(\mu_A \mid \mu)) + 
+		\alpha^{-1}(H(\mu_B \mid \mu))
+	\end{align*}
+	We now calculate $H(\mu_A \mid \mu)$, with $H(\mu_B \mid \mu)$ being analogous.
+	\begin{align*}
+	H(\mu_A \mid \mu) =  \int \frac{d\mu_A}{d\mu}\log (\frac{d\mu_A}{d\mu}) d\mu
+	&=\int \frac{1}{\mu(A)} \mathbbm 1_A \log(\frac{1}{\mu(A)}\mathbbm 1_A) d\mu
+	\\
+	&=-\frac{\log\mu(A)}{\mu(A)}\int_A d\mu \\
+	&= - \log\mu(A)
+	\end{align*}
+
+	Hence, $H(\mu_A \mid \mu) = - \log\mu(A) \leq \log 2$ and
+	$H(\mu_B \mid \mu) = - \log\mu(B) = -\log(1-\mu(A^r))$. Then,
+	\begin{align*}
+	r  \leq 
+		\alpha^{-1}(H(\mu_A \mid \mu)) + 
+		\alpha^{-1}(H(\mu_B \mid \mu)) \leq 
+		\alpha^{-1}(\log2) + 
+		\alpha^{-1}(H(\mu_B \mid \mu))
+	\end{align*}
+	\begin{align*}
+	r - r_o  = r - \alpha^{-1}(\log2) \leq
+	\alpha^{-1}(-\log(1-\mu(A^r))
+	\end{align*}
+	Therefore, we conclude that $\mu(A^r) \geq 1- e^{-\alpha(r-r_o)}$, for all
+	$r \geq r_o = \alpha^{-1}(\log2)$.
+
+	To show the equivalence for 1-Lipschitz functions, just use Proposition 1 and
+	$r' = r + r_o$ in the inequality we just proved. Finally
+	$$
+	\mu(A^{r'}) \geq 1 - e^{-\alpha(r' - r_o)} = 1 - e^{-\alpha(r)} \therefore
+	\mu(f > m_f + r + r_o) \leq e^{-\alpha(r)}
+	$$
+\end{proof}
+\end{theorem}
+
+Let's use everything we proved so far in an example, so we can better understand how
+these inequalities relate to concentration.
   \bibliography{probability_ot}
   \bibliographystyle{plainnat}
-  % \bibliographystyle{plainnat}
-  % \bibliographystyle{plain}
-  % \bibliographystyle{abbrv}
 \end{document}
 

@@ -1,0 +1,8 @@
+\expandafter\ifx\csname doTocEntry\endcsname\relax \expandafter\endinput\fi
+\doTocEntry\toclikesection{}{\csname a:TocLink\endcsname{1}{x1-1000}{QQ2-1-1}{Contents}}{3}\relax 
+\doTocEntry\tocsection{1}{\csname a:TocLink\endcsname{1}{x1-20001}{QQ2-1-2}{Introduction}}{3}\relax 
+\doTocEntry\toclof{1}{\csname a:TocLink\endcsname{1}{x1-20011}{}{\ignorespaces Each pair has the same distance in $L_2$, Hellinger and TV. But using Wasserstein, $X_1$ is closer to $X_2$ than to $X_3$.}}{figure}\relax 
+\doTocEntry\toclof{2}{\csname a:TocLink\endcsname{1}{x1-20022}{}{\ignorespaces In the left you have different distributions, and in the right, there is a comparison between averaging these distribution versus finding the Wasserstein barycenter.}}{figure}\relax 
+\doTocEntry\tocsection{2}{\csname a:TocLink\endcsname{1}{x1-30002}{QQ2-1-5}{Optimal Transport and the Wasserstein Distance}}{7}\relax 
+\doTocEntry\tocsection{3}{\csname a:TocLink\endcsname{1}{x1-40003}{QQ2-1-6}{Transport Inequalities and Concentration}}{9}\relax 
+\doTocEntry\toclikesection{}{\csname a:TocLink\endcsname{1}{x1-50003}{QQ2-1-7}{References}}{23}\relax 

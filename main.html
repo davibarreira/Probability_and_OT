@@ -1,0 +1,1900 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+  "http://www.w3.org/TR/html4/loose.dtd">  
+<html > 
+<head><title>Probability &amp; Optimal Transport</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)"> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)"> 
+<!-- html --> 
+<meta name="src" content="main.tex"> 
+<link rel="stylesheet" type="text/css" href="main.css"> 
+</head><body 
+>
+   <div class="maketitle">
+                                                                                         
+                                                                                         
+                                                                                         
+                                                                                         
+
+<h2 class="titleHead">Probability &amp; Optimal Transport</h2>
+<div class="author" ><span 
+class="cmr-12">Davi Sales Barreira</span></div><br />
+<div class="date" ><span 
+class="cmr-12">October 5, 2020</span></div>
+   </div>
+   <h3 class="likesectionHead"><a 
+ id="x1-1000"></a>Contents</h3>
+   <div class="tableofcontents">
+   <span class="sectionToc" >1 <a 
+href="#x1-20001" id="QQ2-1-2">Introduction</a></span>
+<br />   <span class="sectionToc" >2 <a 
+href="#x1-30002" id="QQ2-1-5">Optimal Transport and the Wasserstein Distance</a></span>
+<br />   <span class="sectionToc" >3 <a 
+href="#x1-40003" id="QQ2-1-6">Transport Inequalities and Concentration</a></span>
+   </div>
+   <div 
+class="abstract" 
+>
+<div class="center" 
+>
+<!--l. 74--><p class="noindent" >
+<!--l. 74--><p class="noindent" ><span 
+class="cmbx-9">Abstract</span></div>
+<!--l. 74--><p class="noindent" >
+     <!--l. 75--><p class="indent" >    <span 
+class="cmr-9">The main goal of these notes is to present an introduction to the transport inequalities, which consist</span>
+     <span 
+class="cmr-9">of methods of using Optimal Transport Theory to obtain concentration inequalities in high-dimensional</span>
+     <span 
+class="cmr-9">probability. Along the way, as new concepts are presented, some side-lining will be done, with the aim to</span>
+     <span 
+class="cmr-9">explore some of these new concepts, before diving back in the proof of the inequalities. The core of these</span>
+     <span 
+class="cmr-9">notes are base on the excellent paper &#8221;Transport Inequalities. A Survey&#8221; by </span><span class="cite"><a 
+href="#Xgozlan2010transport"><span 
+class="cmr-9">Gozlan and L</span><span 
+class="cmr-9">éonard</span></a></span><span 
+class="cmr-9">&#x00A0;[</span><span class="cite"><a 
+href="#Xgozlan2010transport"><span 
+class="cmr-9">2010</span></a></span><span 
+class="cmr-9">].</span>
+</div>
+<!--l. 89--><p class="noindent" >
+   <h3 class="sectionHead"><span class="titlemark">1   </span> <a 
+ id="x1-20001"></a>Introduction</h3>
+<!--l. 90--><p class="noindent" >Given two probability distributions <span 
+class="cmmi-10">&#x03BC;,&#x03BD;</span>, there are many situations where one is interested in defining a way of
+measuring the distance between them. The Wasserstein distance is a metric that arises from the idea of
+optimal transport, and which has being gaining attention in Statistics and Machine Learning. One
+prominent example is the so called Wasserstein Generative Adversarial Network (WGAN), which uses this
+metric to evaluate how well the model generated distribution approximates the &#8221;real&#8221; distribution of
+the data. As will be shown shortly, the Wasserstein metric has several advantages compared to other
+metrics.
+                                                                                         
+                                                                                         
+<!--l. 100--><p class="indent" >   There are several ways of defining distances between two probability measures. Let&#8217;s assume that <span 
+class="cmmi-10">&#x03BD;,&#x03BC; </span>are defined
+on (&#x03A9;<span 
+class="cmmi-10">,</span><span 
+class="cmsy-10"><img 
+src="cmsy10-46.png" alt="F" class="10x-x-46" /></span>) and that <span 
+class="cmmi-10">&#x03BD; </span><span 
+class="cmsy-10">&#x226A; </span><span 
+class="cmmi-10">&#x03BB;</span>, <span 
+class="cmmi-10">&#x03BC; </span><span 
+class="cmsy-10">&#x226A; </span><span 
+class="cmmi-10">&#x03BB; </span>, for <span 
+class="cmmi-10">&#x03BB; </span>representing the Lebesgue measure. Below we present some example of
+distances:
+<!--l. 106--><p class="indent" >
+<table 
+class="align-star">
+     <tr><td 
+class="align-odd">Total Variation</td>     <td 
+class="align-even"> :    <span 
+class="cmsy-10">||</span><span 
+class="cmmi-10">&#x03BC; </span><span 
+class="cmsy-10">- </span><span 
+class="cmmi-10">&#x03BD;</span><span 
+class="cmsy-10">||</span><sub><span 
+class="cmmi-7">TV</span> </sub> = sup<sub><span 
+class="cmmi-7">A</span><span 
+class="cmsy-7">&#x2208;<img 
+src="cmsy7-46.png" alt="F" class="7x-x-46" /></span></sub><span 
+class="cmsy-10">|</span><span 
+class="cmmi-10">&#x03BC;</span>(<span 
+class="cmmi-10">A</span>) <span 
+class="cmsy-10">- </span><span 
+class="cmmi-10">&#x03BD;</span>(<span 
+class="cmmi-10">A</span>)<span 
+class="cmsy-10">| </span>= <img 
+src="main0x.png" alt="1
+2"  class="frac" align="middle"><span 
+class="cmex-10">&#x222B;</span>
+   <sub><span 
+class="cmr-7">&#x03A9;</span></sub><img 
+src="main1x.png" alt="|        |
+||d&#x03BC;-- d&#x03BD;-||
+|d&#x03BB;   d&#x03BB; |"  class="left" align="middle"><span 
+class="cmmi-10">d&#x03BB; </span>= sup<sub><span 
+class="cmsy-7">|</span><span 
+class="cmmi-7">f</span><span 
+class="cmsy-7">|&#x2264;</span><span 
+class="cmr-7">1</span></sub><img 
+src="main2x.png" alt="|&#x222B;           |
+|| f(d&#x03BD; - d&#x03BC;)||
+|           |"  class="left" align="middle"></td>     <td 
+class="align-label"></td>     <td 
+class="align-label">
+     </td></tr><tr><td 
+class="align-odd"></td>                 <td 
+class="align-even"></td>                                                                                <td 
+class="align-label">
+     </td></tr><tr><td 
+class="align-odd">Hellinger</td>          <td 
+class="align-even"> :    <img 
+src="main3x.png" alt="&#x250C;&#x2502; &#x222B;----------------------
+&#x2502;&#x2502;      (&#x2218; ---  &#x2218; --)2
+&#x2218;         d&#x03BC;--   d&#x03BD;-  d&#x03BB;
+     &#x03A9;    d&#x03BB;     d&#x03BB;"  class="sqrt" ></td>                                                    <td 
+class="align-label"></td>     <td 
+class="align-label">
+     </td></tr><tr><td 
+class="align-odd"></td>                 <td 
+class="align-even"></td>                                                                                <td 
+class="align-label">
+     </td></tr><tr><td 
+class="align-odd"><span 
+class="cmmi-10">L</span><sub><span 
+class="cmr-7">2</span></sub></td>               <td 
+class="align-even"> :    <span 
+class="cmex-10">&#x222B;</span>
+   <sub><span 
+class="cmr-7">&#x03A9;</span></sub><img 
+src="main4x.png" alt="(        )
+  d&#x03BC;-- d&#x03BD;-
+  d&#x03BB;   d&#x03BB;"  class="left" align="middle"><sup><span 
+class="cmr-7">2</span></sup><span 
+class="cmmi-10">d&#x03BB;</span></td>                                                           <td 
+class="align-label"></td>     <td 
+class="align-label">
+     </td></tr><tr><td 
+class="align-odd"></td>                 <td 
+class="align-even"></td>                                                                                <td 
+class="align-label">     </td></tr></table>
+<!--l. 131--><p class="indent" >   As pointed out by <span class="cite"><a 
+href="#XwassermanStatisicalMethods2018">Wasserman</a></span>&#x00A0;[<span class="cite"><a 
+href="#XwassermanStatisicalMethods2018">2018</a></span>] in his lecture notes, although such distances are useful, there are
+drawbacks:
+     <ul class="itemize1">
+     <li class="itemize">If one distribution is discrete and the other is continuous, they cannot be compared. If <span 
+class="cmmi-10">X </span><span 
+class="cmsy-10">~ </span><span 
+class="cmmi-10">U</span>(0<span 
+class="cmmi-10">,</span>1) and
+     <span 
+class="cmmi-10">Y </span>is uniform on <span 
+class="cmsy-10">{</span>0<span 
+class="cmmi-10">,</span>1<span 
+class="cmmi-10">&#x2215;N,</span>2<span 
+class="cmmi-10">&#x2215;N,...,</span>1<span 
+class="cmsy-10">}</span>, although this distributions are very similar, their total variation
+     is 1 (which is the maximum value). The Wasserstein distance is 1<span 
+class="cmmi-10">&#x2215;N</span>, which is reasonable.
+     </li>
+     <li class="itemize">These distances ignore the &#8221;geometry of the underlying space&#8221;, while the Wasserstein distance preserves
+     it, as shown in Figure&#x00A0;<a 
+href="#x1-20011">1<!--tex4ht:ref: fig:distances --></a>.
+     </li>
+     <li class="itemize">When &#8221;averaging&#8221; different distributions, one might be interested in obtaining a similar distribution,
+     avoiding smoothing. This can be done using the Wasserstein barycenter, as shown in Figure&#x00A0;<a 
+href="#x1-20022">2<!--tex4ht:ref: fig:barycenter --></a>.</li></ul>
+<!--l. 144--><p class="noindent" ><hr class="figure"><div class="figure" 
+><a 
+ id="x1-20011"></a><img 
+src="images/Distributions_Distances.png" alt="PIC"  
+width="227" height="227" >
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;1: </span><span  
+class="content">Each pair has the same distance in <span 
+class="cmmi-10">L</span><sub><span 
+class="cmr-7">2</span></sub>, Hellinger and TV. But using Wasserstein, <span 
+class="cmmi-10">X</span><sub><span 
+class="cmr-7">1</span></sub> is closer to
+<span 
+class="cmmi-10">X</span><sub><span 
+class="cmr-7">2</span></sub> than to <span 
+class="cmmi-10">X</span><sub><span 
+class="cmr-7">3</span></sub>.</span></div><!--tex4ht:label?: x1-20011 -->
+<!--l. 150--><p class="indent" >   </div><hr class="endfigure">
+<!--l. 152--><p class="indent" >   <hr class="figure"><div class="figure" 
+>
+                                                                                         
+                                                                                         
+<a 
+ id="x1-20022"></a>
+                                                                                         
+                                                                                         
+<!--l. 154--><p class="noindent" ><img 
+src="images/Barycenter.png" alt="PIC"  
+width="398" height="398" >
+<br /> <div class="caption" 
+><span class="id">Figure&#x00A0;2: </span><span  
+class="content">In the left you have different distributions, and in the right, there is a comparison between
+averaging these distribution versus finding the Wasserstein barycenter.</span></div><!--tex4ht:label?: x1-20022 -->
+                                                                                         
+                                                                                         
+<!--l. 159--><p class="indent" >   </div><hr class="endfigure">
+   <h3 class="sectionHead"><span class="titlemark">2   </span> <a 
+ id="x1-30002"></a>Optimal Transport and the Wasserstein Distance</h3>
+<!--l. 163--><p class="noindent" >Let <span 
+class="cmsy-10"><img 
+src="cmsy10-58.png" alt="X" class="10x-x-58" /> </span>be a polish space, and define a function <span 
+class="cmmi-10">c </span>: <span 
+class="cmsy-10"><img 
+src="cmsy10-58.png" alt="X" class="10x-x-58" />&#x00D7;<img 
+src="cmsy10-58.png" alt="X" class="10x-x-58" /> &#x2192; </span>[0<span 
+class="cmmi-10">,</span><span 
+class="cmsy-10">&#x221E;</span>), where <span 
+class="cmmi-10">c </span>is a lower semicontinuous function and
+<span 
+class="cmmi-10">&#x03BC;,&#x03BD; </span><span 
+class="cmsy-10">&#x2208; </span><span 
+class="cmmi-10">P</span>() (this means that <span 
+class="cmmi-10">&#x03BC; </span>and <span 
+class="cmmi-10">&#x03BD; </span>are probability measures on <span 
+class="cmmi-10">X</span>). Function <span 
+class="cmmi-10">c </span>is usually called the <span 
+class="cmti-10">cost function</span>.
+The Wasserstein distance arises from the Monge-Kantorovich optimal transport problem, which seeks to find a map
+<span 
+class="cmmi-10">&#x03C0; </span>: <span 
+class="cmsy-10"><img 
+src="cmsy10-58.png" alt="X" class="10x-x-58" />&#x00D7;<img 
+src="cmsy10-58.png" alt="X" class="10x-x-58" /> &#x2192;<img 
+src="cmsy10-58.png" alt="X" class="10x-x-58" />&#x00D7;<img 
+src="cmsy10-58.png" alt="X" class="10x-x-58" /></span>, that transport <span 
+class="cmmi-10">&#x03BC; </span>to <span 
+class="cmmi-10">&#x03BD; </span>with minimum cost.
+   <div class="newtheorem">
+<!--l. 172--><p class="noindent" ><span class="head">
+<a 
+ id="x1-3001r1"></a>
+<span 
+class="cmbx-10">Definition 2.1.</span>  </span>Coupling A probability measure <span 
+class="cmmi-10">&#x03C0; </span><span 
+class="cmsy-10">&#x2208; </span><span 
+class="cmmi-10">P</span>(<span 
+class="cmsy-10"><img 
+src="cmsy10-58.png" alt="X" class="10x-x-58" /> &#x00D7;<img 
+src="cmsy10-59.png" alt="Y" class="10x-x-59" /></span>) is called a coupling of <span 
+class="cmmi-10">&#x03BC; </span><span 
+class="cmsy-10">&#x2208; </span><span 
+class="cmmi-10">P</span>(<span 
+class="cmsy-10"><img 
+src="cmsy10-58.png" alt="X" class="10x-x-58" /></span>) and
+<span 
+class="cmmi-10">&#x03BD; </span><span 
+class="cmsy-10">&#x2208; </span><span 
+class="cmmi-10">P</span>(<span 
+class="cmsy-10"><img 
+src="cmsy10-59.png" alt="Y" class="10x-x-59" /></span>) if it&#8217;s marginal distributions <span 
+class="cmmi-10">&#x03C0;</span><sub><span 
+class="cmr-7">1</span></sub> and <span 
+class="cmmi-10">&#x03C0;</span><sub><span 
+class="cmr-7">2</span></sub> are <span 
+class="cmmi-10">&#x03BC; </span>and <span 
+class="cmmi-10">&#x03BD;</span>.
+   </div>
+   <table 
+class="equation-star"><tr><td>
+   <center class="math-display" >
+<img 
+src="main5x.png" alt="                           &#x222B;
+(M K ) Minimize&#x03C0; &#x2208; P (X2) &#x21A6;&#x2192;   c(x,y)d&#x03C0;(x,y) subject to &#x03C0;coupling of (&#x03BD;,&#x03BC;)
+                            X2
+" class="math-display" ></center></td></tr></table>
+<!--l. 183--><p class="nopar" >
+<!--l. 185--><p class="indent" >   From solving the above problem, one obtains the optimal transport cost, given by:
+   <table 
+class="equation"><tr><td><a 
+ id="x1-3002r1"></a>
+   <center class="math-display" >
+<img 
+src="main6x.png" alt="            {&#x222B;                            }
+Tc(&#x03BD;,&#x03BC;) := inf     c(x,y)d&#x03C0;(x,y) ;&#x03C0;1 = &#x03BD;,&#x03C0;2 = &#x03BC;
+              X2
+" class="math-display" ></center></td><td class="equation-label">(1)</td></tr></table>
+<!--l. 191--><p class="nopar" >
+<!--l. 193--><p class="indent" >   Now, given a metric space (<span 
+class="cmsy-10"><img 
+src="cmsy10-58.png" alt="X" class="10x-x-58" /></span><span 
+class="cmmi-10">,d</span>), we say that <span 
+class="cmmi-10">f </span>: <span 
+class="cmsy-10"><img 
+src="cmsy10-58.png" alt="X" class="10x-x-58" /> &#x2192; </span><span 
+class="msbm-10">&#x211D; </span>is <span 
+class="cmmi-10">L</span>-Lipschitz if
+   <table 
+class="equation"><tr><td><a 
+ id="x1-3003r2"></a>
+                                                                                         
+                                                                                         
+   <center class="math-display" >
+<img 
+src="main7x.png" alt="| f (x) - f (y) |&#x2264; Ld(x,y) &#x2200;x,y &#x2208; X
+" class="math-display" ></center></td><td class="equation-label">(2)</td></tr></table>
+<!--l. 197--><p class="nopar" >
+<!--l. 199--><p class="indent" >   We will use <span 
+class="cmsy-10">||</span><span 
+class="cmmi-10">f</span><span 
+class="cmsy-10">||</span><sub><span 
+class="cmmi-7">Lip</span></sub> to denote the smallest <span 
+class="cmmi-10">L </span>for which this inequality holds. Also, denote <span 
+class="cmmi-10">P</span><sub><span 
+class="cmr-7">1</span></sub>(<span 
+class="cmsy-10"><img 
+src="cmsy10-58.png" alt="X" class="10x-x-58" /></span>) the space of
+probability measures with finite first moment.
+<!--l. 202--><p class="indent" >   Therefore, for <span 
+class="cmmi-10">&#x03BC;,&#x03BD; </span><span 
+class="cmsy-10">&#x2208; </span><span 
+class="cmmi-10">P</span><sub><span 
+class="cmr-7">1</span></sub>(<span 
+class="cmsy-10"><img 
+src="cmsy10-58.png" alt="X" class="10x-x-58" /></span>), the Wasserstein distance is then defined as
+   <center class="math-display" >
+<img 
+src="main8x.png" alt="                 |&#x222B;      &#x222B;     |
+Wd(&#x03BD;,&#x03BC;) :=  sup  ||  fd&#x03BD; -   fd&#x03BC;||
+          ||f||Lip&#x2264;1|             |
+" class="math-display" ></center>
+<!--l. 209--><p class="indent" >   A classical results in the optimal transport theory, called <span 
+class="cmti-10">Kantorovich-Rubinstein duality </span>(which will not be
+proved here), guarantees the equivalence between the Wasserstein distance and the optimal transport cost when the
+underlying metric space is separable. Hence, by setting <span 
+class="cmmi-10">c </span>= <span 
+class="cmmi-10">d</span><sup><span 
+class="cmmi-7">p</span></sup> where , where <span 
+class="cmmi-10">d </span>is a metric on <span 
+class="cmsy-10"><img 
+src="cmsy10-58.png" alt="X" class="10x-x-58" /> </span>and
+<span 
+class="cmmi-10">p </span><span 
+class="cmsy-10">&#x2265; </span>1,
+   <table 
+class="equation"><tr><td><a 
+ id="x1-3004r3"></a>
+   <center class="math-display" >
+<img 
+src="main9x.png" alt="                  1
+Wdp(&#x03BD;,&#x03BC;) := Tdp(&#x03BD;,&#x03BC;)p
+" class="math-display" ></center></td><td class="equation-label">(3)</td></tr></table>
+<!--l. 217--><p class="nopar" >
+<!--l. 219--><p class="indent" >   When the context allows, we will write <span 
+class="cmmi-10">W</span><sub><span 
+class="cmmi-7">p</span></sub> instead of <span 
+class="cmmi-10">W</span><sub><span 
+class="cmmi-7">d</span><sup><span 
+class="cmmi-5">p</span></sup></sub>. Note that depending on the reference, the
+Wasserstein distance might be first defined as a transport cost. A simple proof for this duality in the discrete setting
+is present in the lecture notes by <span class="cite"><a 
+href="#Xvan2014probability">van Handel</a></span>&#x00A0;[<span class="cite"><a 
+href="#Xvan2014probability">2014</a></span>].
+<!--l. 224--><p class="indent" >   Note that <span 
+class="cmmi-10">W</span><sub><span 
+class="cmmi-7">p</span></sub> are proper metrics (positive, symmetric and satisfy the triangle inequality) in the space of
+probability measures. Also, the spaces with <span 
+class="cmmi-10">p</span>-th moments finite, the metric space (<span 
+class="cmmi-10">P</span><sub><span 
+class="cmmi-7">p</span></sub>(<span 
+class="cmsy-10"><img 
+src="cmsy10-58.png" alt="X" class="10x-x-58" /></span>)<span 
+class="cmmi-10">,W</span><sub><span 
+class="cmmi-7">p</span></sub>) is complete and
+separable if so is <span 
+class="cmsy-10"><img 
+src="cmsy10-58.png" alt="X" class="10x-x-58" /> </span>[<span class="cite"><a 
+href="#Xpanaretos2019statistical">Panaretos and Zemel</a></span>,&#x00A0;<span class="cite"><a 
+href="#Xpanaretos2019statistical">2019</a></span>]. Hence, the Wasserstein distance has the interesting features
+already presented, such as incorporating the geometry of the &#8221;ground space&#8221;, and allowing the comparison between
+discrete and continuous distributions. Another interesting aspect, is that convergence of r.v <span 
+class="cmmi-10">X</span><sub><span 
+class="cmmi-7">n</span></sub> to <span 
+class="cmmi-10">X</span>
+in <span 
+class="cmmi-10">W</span><sub><span 
+class="cmmi-7">p</span></sub> distance is equivalent to convergence in distribution with <span 
+class="cmmi-10">E</span><span 
+class="cmsy-10">|</span><span 
+class="cmmi-10">X</span><sub><span 
+class="cmmi-7">n</span></sub><span 
+class="cmsy-10">|</span><sup><span 
+class="cmmi-7">p</span></sup> <span 
+class="cmsy-10">&#x2192; </span><span 
+class="cmmi-10">E</span><span 
+class="cmsy-10">|</span><span 
+class="cmmi-10">X</span><span 
+class="cmsy-10">|</span><sup><span 
+class="cmmi-7">p</span></sup> [<span class="cite"><a 
+href="#Xpanaretos2019statistical">Panaretos and
+                                                                                         
+                                                                                         
+Zemel</a></span>,&#x00A0;<span class="cite"><a 
+href="#Xpanaretos2019statistical">2019</a></span>].
+<!--l. 232--><p class="noindent" >
+   <h3 class="sectionHead"><span class="titlemark">3   </span> <a 
+ id="x1-40003"></a>Transport Inequalities and Concentration</h3>
+<!--l. 234--><p class="noindent" >In the literature, there are a range of different methods for obtaining inequalities concerning the phenomenon of
+concentration of measure. The use of transport inequalities is a more recent endeavor and usually not present in
+more basic texts concerning high-dimensional probability, such as the book by <span class="cite"><a 
+href="#Xvershynin2018high">Vershynin</a></span>&#x00A0;[<span class="cite"><a 
+href="#Xvershynin2018high">2018</a></span>]. The relation of
+optimal transport to concentration inequalities was first pointed out by <span class="cite"><a 
+href="#Xmarton1986simple">Marton</a></span>&#x00A0;[<span class="cite"><a 
+href="#Xmarton1986simple">1986</a></span>], and advanced through the
+nineties, with advances in optimal transport theory. Take a look at <span class="cite"><a 
+href="#Xgozlan2010transport">Gozlan and Léonard</a></span>&#x00A0;[<span class="cite"><a 
+href="#Xgozlan2010transport">2010</a></span>] for a more complete
+overview on the topic.
+   <div class="newtheorem">
+<!--l. 242--><p class="noindent" ><span class="head">
+<a 
+ id="x1-4001r1"></a>
+<span 
+class="cmbx-10">Definition 3.1 </span>(Transport Inequalities)<span 
+class="cmbx-10">.</span>  </span>Let <span 
+class="cmmi-10">J</span>(<span 
+class="cmsy-10">&#x22C5;</span><span 
+class="cmsy-10">&#x2223;</span><span 
+class="cmmi-10">&#x03BC;</span>) : <span 
+class="cmmi-10">P</span>(<span 
+class="cmsy-10"><img 
+src="cmsy10-58.png" alt="X" class="10x-x-58" /></span>) and <span 
+class="cmmi-10">&#x03B1; </span>: [0<span 
+class="cmmi-10">,</span><span 
+class="cmsy-10">&#x221E;</span>) <span 
+class="cmsy-10">&#x2192; </span>[0<span 
+class="cmmi-10">,</span><span 
+class="cmsy-10">&#x221E;</span>) an increasing function
+with <span 
+class="cmmi-10">&#x03B1;</span>(0) = 0. One says that <span 
+class="cmmi-10">&#x03BC; </span><span 
+class="cmsy-10">&#x2208; </span><span 
+class="cmmi-10">P</span>(<span 
+class="cmsy-10"><img 
+src="cmsy10-58.png" alt="X" class="10x-x-58" /></span>) satisfy the transport inequality <span 
+class="cmmi-10">&#x03B1;</span>(<span 
+class="cmmi-10">T</span><sub><span 
+class="cmmi-7">c</span></sub>) <span 
+class="cmsy-10">&#x2264; </span><span 
+class="cmmi-10">J </span>if
+   <center class="math-display" >
+<img 
+src="main10x.png" alt="&#x03B1;(T(&#x03BD;,&#x03BC;)) &#x2264; J(&#x03BD; | &#x03BC;), &#x2200;&#x03BD; &#x2208; P(X )
+   c
+" class="math-display" ></center>
+   </div>
+   <div class="newtheorem">
+<!--l. 251--><p class="noindent" ><span class="head">
+<a 
+ id="x1-4002r2"></a>
+<span 
+class="cmbx-10">Definition 3.2 </span>(Relative Entropy)<span 
+class="cmbx-10">.</span>  </span>
+   <center class="math-display" >
+<img 
+src="main11x.png" alt="          {&#x222B;     d&#x03BD;      &#x222B;  d&#x03BD;-   d&#x03BD;
+H (&#x03BD; | &#x03BC;) = X log(d&#x03BC;)d&#x03BD; =  X d&#x03BC; log(d&#x03BC;)d&#x03BC;,  if &#x03BD; &#x226A; &#x03BC;
+           + &#x221E;,                          otherwise
+" class="math-display" ></center>
+   </div>
+<!--l. 264--><p class="indent" >   When <span 
+class="cmmi-10">J </span>= <span 
+class="cmmi-10">H</span>, one also calls these transport-entropy inequalities. Among the family of transport inequalities, two
+classical ones are the <span 
+class="cmbx-10">T</span><sub><span 
+class="cmr-7">1</span></sub> and <span 
+class="cmbx-10">T</span><sub><span 
+class="cmr-7">2</span></sub>. We say that <span 
+class="cmmi-10">&#x03BC; </span><span 
+class="cmsy-10">&#x2208; </span><span 
+class="cmmi-10">P</span><sub><span 
+class="cmmi-7">p</span></sub>(<span 
+class="cmsy-10"><img 
+src="cmsy10-58.png" alt="X" class="10x-x-58" /></span>) := <span 
+class="cmsy-10">{</span><span 
+class="cmmi-10">&#x03BD; </span><span 
+class="cmsy-10">&#x2208; </span><span 
+class="cmmi-10">P</span>(<span 
+class="cmsy-10"><img 
+src="cmsy10-58.png" alt="X" class="10x-x-58" /></span>) : <span 
+class="cmex-10">&#x222B;</span>
+  <span 
+class="cmmi-10">d</span>(<span 
+class="cmmi-10">x</span><sub><span 
+class="cmmi-7">o</span></sub><span 
+class="cmmi-10">,</span><span 
+class="cmsy-10">&#x22C5;</span>)<sup><span 
+class="cmmi-7">p</span></sup><span 
+class="cmmi-10">d&#x03BD; &#x003C; </span><span 
+class="cmsy-10">&#x221E;} </span>satisfies <span 
+class="cmbx-10">T</span><sub><span 
+class="cmmi-7">p</span></sub>(<span 
+class="cmmi-10">C</span>), for
+<span 
+class="cmmi-10">C &#x003E; </span>0 if
+   <table 
+class="equation"><tr><td><a 
+ id="x1-4003r4"></a>
+                                                                                         
+                                                                                         
+   <center class="math-display" >
+<img 
+src="main12x.png" alt="W 2(&#x03BD;,&#x03BC;) &#x2264; CH (&#x03BD; | &#x03BC;)
+  p
+" class="math-display" ></center></td><td class="equation-label">(4)</td></tr></table>
+<!--l. 272--><p class="nopar" >
+<!--l. 274--><p class="indent" >   Note that <span 
+class="cmbx-10">T</span><sub><span 
+class="cmr-7">1</span></sub>(<span 
+class="cmmi-10">C</span>) is weaker than <span 
+class="cmbx-10">T</span><sub><span 
+class="cmr-7">2</span></sub>(<span 
+class="cmmi-10">C</span>), because, if <span 
+class="cmmi-10">&#x03BC; </span>satisfies <span 
+class="cmbx-10">T</span><sub><span 
+class="cmr-7">2</span></sub>(<span 
+class="cmmi-10">C</span>), then
+<table 
+class="align-star">
+               <tr><td 
+class="align-odd"><span 
+class="cmmi-10">W</span><sub><span 
+class="cmr-7">2</span></sub><sup><span 
+class="cmr-7">2</span></sup>(<span 
+class="cmmi-10">&#x03BD;,&#x03BC;</span>) <span 
+class="cmsy-10">&#x2264; </span><span 
+class="cmmi-10">CH</span>(<span 
+class="cmmi-10">&#x03BD;</span><span 
+class="cmsy-10">&#x2223;</span><span 
+class="cmmi-10">&#x03BC;</span>)</td>               <td 
+class="align-even"><img 
+src="main13x.png" alt="=&#x21D2;"  class="Longrightarrow" ><span 
+class="cmmi-10">C</span><sup><span 
+class="cmsy-7">-</span><span 
+class="cmr-7">1</span></sup>(<span 
+class="cmmi-10">T</span><sub>
+<span 
+class="cmmi-7">d</span><sup><span 
+class="cmr-5">2</span></sup></sub>(<span 
+class="cmmi-10">&#x03BD;,&#x03BC;</span>)<sup><span 
+class="cmr-7">1</span><span 
+class="cmmi-7">&#x2215;</span><span 
+class="cmr-7">2</span></sup>)<sup><span 
+class="cmr-7">2</span></sup> <span 
+class="cmsy-10">&#x2264; </span><span 
+class="cmmi-10">H</span></td>                                <td 
+class="align-label"></td>               <td 
+class="align-label">
+               </td></tr><tr><td 
+class="align-odd"></td>                                 <td 
+class="align-even"> <span 
+class="cmmi-7">Jensen</span>
+ == = = <span 
+class="cmsy-10">&#x21D2;</span> <span 
+class="cmmi-10">C</span><sup><span 
+class="cmsy-7">-</span><span 
+class="cmr-7">1</span></sup>(<span 
+class="cmmi-10">T</span><sub>
+<span 
+class="cmmi-7">d</span></sub>)<sup><span 
+class="cmr-7">2</span></sup>(<span 
+class="cmmi-10">&#x03BD;,&#x03BC;</span>) <span 
+class="cmsy-10">&#x2264; </span><span 
+class="cmmi-10">C</span><sup><span 
+class="cmsy-7">-</span><span 
+class="cmr-7">1</span></sup><span 
+class="cmmi-10">T</span><sub>
+<span 
+class="cmmi-7">d</span><sup><span 
+class="cmr-5">2</span></sup></sub>(<span 
+class="cmmi-10">&#x03BD;,&#x03BC;</span>) <span 
+class="cmsy-10">&#x2264; </span><span 
+class="cmmi-10">H</span>(<span 
+class="cmmi-10">&#x03BD;</span><span 
+class="cmsy-10">&#x2223;</span><span 
+class="cmmi-10">&#x03BC;</span>)</td>               <td 
+class="align-label"></td>               <td 
+class="align-label"></td></tr></table>
+<!--l. 284--><p class="indent" >   The following inequality is a classical result in information theory.
+   <div class="newtheorem">
+<!--l. 285--><p class="noindent" ><span class="head">
+<a 
+ id="x1-4004r1"></a>
+<span 
+class="cmbx-10">Theorem 1 </span>(Pinsker-Csiszár-Kullback inequality)<span 
+class="cmbx-10">.</span>  </span>
+   <center class="math-display" >
+<img 
+src="main14x.png" alt="||&#x03BD; - &#x03BC;||2TV &#x2264; 1H (&#x03BD; | &#x03BC; ),
+            2
+" class="math-display" ></center>
+<!--l. 290--><p class="indent" >   for all <span 
+class="cmmi-10">&#x03BC;,&#x03BD; </span><span 
+class="cmsy-10">&#x2208; </span><span 
+class="cmmi-10">P</span>(<span 
+class="cmsy-10"><img 
+src="cmsy10-58.png" alt="X" class="10x-x-58" /></span>).
+                                                                                         
+                                                                                         
+   </div>
+<!--l. 293--><p class="indent" >
+   <div class="proof">
+<!--l. 294--><p class="indent" >   <span class="head">
+<span 
+class="cmti-10">Proof.</span> </span>This proof is taken from <span class="cite"><a 
+href="#Xgozlan2010transport">Gozlan and Léonard</a></span>&#x00A0;[<span class="cite"><a 
+href="#Xgozlan2010transport">2010</a></span>] and is originally attributed to Talagrand. Suppose
+<span 
+class="cmmi-10">H</span>(<span 
+class="cmmi-10">&#x03BD;</span><span 
+class="cmsy-10">&#x2223;</span><span 
+class="cmmi-10">&#x03BC;</span>) <span 
+class="cmmi-10">&#x003C; </span><span 
+class="cmsy-10">&#x221E; </span>(otherwise we are done). Let <span 
+class="cmmi-10">f </span>= <img 
+src="main15x.png" alt="d&#x03BD;-
+d&#x03BC;"  class="frac" align="middle"> and <span 
+class="cmmi-10">u </span>= <span 
+class="cmmi-10">f </span><span 
+class="cmsy-10">- </span>1, which implies <span 
+class="cmex-10">&#x222B;</span>
+  <span 
+class="cmmi-10">ud&#x03BC; </span>= 0
+   <center class="math-display" >
+<img 
+src="main16x.png" alt="         &#x222B;            &#x222B;
+
+H (&#x03BD; | &#x03BC;) = X f logfd&#x03BC; = X (1 + u)log(1+ u)- u d&#x03BC;
+" class="math-display" ></center>
+<!--l. 302--><p class="indent" >   For <span 
+class="cmmi-10">&#x03D5;</span>(<span 
+class="cmmi-10">u</span>) = (1 + <span 
+class="cmmi-10">u</span>)log(1 + <span 
+class="cmmi-10">u</span>) <span 
+class="cmsy-10">- </span><span 
+class="cmmi-10">u</span>, one can do some manipulations to obtain:
+   <center class="math-display" >
+<img 
+src="main17x.png" alt="       &#x222B; y             &#x222B; 1
+&#x03D5; (u) =    (u--x)dx = u2   -1--s-ds,  u &#x003E; - 1
+        0  1+ u         0 1 + su
+" class="math-display" ></center>
+<!--l. 308--><p class="indent" >   Then, substituting in the relative entropy equation
+<!--l. 310--><p class="indent" >
+   <center class="math-display" >
+<img 
+src="main18x.png" alt="         &#x222B;          &#x222B;    &#x222B; 1 1 - s        &#x222B;            1 - s
+H(&#x03BD; | &#x03BC;) =  &#x03D5;(u)du =   u2    ------ds d&#x03BC; =       u(x)2-------- ds d&#x03BC;(x)
+          X          X    0  1+ su         X&#x00D7;[0,1]    1 + su(x )
+" class="math-display" ></center>
+<!--l. 317--><p class="indent" >   We can rewrite some equations and apply Cauchy-Schwarz inequality, to obtain the following
+                                                                                         
+                                                                                         
+<table 
+class="align-star">
+                <tr><td 
+class="align-odd"><img 
+src="main19x.png" alt="(                         )
+  &#x222B;
+         |u(x)|(1 - s)d&#x03BC;(x) ds
+   X&#x00D7;[0,1]"  class="left" align="middle"><sup><span 
+class="cmr-7">2</span></sup></td>                <td 
+class="align-even"> <span 
+class="cmsy-10">&#x2264;</span><span 
+class="cmex-10">&#x222B;</span>
+  <sub><span 
+class="cmsy-7"><img 
+src="cmsy7-58.png" alt="X" class="7x-x-58" />&#x00D7;</span><span 
+class="cmr-7">[0</span><span 
+class="cmmi-7">,</span><span 
+class="cmr-7">1]</span></sub><span 
+class="cmmi-10">u</span>(<span 
+class="cmmi-10">x</span>)<sup><span 
+class="cmr-7">2</span></sup><img 
+src="main20x.png" alt="  1- s
+1+-su(x)"  class="frac" align="middle"><span 
+class="cmmi-10">&#x03BC;</span>(<span 
+class="cmmi-10">x</span>)<span 
+class="cmmi-10">&#x00A0;ds</span><span 
+class="cmmi-10">&#x00A0;</span><span 
+class="cmsy-10">&#x22C5;</span></td>                <td 
+class="align-label"></td>                <td 
+class="align-label">
+                </td></tr><tr><td 
+class="align-odd"></td>                                             <td 
+class="align-even"><span 
+class="cmex-10">&#x222B;</span>
+  <sub><span 
+class="cmsy-7"><img 
+src="cmsy7-58.png" alt="X" class="7x-x-58" />&#x00D7;</span><span 
+class="cmr-7">[0</span><span 
+class="cmmi-7">,</span><span 
+class="cmr-7">1]</span></sub>(1 <span 
+class="cmsy-10">- </span><span 
+class="cmmi-10">s</span>)(1 + <span 
+class="cmmi-10">su</span>(<span 
+class="cmmi-10">x</span>))<span 
+class="cmmi-10">d&#x03BC;</span>(<span 
+class="cmmi-10">x</span>)<span 
+class="cmmi-10">&#x00A0;ds</span></td>                 <td 
+class="align-label"></td>                <td 
+class="align-label"></td></tr></table>
+<!--l. 328--><p class="indent" >   Noting that:
+    <table 
+class="align-star">
+                            <tr><td 
+class="align-odd"><span 
+class="cmex-10">&#x222B;</span>
+  <sub><span 
+class="cmsy-7"><img 
+src="cmsy7-58.png" alt="X" class="7x-x-58" />&#x00D7;</span><span 
+class="cmr-7">[0</span><span 
+class="cmmi-7">,</span><span 
+class="cmr-7">1]</span></sub><span 
+class="cmsy-10">|</span><span 
+class="cmmi-10">u</span>(<span 
+class="cmmi-10">x</span>)<span 
+class="cmsy-10">|</span>(1 <span 
+class="cmsy-10">- </span><span 
+class="cmmi-10">s</span>)<span 
+class="cmmi-10">d&#x03BC;</span>(<span 
+class="cmmi-10">x</span>)<span 
+class="cmmi-10">&#x00A0;ds</span></td>                       <td 
+class="align-even"> = <img 
+src="main21x.png" alt="1
+2"  class="frac" align="middle"><span 
+class="cmex-10">&#x222B;</span>
+   <sub></td>                </sub><span 
+class="cmmi-10">X</span><span 
+class="cmsy-10">|</span>1 <span 
+class="cmsy-10">- </span><span 
+class="cmmi-10">f</span><span 
+class="cmsy-10">|</span><span 
+class="cmmi-10">d&#x03BC;</span><td 
+class="align-label">
+<!--l. 336--><p class="indent" >   = <img 
+src="main22x.png" alt="12--"  class="frac" align="middle"> <span 
+class="cmex-7">&#x222B;</span> <sub>
+<!--l. 336--><p class="indent" >   </sub>X <img 
+src="main23x.png" alt="||d&#x03BC;   d&#x03BD;||
+|d&#x03BC; - d&#x03BC;|"  class="left" align="middle"><span 
+class="cmmi-10">d&#x03BC; </span>= <span 
+class="cmsy-10">||</span><span 
+class="cmmi-10">&#x03BD; </span><span 
+class="cmsy-10">- </span><span 
+class="cmmi-10">&#x03BC;</span><span 
+class="cmsy-10">||</span><sub><span 
+class="cmmi-7">TV</span> </sub>
+   </td>
+   <center class="math-display" >
+<img 
+src="main24x.png" alt="  " class="math-display" ></center>
+<!--l. 337--><p class="indent" >   And that
+                                                                                         
+                                                                                         
+<table 
+class="align-star">
+          <tr><td 
+class="align-odd"><span 
+class="cmex-10">&#x222B;</span>
+  <sub><span 
+class="cmsy-7"><img 
+src="cmsy7-58.png" alt="X" class="7x-x-58" />&#x00D7;</span><span 
+class="cmr-7">[0</span><span 
+class="cmmi-7">,</span><span 
+class="cmr-7">1]</span></sub><span 
+class="cmmi-10">u</span>(<span 
+class="cmmi-10">x</span>)<sup><span 
+class="cmr-7">2</span></sup><img 
+src="main25x.png" alt="  1- s
+1-+-su-(x)"  class="frac" align="middle"><span 
+class="cmmi-10">&#x03BC;</span>(<span 
+class="cmmi-10">x</span>)<span 
+class="cmmi-10">&#x00A0;ds</span><span 
+class="cmmi-10">&#x00A0; </span><span 
+class="cmsy-10">&#x22C5;</span><span 
+class="cmex-10">&#x222B;</span>
+  <sub><span 
+class="cmsy-7"><img 
+src="cmsy7-58.png" alt="X" class="7x-x-58" />&#x00D7;</span><span 
+class="cmr-7">[0</span><span 
+class="cmmi-7">,</span><span 
+class="cmr-7">1]</span></sub>(1 <span 
+class="cmsy-10">- </span><span 
+class="cmmi-10">s</span>)(1 + <span 
+class="cmmi-10">su</span>(<span 
+class="cmmi-10">x</span>))<span 
+class="cmmi-10">d&#x03BC;</span>(<span 
+class="cmmi-10">x</span>)<span 
+class="cmmi-10">&#x00A0;ds </span>= <span 
+class="cmmi-10">H</span>(<span 
+class="cmmi-10">&#x03BD;</span><span 
+class="cmsy-10">&#x2223;</span><span 
+class="cmmi-10">&#x03BC;</span>) <span 
+class="cmsy-10">&#x22C5;</span><img 
+src="main26x.png" alt="1
+2"  class="frac" align="middle"></td>          <td 
+class="align-even"></td>          <td 
+class="align-label"></td></tr></table>
+<!--l. 343--><p class="indent" >   We conclude that
+   <center class="math-display" >
+<img 
+src="main27x.png" alt="            1
+||&#x03BD; - &#x03BC;||2TV &#x2264; 2H (&#x03BD; | &#x03BC; ),
+" class="math-display" ></center>
+                                                                                        __
+   </div>
+<!--l. 351--><p class="indent" >   The connection with the transport cost is made by defining the Hamming metric
+   <div class="newtheorem">
+<!--l. 352--><p class="noindent" ><span class="head">
+<a 
+ id="x1-4005r3"></a>
+<span 
+class="cmbx-10">Definition 3.3 </span>(Hamming metric)<span 
+class="cmbx-10">.</span>  </span>
+   <center class="math-display" >
+<img 
+src="main28x.png" alt="dH(x,y) = 1x&#x2044;=y, x,y &#x2208; X
+" class="math-display" ></center>
+                                                                                         
+                                                                                         
+   </div>
+<!--l. 356--><p class="indent" >   Now, observe that using <span 
+class="cmmi-10">d</span><sub><span 
+class="cmmi-7">H</span></sub>, then <span 
+class="cmsy-10">|</span><span 
+class="cmmi-10">f</span>(<span 
+class="cmmi-10">x</span>) <span 
+class="cmsy-10">- </span><span 
+class="cmmi-10">f</span>(<span 
+class="cmmi-10">y</span>)<span 
+class="cmsy-10">|&#x2264; </span><span 
+class="cmmi-10">d</span><sub><span 
+class="cmmi-7">H</span></sub>(<span 
+class="cmmi-10">x,y</span>) <span 
+class="cmsy-10">&#x2264; </span>1, hence
+   <table 
+class="equation"><tr><td><a 
+ id="x1-4006r5"></a>
+   <center class="math-display" >
+<img 
+src="main29x.png" alt="               ||&#x222B;       &#x222B;     ||
+Wdh (&#x03BD;,&#x03BC;) = sup ||  fd&#x03BD; -  fd&#x03BC; || = ||&#x03BC;- &#x03BD;||T V
+           |f|&#x2264;1
+" class="math-display" ></center></td><td class="equation-label">(5)</td></tr></table>
+<!--l. 361--><p class="nopar" >
+<!--l. 363--><p class="indent" >   Using the Kantorovich-Rubinstein duality, one would then obtain that <span 
+class="cmmi-10">T</span><sub><span 
+class="cmmi-7">d</span><sub><span 
+class="cmmi-5">H</span></sub></sub>(<span 
+class="cmmi-10">&#x03BC;,&#x03BD;</span>) = <span 
+class="cmsy-10">||</span><span 
+class="cmmi-10">&#x03BC;</span><span 
+class="cmsy-10">-</span><span 
+class="cmmi-10">&#x03BD;</span><span 
+class="cmsy-10">||</span><sub><span 
+class="cmmi-7">TV</span> </sub>. The problem is
+that (<span 
+class="cmsy-10"><img 
+src="cmsy10-58.png" alt="X" class="10x-x-58" /></span><span 
+class="cmmi-10">,d</span><sub><span 
+class="cmmi-7">H</span></sub>) is not separable, unless <span 
+class="cmsy-10"><img 
+src="cmsy10-58.png" alt="X" class="10x-x-58" /> </span>is discrete. Fortunately, one can still prove that indeed the duality is still
+valid for this metric. The proof for this assertion is present in Example 4.14 at <span class="cite"><a 
+href="#Xvan2014probability">van Handel</a></span>&#x00A0;[<span class="cite"><a 
+href="#Xvan2014probability">2014</a></span>]. Briefly, the proof
+consists of explicitly constructing the optimal coupling, and showing that <span 
+class="cmsy-10">||</span><span 
+class="cmmi-10">&#x03BC; </span><span 
+class="cmsy-10">- </span><span 
+class="cmmi-10">&#x03BD;</span><span 
+class="cmsy-10">||</span><sub><span 
+class="cmmi-7">TV</span> </sub> coincides with
+<span 
+class="cmmi-10">T</span><sub><span 
+class="cmmi-7">d</span><sub><span 
+class="cmmi-5">H</span></sub></sub>(<span 
+class="cmmi-10">&#x03BD;,&#x03BC;</span>). Therefore, a probability measure <span 
+class="cmmi-10">&#x03BC; </span>defined in the metric space (<span 
+class="cmsy-10"><img 
+src="cmsy10-58.png" alt="X" class="10x-x-58" /></span><span 
+class="cmmi-10">,d</span><sub><span 
+class="cmmi-7">H</span></sub>) satisfies the <span 
+class="cmbx-10">T</span><sub><span 
+class="cmr-7">1</span></sub>(1<span 
+class="cmmi-10">&#x2215;</span>2)
+inequality.
+<!--l. 373--><p class="indent" >   Before showing how this entails a concentration inequality, one needs a little more results.
+   <div class="newtheorem">
+<!--l. 376--><p class="noindent" ><span class="head">
+<a 
+ id="x1-4007r4"></a>
+<span 
+class="cmbx-10">Definition 3.4 </span>(Concentration of measure)<span 
+class="cmbx-10">.</span>  </span>For a metric space (<span 
+class="cmsy-10"><img 
+src="cmsy10-58.png" alt="X" class="10x-x-58" /></span><span 
+class="cmmi-10">,d</span>) and <span 
+class="cmmi-10">r </span><span 
+class="cmsy-10">&#x2265; </span>0. The <span 
+class="cmmi-10">r</span>-neighborhood of
+<span 
+class="cmmi-10">A </span><span 
+class="cmsy-10">&#x2282;<img 
+src="cmsy10-58.png" alt="X" class="10x-x-58" /> </span>is
+<!--l. 380--><p class="indent" >
+   <center class="math-display" >
+<img 
+src="main30x.png" alt="  r
+A  := {x &#x2208; X : d(x,A) &#x2264; r}, d(x,A) := iyn&#x2208;fAd(x,y)
+" class="math-display" ></center>
+<!--l. 387--><p class="indent" >   Hence, for <span 
+class="cmmi-10">&#x03B2; </span>: [0<span 
+class="cmmi-10">,</span><span 
+class="cmsy-10">&#x221E;</span>) <span 
+class="cmsy-10">&#x2192; </span><span 
+class="msbm-10">&#x211D;</span><sub><span 
+class="cmr-7">+</span></sub> such that <span 
+class="cmmi-10">&#x03B2;</span>(<span 
+class="cmmi-10">r</span>) <span 
+class="cmsy-10">&#x2192; </span>0 when <span 
+class="cmmi-10">r </span><span 
+class="cmsy-10">&#x2192;&#x221E;</span>. One says that the probability measure <span 
+class="cmmi-10">&#x03BC;</span>
+satisfies the concentration inequality with profile <span 
+class="cmmi-10">&#x03B2; </span>if,
+   <center class="math-display" >
+<img 
+src="main31x.png" alt="    r
+&#x03BC; (A  ) &#x2265; 1- &#x03B2;(r)
+" class="math-display" ></center> for all measurable <span 
+class="cmmi-10">A </span><span 
+class="cmsy-10">&#x2208;<img 
+src="cmsy10-58.png" alt="X" class="10x-x-58" /> </span>and <span 
+class="cmmi-10">&#x03BC;</span>(<span 
+class="cmmi-10">A</span>) <span 
+class="cmsy-10">&#x2265; </span>1<span 
+class="cmmi-10">&#x2215;</span>2 .
+   </div>
+<!--l. 396--><p class="indent" >   The relation of measure concentration with deviations of Lipschitz functions from their medians is established in
+the following proposition.
+   <div class="newtheorem">
+<!--l. 399--><p class="noindent" ><span class="head">
+<a 
+ id="x1-4008r1"></a>
+<span 
+class="cmbx-10">Proposition 1.</span>  </span>Let (<span 
+class="cmsy-10"><img 
+src="cmsy10-58.png" alt="X" class="10x-x-58" /></span><span 
+class="cmmi-10">,d</span>) be a metric space with <span 
+class="cmmi-10">&#x03BC; </span><span 
+class="cmsy-10">&#x2208; </span><span 
+class="cmmi-10">P</span>(<span 
+class="cmsy-10"><img 
+src="cmsy10-58.png" alt="X" class="10x-x-58" /></span>) and <span 
+class="cmmi-10">&#x03B2; </span>: [0<span 
+class="cmmi-10">,</span><span 
+class="cmsy-10">&#x221E;</span>) <span 
+class="cmsy-10">&#x2192; </span>[0<span 
+class="cmmi-10">,</span>1]. The following statements are
+equivalent:
+    <dl class="enumerate"><dt class="enumerate">
+  (i) </dt><dd 
+class="enumerate"><span 
+class="cmmi-10">&#x03BC;</span>(<span 
+class="cmmi-10">A</span><sup><span 
+class="cmmi-7">r</span></sup>) <span 
+class="cmsy-10">&#x2265; </span>1 <span 
+class="cmsy-10">- </span><span 
+class="cmmi-10">&#x03B2;</span>(<span 
+class="cmmi-10">r</span>)<span 
+class="cmmi-10">,   r </span><span 
+class="cmsy-10">&#x2265; </span>0 for all measurable <span 
+class="cmmi-10">A </span><span 
+class="cmsy-10">&#x2282;<img 
+src="cmsy10-58.png" alt="X" class="10x-x-58" /> </span>with <span 
+class="cmmi-10">&#x03BC;</span>(<span 
+class="cmmi-10">A</span>) <span 
+class="cmsy-10">&#x2265; </span>1<span 
+class="cmmi-10">&#x2215;</span>2;
+    </dd><dt class="enumerate">
+ (ii) </dt><dd 
+class="enumerate">For <span 
+class="cmmi-10">f </span>: <span 
+class="cmsy-10"><img 
+src="cmsy10-58.png" alt="X" class="10x-x-58" /> &#x2192; </span><span 
+class="msbm-10">&#x211D;</span>, with <span 
+class="cmmi-10">f </span>being 1-Lipschitz,
+    <center class="math-display" >
+    <img 
+src="main32x.png" alt="&#x03BC;(f &#x003E; mf + r) &#x2264; &#x03B2;(r), r &#x2265; 0
+    " class="math-display" ></center> where <span 
+class="cmmi-10">m</span><sub><span 
+class="cmmi-7">f</span></sub> is the median of <span 
+class="cmmi-10">f</span>.</dd></dl>
+<!--l. 413--><p class="indent" >
+   <div class="proof">
+<!--l. 414--><p class="indent" >   <span class="head">
+<span 
+class="cmti-10">Proof.</span> </span>(<span 
+class="cmmi-10">i</span>)<img 
+src="main33x.png" alt="=&#x21D2;"  class="Longrightarrow" >(<span 
+class="cmmi-10">ii</span>). If <span 
+class="cmmi-10">x </span><span 
+class="cmsy-10">&#x2208; </span><span 
+class="cmmi-10">A</span><sup><span 
+class="cmmi-7">r</span></sup>, then <span 
+class="cmmi-10">d</span>(<span 
+class="cmmi-10">x,A</span>) <span 
+class="cmsy-10">&#x2264; </span><span 
+class="cmmi-10">r</span>. Therefore, for any <span 
+class="cmmi-10">y </span><span 
+class="cmsy-10">&#x2208; </span><span 
+class="cmmi-10">A</span>, <span 
+class="cmmi-10">d</span>(<span 
+class="cmmi-10">x,y</span>) <span 
+class="cmsy-10">&#x2264; </span><span 
+class="cmmi-10">r</span>. Also, note that since
+<span 
+class="cmmi-10">A </span>= <span 
+class="cmsy-10">{</span><span 
+class="cmmi-10">y </span>: <span 
+class="cmmi-10">f</span>(<span 
+class="cmmi-10">y</span>) <span 
+class="cmsy-10">&#x2264; </span><span 
+class="cmmi-10">m</span><sub><span 
+class="cmmi-7">f</span></sub><span 
+class="cmsy-10">}</span>, then <span 
+class="cmmi-10">f</span>(<span 
+class="cmmi-10">y</span>) <span 
+class="cmsy-10">&#x2264; </span><span 
+class="cmmi-10">m</span><sub><span 
+class="cmmi-7">f</span></sub>, for all <span 
+class="cmmi-10">y </span><span 
+class="cmsy-10">&#x2208; </span><span 
+class="cmmi-10">A</span>.
+<!--l. 418--><p class="indent" >   For all <span 
+class="cmmi-10">f </span>1-Lipschitz, we then have that
+   <center class="math-display" >
+<img 
+src="main34x.png" alt="f(x)- f(y) &#x2264; d(x,y) =&#x21D2; f(x ) &#x2264; f(y)+ r &#x2264; m + r
+                                       f
+" class="math-display" ></center>
+<!--l. 423--><p class="indent" >   Therefore, <span 
+class="cmmi-10">x </span><span 
+class="cmsy-10">&#x2208; {</span><span 
+class="cmmi-10">f </span><span 
+class="cmsy-10">&#x2264; </span><span 
+class="cmmi-10">m</span><sub><span 
+class="cmmi-7">f</span></sub> + <span 
+class="cmmi-10">r</span><span 
+class="cmsy-10">}</span>. We then obtained that <span 
+class="cmmi-10">A</span><sup><span 
+class="cmmi-7">r</span></sup> <span 
+class="cmsy-10">&#x2282; {</span><span 
+class="cmmi-10">f </span><span 
+class="cmsy-10">&#x2264; </span><span 
+class="cmmi-10">m</span><sub><span 
+class="cmmi-7">f</span></sub> + <span 
+class="cmmi-10">r</span><span 
+class="cmsy-10">}</span>. Since <span 
+class="cmmi-10">&#x03BC;</span>(<span 
+class="cmmi-10">A</span>) <span 
+class="cmsy-10">&#x2265; </span>1<span 
+class="cmmi-10">&#x2215;</span>2, then
+<span 
+class="cmmi-10">&#x03BC;</span>(<span 
+class="cmmi-10">f </span><span 
+class="cmsy-10">&#x2264; </span><span 
+class="cmmi-10">m</span><sub><span 
+class="cmmi-7">f</span></sub> + <span 
+class="cmmi-10">r</span>) <span 
+class="cmsy-10">&#x2265; </span><span 
+class="cmmi-10">&#x03BC;</span>(<span 
+class="cmmi-10">A</span><sup><span 
+class="cmmi-7">r</span></sup>) <span 
+class="cmsy-10">&#x2265; </span>1 <span 
+class="cmsy-10">- </span><span 
+class="cmmi-10">&#x03B2;</span>(<span 
+class="cmmi-10">r</span>).
+<!--l. 427--><p class="indent" >   (<span 
+class="cmmi-10">ii</span>)<img 
+src="main35x.png" alt="= &#x21D2;"  class="Longrightarrow" >(<span 
+class="cmmi-10">i</span>) Note that for any <span 
+class="cmmi-10">A </span><span 
+class="cmsy-10">&#x2282;<img 
+src="cmsy10-58.png" alt="X" class="10x-x-58" /></span>, <span 
+class="cmmi-10">f</span><sub><span 
+class="cmmi-7">A</span></sub>(<span 
+class="cmmi-10">x</span>) = <span 
+class="cmmi-10">d</span>(<span 
+class="cmmi-10">x,A</span>) <span 
+class="cmsy-10">&#x2264; </span><span 
+class="cmmi-10">d</span>(<span 
+class="cmmi-10">x,y</span>), hence, it is 1-Lipschitz. Now, consider
+only the sets <span 
+class="cmmi-10">A </span>such that <span 
+class="cmmi-10">&#x03BC;</span>(<span 
+class="cmmi-10">A</span>) <span 
+class="cmsy-10">&#x2265; </span>1<span 
+class="cmmi-10">&#x2215;</span>2.
+                                                                                         
+                                                                                         
+   <center class="math-display" >
+<img 
+src="main36x.png" alt="&#x03BC;(fA &#x2264; 0) = &#x03BC;(d(x,A) &#x2264; 0) = &#x03BC; (x &#x2208; A) = &#x03BC; (A ) = 1&#x2215;2
+" class="math-display" ></center> Therefore, <span 
+class="cmmi-10">m</span><sub><span 
+class="cmmi-7">f</span><sub><span 
+class="cmmi-5">A</span></sub></sub> = 0. Note that <span 
+class="cmmi-10">A</span><sup><span 
+class="cmmi-7">r</span></sup> = <span 
+class="cmsy-10">{</span><span 
+class="cmmi-10">f</span><sub><span 
+class="cmmi-7">A</span></sub> <span 
+class="cmsy-10">&#x2264; </span><span 
+class="cmmi-10">r</span><span 
+class="cmsy-10">} </span>= <span 
+class="cmsy-10">{</span><span 
+class="cmmi-10">x </span><span 
+class="cmsy-10">&#x2208;<img 
+src="cmsy10-58.png" alt="X" class="10x-x-58" /> </span>: <span 
+class="cmmi-10">d</span>(<span 
+class="cmmi-10">x,A</span>) <span 
+class="cmsy-10">&#x2264; </span><span 
+class="cmmi-10">r</span><span 
+class="cmsy-10">}</span>. Finally,
+   <center class="math-display" >
+<img 
+src="main37x.png" alt="    r
+&#x03BC;(A ) &#x2265; 1- &#x03BC;(fA &#x003E; r) &#x2265; 1- &#x03B2;(r)
+" class="math-display" ></center>
+                                                                                        __
+   </div>
+   </div>
+<!--l. 440--><p class="indent" >   From the proposition above applied to <span 
+class="cmsy-10">±</span><span 
+class="cmmi-10">f</span>, we have that
+   <table 
+class="equation"><tr><td><a 
+ id="x1-4011r6"></a>
+   <center class="math-display" >
+<img 
+src="main38x.png" alt="&#x03BC;(| f - mf |&#x003E; r) &#x2264; 2&#x03B2;(r), r &#x2265; 0
+" class="math-display" ></center></td><td class="equation-label">(6)</td></tr></table>
+<!--l. 443--><p class="nopar" >
+<!--l. 445--><p class="indent" >   We finally tie the transport-entropy inequality <span 
+class="cmmi-10">&#x03B1;</span>(<span 
+class="cmmi-10">T</span><sub><span 
+class="cmmi-7">d</span></sub>) <span 
+class="cmsy-10">&#x2264; </span><span 
+class="cmmi-10">H </span>with concentration measures by using the so called
+&#8221;Marton&#8217;s argument&#8221; presented in <span class="cite"><a 
+href="#Xmarton1986simple">Marton</a></span>&#x00A0;[<span class="cite"><a 
+href="#Xmarton1986simple">1986</a></span>].
+   <div class="newtheorem">
+<!--l. 449--><p class="noindent" ><span class="head">
+<a 
+ id="x1-4012r2"></a>
+<span 
+class="cmbx-10">Theorem 2 </span>(Marton&#8217;s Argument)<span 
+class="cmbx-10">.</span>  </span>Let (<span 
+class="cmsy-10"><img 
+src="cmsy10-58.png" alt="X" class="10x-x-58" /></span><span 
+class="cmmi-10">,d</span>) be a metric space with <span 
+class="cmmi-10">&#x03B1; </span>: <span 
+class="msbm-10">&#x211D;</span><sub><span 
+class="cmr-7">+</span></sub>  <span 
+class="cmsy-10">&#x2192; </span><span 
+class="msbm-10">&#x211D;</span><sub><span 
+class="cmr-7">+</span></sub>  be a bijection, and
+suppose that <span 
+class="cmmi-10">&#x03BC; </span><span 
+class="cmsy-10">&#x2208; </span><span 
+class="cmmi-10">P</span>(<span 
+class="cmsy-10"><img 
+src="cmsy10-58.png" alt="X" class="10x-x-58" /></span>) satisfies the transport-entropy inequality. Then, for all measurable <span 
+class="cmmi-10">A </span><span 
+class="cmsy-10">&#x2282;<img 
+src="cmsy10-58.png" alt="X" class="10x-x-58" /> </span>such that
+<span 
+class="cmmi-10">&#x03BC;</span>(<span 
+class="cmmi-10">A</span>) <span 
+class="cmsy-10">&#x2265; </span>1<span 
+class="cmmi-10">&#x2215;</span>2, the following can be asserted
+                                                                                         
+                                                                                         
+   <center class="math-display" >
+<img 
+src="main39x.png" alt="&#x03BC;(Ar ) &#x2265; 1- e-&#x03B1;(r-ro), r &#x2265; ro := &#x03B1;-1(log2)
+" class="math-display" ></center> In an equivalent manner, for all 1-Lipschitz <span 
+class="cmmi-10">f </span>: <span 
+class="cmsy-10"><img 
+src="cmsy10-58.png" alt="X" class="10x-x-58" /> &#x2192; </span><span 
+class="msbm-10">&#x211D;</span>,
+   <center class="math-display" >
+<img 
+src="main40x.png" alt="                    -&#x03B1;(r)
+&#x03BC;(f - mf &#x003E; r+ ro) &#x2264; e    ,  r &#x2265; 0
+" class="math-display" ></center>
+<!--l. 462--><p class="indent" >
+   <div class="proof">
+<!--l. 463--><p class="indent" >   <span class="head">
+<span 
+class="cmti-10">Proof.</span> </span>Take a measurable <span 
+class="cmmi-10">A </span><span 
+class="cmsy-10">&#x2282; <img 
+src="cmsy10-58.png" alt="X" class="10x-x-58" /> </span>such that <span 
+class="cmmi-10">&#x03BC;</span>(<span 
+class="cmmi-10">A</span>) <span 
+class="cmsy-10">&#x2265; </span>1<span 
+class="cmmi-10">&#x2215;</span>2 and set <span 
+class="cmmi-10">B </span>= <span 
+class="cmsy-10"><img 
+src="cmsy10-58.png" alt="X" class="10x-x-58" /> \ </span><span 
+class="cmmi-10">A</span><sup><span 
+class="cmmi-7">r</span></sup>. Next, define the following
+uniform probability measures in each of these sets:
+   <center class="math-display" >
+<img 
+src="main41x.png" alt="d&#x03BC;A (x) = d&#x03BC;(x)1A (x), d&#x03BC;B(x) = d&#x03BC;(x-)1B(x)
+          &#x03BC;(A )                 &#x03BC;(B)
+" class="math-display" ></center> For <span 
+class="cmmi-10">x </span><span 
+class="cmsy-10">&#x2208; </span><span 
+class="cmmi-10">A </span>and <span 
+class="cmmi-10">y </span><span 
+class="cmsy-10">&#x2208; </span><span 
+class="cmmi-10">B</span>, it is easy to see that <span 
+class="cmmi-10">d</span>(<span 
+class="cmmi-10">x,y</span>) <span 
+class="cmsy-10">&#x2265; </span><span 
+class="cmmi-10">r</span>. Also, if <span 
+class="cmmi-10">&#x03C0; </span>is a coupling of <span 
+class="cmmi-10">&#x03BC;</span><sub><span 
+class="cmmi-7">A</span></sub><span 
+class="cmmi-10">,&#x03BC;</span><sub><span 
+class="cmmi-7">B</span></sub>, then
+   <center class="math-display" >
+<img 
+src="main42x.png" alt="&#x222B;             &#x222B;         &#x222B;
+
+ X2 d(x,y)d&#x03C0; &#x2265;  X2 rd&#x03C0; = r X2 d&#x03C0; = r
+" class="math-display" ></center> Since we used an arbitrary coupling <span 
+class="cmmi-10">&#x03C0;</span>, we showed that for <span 
+class="cmsy-10"><img 
+src="cmsy10-43.png" alt="C" class="10x-x-43" /></span>(<span 
+class="cmmi-10">&#x03BC;</span><sub><span 
+class="cmmi-7">A</span></sub><span 
+class="cmmi-10">,&#x03BC;</span><sub><span 
+class="cmmi-7">B</span></sub>) := <span 
+class="cmsy-10">{</span><span 
+class="cmmi-10">&#x03C0; </span><span 
+class="cmsy-10">&#x2208; </span><span 
+class="cmmi-10">P</span>(<span 
+class="cmsy-10"><img 
+src="cmsy10-58.png" alt="X" class="10x-x-58" /></span><sup><span 
+class="cmr-7">2</span></sup>);<span 
+class="cmmi-10">&#x03C0;</span><sub><span 
+class="cmr-7">1</span></sub> = <span 
+class="cmmi-10">&#x03BC;</span><sub><span 
+class="cmmi-7">A</span></sub><span 
+class="cmmi-10">,&#x03C0;</span><sub><span 
+class="cmr-7">2</span></sub> = <span 
+class="cmmi-10">&#x03BC;</span><sub><span 
+class="cmmi-7">B</span></sub><span 
+class="cmsy-10">}</span>
+                                                                                         
+                                                                                         
+   <center class="math-display" >
+<img 
+src="main43x.png" alt="         &#x222B;
+
+&#x03C0;&#x2208;Ci(&#x03BC;nAf,&#x03BC;B) X2 d(x,y)d&#x03C0; = Td(&#x03BC;A,&#x03BC;B ) &#x2265; r
+" class="math-display" ></center>
+<!--l. 484--><p class="indent" >   Using the triangle inequality
+<table 
+class="align-star">
+                       <tr><td 
+class="align-odd"><span 
+class="cmmi-10">r </span><span 
+class="cmsy-10">&#x2264; </span><span 
+class="cmmi-10">T</span><sub><span 
+class="cmmi-7">d</span></sub>(<span 
+class="cmmi-10">&#x03BC;</span><sub><span 
+class="cmmi-7">A</span></sub><span 
+class="cmmi-10">,&#x03BC;</span><sub><span 
+class="cmmi-7">B</span></sub>)</td>                       <td 
+class="align-even"> <span 
+class="cmsy-10">&#x2264; </span><span 
+class="cmmi-10">T</span><sub><span 
+class="cmmi-7">d</span></sub>(<span 
+class="cmmi-10">&#x03BC;</span><sub><span 
+class="cmmi-7">A</span></sub><span 
+class="cmmi-10">,&#x03BC;</span>) + <span 
+class="cmmi-10">T</span><sub><span 
+class="cmmi-7">d</span></sub>(<span 
+class="cmmi-10">&#x03BC;</span><sub><span 
+class="cmmi-7">B</span></sub><span 
+class="cmmi-10">,&#x03BC;</span>)</td>                               <td 
+class="align-label"></td>                       <td 
+class="align-label">
+                       </td></tr><tr><td 
+class="align-odd"></td>                                    <td 
+class="align-even"> <span 
+class="cmsy-10">&#x2264; </span><span 
+class="cmmi-10">&#x03B1;</span><sup><span 
+class="cmsy-7">-</span><span 
+class="cmr-7">1</span></sup>(<span 
+class="cmmi-10">H</span>(<span 
+class="cmmi-10">&#x03BC;</span><sub>
+<span 
+class="cmmi-7">A</span></sub><span 
+class="cmsy-10">&#x2223;</span><span 
+class="cmmi-10">&#x03BC;</span>)) + <span 
+class="cmmi-10">&#x03B1;</span><sup><span 
+class="cmsy-7">-</span><span 
+class="cmr-7">1</span></sup>(<span 
+class="cmmi-10">H</span>(<span 
+class="cmmi-10">&#x03BC;</span><sub>
+<span 
+class="cmmi-7">B</span></sub><span 
+class="cmsy-10">&#x2223;</span><span 
+class="cmmi-10">&#x03BC;</span>))</td>                       <td 
+class="align-label"></td>                       <td 
+class="align-label"></td></tr></table>
+<!--l. 491--><p class="indent" >   We now calculate <span 
+class="cmmi-10">H</span>(<span 
+class="cmmi-10">&#x03BC;</span><sub><span 
+class="cmmi-7">A</span></sub><span 
+class="cmsy-10">&#x2223;</span><span 
+class="cmmi-10">&#x03BC;</span>), with <span 
+class="cmmi-10">H</span>(<span 
+class="cmmi-10">&#x03BC;</span><sub><span 
+class="cmmi-7">B</span></sub><span 
+class="cmsy-10">&#x2223;</span><span 
+class="cmmi-10">&#x03BC;</span>) being analogous.
+<table 
+class="align-star">
+                   <tr><td 
+class="align-odd"><span 
+class="cmmi-10">H</span>(<span 
+class="cmmi-10">&#x03BC;</span><sub><span 
+class="cmmi-7">A</span></sub><span 
+class="cmsy-10">&#x2223;</span><span 
+class="cmmi-10">&#x03BC;</span>) = <span 
+class="cmex-10">&#x222B;</span>
+  <img 
+src="main44x.png" alt="d&#x03BC;A-
+ d&#x03BC;"  class="frac" align="middle">log(<img 
+src="main45x.png" alt="d&#x03BC;A-
+d&#x03BC;"  class="frac" align="middle">)<span 
+class="cmmi-10">d&#x03BC;</span></td>                   <td 
+class="align-even"> = <span 
+class="cmex-10">&#x222B;</span>
+  <img 
+src="main46x.png" alt="-1---
+&#x03BC;(A)"  class="frac" align="middle"><span 
+class="bbm-10">1</span><sub><span 
+class="cmmi-7">A</span></sub> log(<img 
+src="main47x.png" alt="--1--
+&#x03BC;(A)"  class="frac" align="middle"><span 
+class="bbm-10">1</span><sub><span 
+class="cmmi-7">A</span></sub>)<span 
+class="cmmi-10">d&#x03BC;</span></td>                   <td 
+class="align-label"></td>                   <td 
+class="align-label">
+                   </td></tr><tr><td 
+class="align-odd"></td>                                             <td 
+class="align-even"> = <span 
+class="cmsy-10">-</span><img 
+src="main48x.png" alt="log-&#x03BC;(A)
+ &#x03BC;(A )"  class="frac" align="middle"><span 
+class="cmex-10">&#x222B;</span>
+       <sub><span 
+class="cmmi-7">A</span></sub><span 
+class="cmmi-10">d&#x03BC;</span></td>                          <td 
+class="align-label"></td>                   <td 
+class="align-label">
+                   </td></tr><tr><td 
+class="align-odd"></td>                                             <td 
+class="align-even"> = <span 
+class="cmsy-10">-</span>log <span 
+class="cmmi-10">&#x03BC;</span>(<span 
+class="cmmi-10">A</span>)</td>                                <td 
+class="align-label"></td>                   <td 
+class="align-label"></td></tr></table>
+                                                                                         
+                                                                                         
+<!--l. 500--><p class="indent" >   Hence, <span 
+class="cmmi-10">H</span>(<span 
+class="cmmi-10">&#x03BC;</span><sub><span 
+class="cmmi-7">A</span></sub><span 
+class="cmsy-10">&#x2223;</span><span 
+class="cmmi-10">&#x03BC;</span>) = <span 
+class="cmsy-10">-</span>log <span 
+class="cmmi-10">&#x03BC;</span>(<span 
+class="cmmi-10">A</span>) <span 
+class="cmsy-10">&#x2264;</span> log 2 and <span 
+class="cmmi-10">H</span>(<span 
+class="cmmi-10">&#x03BC;</span><sub><span 
+class="cmmi-7">B</span></sub><span 
+class="cmsy-10">&#x2223;</span><span 
+class="cmmi-10">&#x03BC;</span>) = <span 
+class="cmsy-10">-</span>log <span 
+class="cmmi-10">&#x03BC;</span>(<span 
+class="cmmi-10">B</span>) = <span 
+class="cmsy-10">-</span>log(1 <span 
+class="cmsy-10">- </span><span 
+class="cmmi-10">&#x03BC;</span>(<span 
+class="cmmi-10">A</span><sup><span 
+class="cmmi-7">r</span></sup>)). Then,
+<table 
+class="align-star">
+               <tr><td 
+class="align-odd"><span 
+class="cmmi-10">r </span><span 
+class="cmsy-10">&#x2264; </span><span 
+class="cmmi-10">&#x03B1;</span><sup><span 
+class="cmsy-7">-</span><span 
+class="cmr-7">1</span></sup>(<span 
+class="cmmi-10">H</span>(<span 
+class="cmmi-10">&#x03BC;</span><sub>
+<span 
+class="cmmi-7">A</span></sub><span 
+class="cmsy-10">&#x2223;</span><span 
+class="cmmi-10">&#x03BC;</span>)) + <span 
+class="cmmi-10">&#x03B1;</span><sup><span 
+class="cmsy-7">-</span><span 
+class="cmr-7">1</span></sup>(<span 
+class="cmmi-10">H</span>(<span 
+class="cmmi-10">&#x03BC;</span><sub>
+<span 
+class="cmmi-7">B</span></sub><span 
+class="cmsy-10">&#x2223;</span><span 
+class="cmmi-10">&#x03BC;</span>)) <span 
+class="cmsy-10">&#x2264; </span><span 
+class="cmmi-10">&#x03B1;</span><sup><span 
+class="cmsy-7">-</span><span 
+class="cmr-7">1</span></sup>(log 2) + <span 
+class="cmmi-10">&#x03B1;</span><sup><span 
+class="cmsy-7">-</span><span 
+class="cmr-7">1</span></sup>(<span 
+class="cmmi-10">H</span>(<span 
+class="cmmi-10">&#x03BC;</span><sub>
+<span 
+class="cmmi-7">B</span></sub><span 
+class="cmsy-10">&#x2223;</span><span 
+class="cmmi-10">&#x03BC;</span>))</td>               <td 
+class="align-even"></td>               <td 
+class="align-label"></td></tr></table>
+<!--l. 509--><p class="indent" >
+<table 
+class="align-star">
+                         <tr><td 
+class="align-odd"><span 
+class="cmmi-10">r </span><span 
+class="cmsy-10">- </span><span 
+class="cmmi-10">r</span><sub><span 
+class="cmmi-7">o</span></sub> = <span 
+class="cmmi-10">r </span><span 
+class="cmsy-10">- </span><span 
+class="cmmi-10">&#x03B1;</span><sup><span 
+class="cmsy-7">-</span><span 
+class="cmr-7">1</span></sup>(log 2) <span 
+class="cmsy-10">&#x2264; </span><span 
+class="cmmi-10">&#x03B1;</span><sup><span 
+class="cmsy-7">-</span><span 
+class="cmr-7">1</span></sup>(<span 
+class="cmsy-10">-</span>log(1 <span 
+class="cmsy-10">- </span><span 
+class="cmmi-10">&#x03BC;</span>(<span 
+class="cmmi-10">A</span><sup><span 
+class="cmmi-7">r</span></sup>))</td>                         <td 
+class="align-even"></td>                         <td 
+class="align-label"></td></tr></table>
+<!--l. 513--><p class="indent" >   Therefore, we conclude that <span 
+class="cmmi-10">&#x03BC;</span>(<span 
+class="cmmi-10">A</span><sup><span 
+class="cmmi-7">r</span></sup>) <span 
+class="cmsy-10">&#x2265; </span>1 <span 
+class="cmsy-10">- </span><span 
+class="cmmi-10">e</span><sup><span 
+class="cmsy-7">-</span><span 
+class="cmmi-7">&#x03B1;</span><span 
+class="cmr-7">(</span><span 
+class="cmmi-7">r</span><span 
+class="cmsy-7">-</span><span 
+class="cmmi-7">r</span><sub><span 
+class="cmmi-5">o</span></sub><span 
+class="cmr-7">)</span></sup>, for all <span 
+class="cmmi-10">r </span><span 
+class="cmsy-10">&#x2265; </span><span 
+class="cmmi-10">r</span><sub><span 
+class="cmmi-7">o</span></sub> = <span 
+class="cmmi-10">&#x03B1;</span><sup><span 
+class="cmsy-7">-</span><span 
+class="cmr-7">1</span></sup>(log 2).
+<!--l. 516--><p class="indent" >   To show the equivalence for 1-Lipschitz functions, just use Proposition 1 and <span 
+class="cmmi-10">r</span><span 
+class="cmsy-10">&#x2032; </span>= <span 
+class="cmmi-10">r </span>+ <span 
+class="cmmi-10">r</span><sub><span 
+class="cmmi-7">o</span></sub> in the inequality we just
+proved. Finally
+   <center class="math-display" >
+<img 
+src="main49x.png" alt="    r&#x2032;       - &#x03B1;(r&#x2032;- r)      - &#x03B1;(r)                      -&#x03B1;(r)
+&#x03BC;(A  ) &#x2265; 1 - e    o = 1 - e    &#x2234; &#x03BC;(f &#x003E; mf + r+ ro) &#x2264; e
+" class="math-display" ></center>                                                                                        __
+   </div>
+   </div>
+<!--l. 525--><p class="indent" >   Let&#8217;s use everything we proved so far in an example, so we can better understand how these inequalities relate to
+concentration.
+   <div class="newtheorem">
+<!--l. 528--><p class="noindent" ><span class="head">
+<a 
+ id="x1-4013r1"></a>
+<span 
+class="cmbx-10">Example 1.</span>  </span>Assume that <span 
+class="cmmi-10">X </span><span 
+class="cmsy-10">&#x2208; </span>[<span 
+class="cmmi-10">a,b</span>] is a random variable and make <span 
+class="cmmi-10">L </span>= <span 
+class="cmmi-10">b </span><span 
+class="cmsy-10">- </span><span 
+class="cmmi-10">a</span>. It is clear that using the
+Hamming metric <span 
+class="cmmi-10">d</span><sub><span 
+class="cmmi-7">H</span></sub>, that <span 
+class="cmmi-10">X </span>is <span 
+class="cmmi-10">L</span>-Lipschitz. Next, define <span 
+class="cmmi-10">T</span><sub><span 
+class="cmmi-7">d</span><sub><span 
+class="cmmi-5">H</span><sub>
+<span 
+class="cmmi-5">L</span></sub></sub></sub>(<span 
+class="cmmi-10">&#x03BC;,&#x03BD;</span>) = <span 
+class="cmmi-10">L </span><span 
+class="cmsy-10">&#x22C5;||</span><span 
+class="cmmi-10">&#x03BC; </span><span 
+class="cmsy-10">- </span><span 
+class="cmmi-10">&#x03BD;</span><span 
+class="cmsy-10">||</span><sub><span 
+class="cmmi-7">TV</span> </sub>
+<!--l. 533--><p class="indent" >   Using Pinkser&#8217;s inequality
+   <center class="math-display" >
+<img 
+src="main50x.png" alt="      2                   2       2     2             2         L2H-(&#x03BC; | &#x03BD;)
+||&#x03BC;- &#x03BD;||TV &#x2264; H (&#x03BC; | &#x03BD; )&#x2215;2 &#x21D0;&#x21D2; L ||&#x03BC; - &#x03BD;||TV &#x2264; L H(&#x03BC; | &#x03BD;)&#x2215;2 &#x2234; TdHL (&#x03BC;,&#x03BD;) &#x2264;  2
+" class="math-display" ></center>
+<!--l. 540--><p class="indent" >   Therefore, for <span 
+class="cmmi-10">&#x03B1;</span>(<span 
+class="cmmi-10">x</span>) = <img 
+src="main51x.png" alt="2
+L2"  class="frac" align="middle"><span 
+class="cmmi-10">x</span><sup><span 
+class="cmr-7">2</span></sup>, we have <span 
+class="cmmi-10">&#x03B1;</span>(<span 
+class="cmmi-10">T</span><sub><span 
+class="cmmi-7">d</span><sub><span 
+class="cmmi-5">H</span><sub>
+<span 
+class="cmmi-5">L</span></sub></sub></sub>) <span 
+class="cmsy-10">&#x2264; </span><span 
+class="cmmi-10">H</span>
+<!--l. 543--><p class="indent" >   We then conclude that
+   <center class="math-display" >
+<img 
+src="main52x.png" alt="                       -2r2&#x2215;L2
+&#x03BC;(|X - mX | &#x003E; r+ ro) &#x2264; 2e
+" class="math-display" ></center>
+<!--l. 548--><p class="indent" >   Which is very similar to Hoeffding&#8217;s inequality for bounded random variables.
+   </div>
+<!--l. 551--><p class="indent" >   From this example, it becomes quite clear what we still have to prove. Our results just works for a single random
+variable. One is usually interested in studying concentration for several random variables, usually independent or
+with some kind of weak dependence (e.g: Markov).
+<!--l. 555--><p class="indent" >   To extend what we have proved so far to several random variables, we need to obtain estimates no only to <span 
+class="cmmi-10">&#x03BC;</span>, but
+to <span 
+class="cmmi-10">&#x03BC;</span><sup><span 
+class="cmmi-7">n</span></sup> = <span 
+class="cmmi-10">&#x03BC; </span><span 
+class="cmsy-10">&#x2297; </span><span 
+class="cmmi-10">... </span><span 
+class="cmsy-10">&#x2297; </span><span 
+class="cmmi-10">&#x03BC; </span><span 
+class="cmsy-10">&#x2208;<img 
+src="cmsy10-58.png" alt="X" class="10x-x-58" /></span><sup><span 
+class="cmmi-7">n</span></sup> (this is just the product measure. Some authors use <span 
+class="cmmi-10">&#x03BC;</span><sub><span 
+class="cmr-7">1</span></sub> <span 
+class="cmsy-10">&#x00D7; </span><span 
+class="cmmi-10">&#x03BC;</span><sub><span 
+class="cmr-7">2</span></sub> instead of <span 
+class="cmmi-10">&#x03BC;</span><sub><span 
+class="cmr-7">1</span></sub> <span 
+class="cmsy-10">&#x2297; </span><span 
+class="cmmi-10">&#x03BC;</span><sub><span 
+class="cmr-7">2</span></sub>). This is
+called the <span 
+class="cmti-10">tensorization of transportation cost</span>.
+<!--l. 561--><p class="indent" >   Here we will deal with only the product space of two probability measures. But the extension for <span 
+class="cmmi-10">n </span>cases follows
+directly from induction.
+<!--l. 564--><p class="indent" >   Let&#8217;s consider two polish spaces <span 
+class="cmsy-10"><img 
+src="cmsy10-58.png" alt="X" class="10x-x-58" /></span><sub><span 
+class="cmr-7">1</span></sub><span 
+class="cmmi-10">,</span><span 
+class="cmsy-10"><img 
+src="cmsy10-58.png" alt="X" class="10x-x-58" /></span><sub><span 
+class="cmr-7">2</span></sub>, with <span 
+class="cmmi-10">&#x03BC;</span><sub><span 
+class="cmr-7">1</span></sub> <span 
+class="cmsy-10">&#x2208; </span><span 
+class="cmmi-10">P</span>(<span 
+class="cmsy-10"><img 
+src="cmsy10-58.png" alt="X" class="10x-x-58" /></span><sub><span 
+class="cmr-7">1</span></sub>) and <span 
+class="cmmi-10">&#x03BC;</span><sub><span 
+class="cmr-7">2</span></sub> <span 
+class="cmsy-10">&#x2208; </span><span 
+class="cmmi-10">P</span>(<span 
+class="cmsy-10"><img 
+src="cmsy10-58.png" alt="X" class="10x-x-58" /></span><sub><span 
+class="cmr-7">2</span></sub>). Consider <span 
+class="cmmi-10">c</span><sub><span 
+class="cmr-7">1</span></sub>(<span 
+class="cmmi-10">x</span><sub><span 
+class="cmr-7">1</span></sub><span 
+class="cmmi-10">,y</span><sub><span 
+class="cmr-7">1</span></sub>) and <span 
+class="cmmi-10">c</span><sub><span 
+class="cmr-7">2</span></sub>(<span 
+class="cmmi-10">x</span><sub><span 
+class="cmr-7">2</span></sub><span 
+class="cmmi-10">,y</span><sub><span 
+class="cmr-7">2</span></sub>)
+defined on <span 
+class="cmsy-10"><img 
+src="cmsy10-58.png" alt="X" class="10x-x-58" /></span><sub><span 
+class="cmr-7">1</span></sub> <span 
+class="cmsy-10">&#x00D7;<img 
+src="cmsy10-58.png" alt="X" class="10x-x-58" /></span><sub><span 
+class="cmr-7">1</span></sub> and <span 
+class="cmsy-10"><img 
+src="cmsy10-58.png" alt="X" class="10x-x-58" /></span><sub><span 
+class="cmr-7">2</span></sub> <span 
+class="cmsy-10">&#x00D7;<img 
+src="cmsy10-58.png" alt="X" class="10x-x-58" /></span><sub><span 
+class="cmr-7">2</span></sub>, respectively. For <span 
+class="cmmi-10">&#x03BC;</span><sub><span 
+class="cmr-7">1</span></sub> <span 
+class="cmsy-10">&#x2297; </span><span 
+class="cmmi-10">&#x03BC;</span><sub><span 
+class="cmr-7">2</span></sub> we then define
+   <table 
+class="equation"><tr><td><a 
+ id="x1-4014r7"></a>
+                                                                                         
+                                                                                         
+   <center class="math-display" >
+<img 
+src="main53x.png" alt="c1 &#x2297; c2((x1,y1),(x2,y2)) := c1(x1,y1)+ c2(x2,y2)
+" class="math-display" ></center></td><td class="equation-label">(7)</td></tr></table>
+<!--l. 572--><p class="nopar" >
+<!--l. 574--><p class="indent" >   Let <span 
+class="cmmi-10">&#x03BD; </span>be a probability measure on <span 
+class="cmsy-10"><img 
+src="cmsy10-58.png" alt="X" class="10x-x-58" /></span><sub><span 
+class="cmr-7">1</span></sub> <span 
+class="cmsy-10">&#x00D7;<img 
+src="cmsy10-58.png" alt="X" class="10x-x-58" /></span><sub><span 
+class="cmr-7">2</span></sub>. We write the disintegration of <span 
+class="cmmi-10">&#x03BD; </span>as
+   <table 
+class="equation"><tr><td><a 
+ id="x1-4015r8"></a>
+   <center class="math-display" >
+<img 
+src="main54x.png" alt="d&#x03BD;(x1,x2) = d&#x03BD;1(x1)d&#x03BD;x21(x2)
+" class="math-display" ></center></td><td class="equation-label">(8)</td></tr></table>
+<!--l. 578--><p class="nopar" >
+<!--l. 580--><p class="indent" >   The above definition of disintegration can be thought of a rigorous way of defining the conditional probability
+measures. For example, if (<span 
+class="cmmi-10">X,Y </span>) <span 
+class="cmsy-10">~ </span><span 
+class="cmmi-10">&#x03BD;</span>, then <span 
+class="cmmi-10">X </span><span 
+class="cmsy-10">~ </span><span 
+class="cmmi-10">&#x03BD;</span><sub><span 
+class="cmr-7">1</span></sub>, and <span 
+class="cmmi-10">&#x03BD;</span><sub><span 
+class="cmr-7">2</span></sub><sup><span 
+class="cmmi-7">x</span><sub><span 
+class="cmr-5">1</span></sub></sup> is <span 
+class="cmmi-10">P</span>(<span 
+class="cmmi-10">Y </span><span 
+class="cmsy-10">&#x2208;&#x22C5;</span><span 
+class="cmsy-10">&#x2223;</span><span 
+class="cmmi-10">X </span>= <span 
+class="cmmi-10">x</span><sub><span 
+class="cmr-7">1</span></sub>).
+<!--l. 585--><p class="indent" >   It is possible to prove that
+   <table 
+class="equation"><tr><td><a 
+ id="x1-4016r9"></a>
+   <center class="math-display" >
+<img 
+src="main55x.png" alt="                            &#x222B;
+Tc1&#x2297;c2(&#x03BD;,&#x03BC;1 &#x2297; &#x03BC;2) &#x2264; Tc1(&#x03BD;1,&#x03BC;1)+   Tc2(&#x03BD;x21,&#x03BC;2)d&#x03BD;1(x1)
+                             X1
+" class="math-display" ></center></td><td class="equation-label">(9)</td></tr></table>
+<!--l. 589--><p class="nopar" >
+For a proof of the inequality above, look the Appendix 1 of <span class="cite"><a 
+href="#Xgozlan2010transport">Gozlan and Léonard</a></span>&#x00A0;[<span class="cite"><a 
+href="#Xgozlan2010transport">2010</a></span>].
+<!--l. 592--><p class="indent" >   Another result stated without proof is the following:
+   <table 
+class="equation"><tr><td><a 
+ id="x1-4017r10"></a>
+   <center class="math-display" >
+                                                                                         
+                                                                                         
+<img 
+src="main56x.png" alt="                          &#x222B;
+H (&#x03BD; | &#x03BC;1 &#x2297; &#x03BC;2) = H (&#x03BD;1 | &#x03BC;1)+ H (&#x03BD;x21| &#x03BC;2)d&#x03BD;1(x1)
+                           X1
+" class="math-display" ></center></td><td class="equation-label">(10)</td></tr></table>
+<!--l. 596--><p class="nopar" >
+<!--l. 598--><p class="indent" >   This is known as the chain rule for relative entropy. A proof can be found on <span class="cite"><a 
+href="#Xvan2014probability">van Handel</a></span>&#x00A0;[<span class="cite"><a 
+href="#Xvan2014probability">2014</a></span>] Lemma
+4.18.
+<!--l. 601--><p class="indent" >   We need one more definition. The inf-convolution of two functions on [0<span 
+class="cmmi-10">,</span><span 
+class="cmsy-10">&#x221E;</span>) is
+   <center class="math-display" >
+<img 
+src="main57x.png" alt="&#x03B1;1 * &#x03B1;2(t) := inf{&#x03B1;1(t1)+ &#x03B1;2(t2);t1,t2 &#x2265; 0 : t1 + t2 = t}, t &#x2265; 0
+" class="math-display" ></center>
+   <div class="newtheorem">
+<!--l. 608--><p class="noindent" ><span class="head">
+<a 
+ id="x1-4018r2"></a>
+<span 
+class="cmbx-10">Proposition 2.</span>  </span>Suppose that the transport-entropy inequalities are satisfied
+   <center class="math-display" >
+<img 
+src="main58x.png" alt="&#x03B1;1(Tc1(&#x03BD;1,&#x03BC;1)) &#x2264; H (&#x03BD;1 | &#x03BC;1)&#x03B1;2(Tc2(&#x03BD;2,&#x03BC;2)) &#x2264; H (&#x03BD;1 | &#x03BC;1)
+" class="math-display" ></center> for <span 
+class="cmmi-10">&#x03B1;</span><sub><span 
+class="cmr-7">1</span></sub><span 
+class="cmmi-10">,&#x03B1;</span><sub><span 
+class="cmr-7">2</span></sub> : [0<span 
+class="cmmi-10">,</span><span 
+class="cmsy-10">&#x221E;</span>) <span 
+class="cmsy-10">&#x2192; </span>[0<span 
+class="cmmi-10">.</span><span 
+class="cmsy-10">&#x221E;</span>) convex increasing Then, on the product space we have
+   <center class="math-display" >
+<img 
+src="main59x.png" alt="&#x03B1;1 * &#x03B1;2(Tc1&#x2297;c2(&#x03BD;,&#x03BC;1 &#x2297; &#x03BC;2)) &#x2264; H (&#x03BD; | &#x03BC;1 &#x2297; &#x03BC;2)
+" class="math-display" ></center>
+   </div>
+<!--l. 622--><p class="indent" >   We can extend this proposition for the case of <span 
+class="cmmi-10">n </span>product spaces such that <span 
+class="cmmi-10">&#x03BC;</span><sup><span 
+class="cmmi-7">n</span></sup> then verifies
+                                                                                         
+                                                                                         
+   <center class="math-display" >
+<img 
+src="main60x.png" alt="&#x03B1;*n(Tc&#x2297;n) &#x2264; H
+" class="math-display" ></center>
+   <div class="newtheorem">
+<!--l. 628--><p class="noindent" ><span class="head">
+<a 
+ id="x1-4019r3"></a>
+<span 
+class="cmbx-10">Proposition 3.</span>  </span>Suppose that <span 
+class="cmmi-10">&#x03BC; </span><span 
+class="cmsy-10">&#x2208; </span><span 
+class="cmmi-10">P</span>(<span 
+class="cmsy-10"><img 
+src="cmsy10-58.png" alt="X" class="10x-x-58" /></span>) satisfies the transport-entropy inequality, for the <span 
+class="cmmi-10">&#x03B1; </span>increasing and
+convex. Then, <span 
+class="cmmi-10">&#x03BC;</span><sup><span 
+class="cmmi-7">n</span></sup> satisfies
+   <center class="math-display" >
+<img 
+src="main61x.png" alt="   (     )
+n&#x03B1;   Tc&#x2297;n-  &#x2264; H(&#x03BD; | &#x03BC;n)
+      n
+" class="math-display" ></center>
+   </div>
+<!--l. 637--><p class="indent" >   This proposition follows directly from the previous one.
+<!--l. 639--><p class="indent" >   Finally, we can go back to our example, and conclude that if <span 
+class="cmmi-10">X</span><sub><span 
+class="cmr-7">1</span></sub><span 
+class="cmmi-10">,...,X</span><sub><span 
+class="cmmi-7">n</span></sub> <span 
+class="cmsy-10">&#x2208; </span>[<span 
+class="cmmi-10">a,b</span>] are <span 
+class="cmmi-10">i.i.d</span>. Then, for
+<span 
+class="cmmi-10">S</span><sub><span 
+class="cmmi-7">n</span></sub> = <span 
+class="cmmi-10">X</span><sub><span 
+class="cmr-7">1</span></sub> + <span 
+class="cmmi-10">... </span>+ <span 
+class="cmmi-10">X</span><sub><span 
+class="cmmi-7">n</span></sub>, we have
+   <center class="math-display" >
+<img 
+src="main62x.png" alt="  n                      -2r22
+&#x03BC;  (|Sn - mS &#x03BD;| &#x003E; r+ ro) &#x2264; 2e nL
+" class="math-display" ></center>
+<!--l. 1--><p class="noindent" >
+   <h3 class="likesectionHead"><a 
+ id="x1-50003"></a>References</h3>
+<!--l. 1--><p class="noindent" >
+  <div class="thebibliography">
+  <p class="bibitem" ><span class="biblabel">
+<a 
+ id="Xgozlan2010transport"></a><span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span>Nathael Gozlan and Christian Léonard. Transport inequalities. a survey. <span 
+class="cmti-10">arXiv preprint arXiv:1003.3852</span>,
+  2010.
+                                                                                         
+                                                                                         
+  </p>
+  <p class="bibitem" ><span class="biblabel">
+<a 
+ id="Xmarton1986simple"></a><span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span>Katalin Marton. A simple proof of the blowing-up lemma (corresp.). <span 
+class="cmti-10">IEEE Transactions on Information</span>
+  <span 
+class="cmti-10">Theory</span>, 32(3):445&#8211;446, 1986.
+  </p>
+  <p class="bibitem" ><span class="biblabel">
+<a 
+ id="Xpanaretos2019statistical"></a><span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span>Victor&#x00A0;M Panaretos and Yoav Zemel.  Statistical aspects of wasserstein distances.  <span 
+class="cmti-10">Annual review of</span>
+  <span 
+class="cmti-10">statistics and its application</span>, 6:405&#8211;431, 2019.
+  </p>
+  <p class="bibitem" ><span class="biblabel">
+<a 
+ id="Xvan2014probability"></a><span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span>Ramon van Handel. Probability in high dimension. Technical report, PRINCETON UNIV NJ, 2014.
+  </p>
+  <p class="bibitem" ><span class="biblabel">
+<a 
+ id="Xvershynin2018high"></a><span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span>Roman  Vershynin.   <span 
+class="cmti-10">High-dimensional probability: An introduction with applications in data science</span>,
+  volume&#x00A0;47. Cambridge university press, 2018.
+  </p>
+  <p class="bibitem" ><span class="biblabel">
+<a 
+ id="XwassermanStatisicalMethods2018"></a><span class="bibsp">&#x00A0;&#x00A0;&#x00A0;</span></span>Larry Wasserman. Statistical methods for machine learning - lecture notes, 2018.
+</p>
+  </div>
+    
+</body></html> 
+
+                                                                                         
+
+

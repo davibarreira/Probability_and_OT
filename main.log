@@ -1,11 +1,14 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.9.8)  9 SEP 2020 14:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=latex 2020.9.15)  5 OCT 2020 16:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**main.tex
-(./main.tex
-LaTeX2e <2020-02-02> patch level 2
-L3 programming layer <2020-02-14>
+**\makeatletter\def\HCode{\futurelet\HCode\HChar}\def\HChar{\ifx"\HCode\def\HCo
+de"##1"{\Link##1}\expandafter\HCode\else\expandafter\Link\fi}\def\Link#1.a.b.c.
+{\g@addto@macro\@documentclasshook{\RequirePackage[#1,html]{tex4ht}}\let\HCode\
+documentstyle\def\documentstyle{\let\documentstyle\HCode\expandafter\def\csname
+ tex4ht\endcsname{#1,html}\def\HCode####1{\documentstyle[tex4ht,}\@ifnextchar[{
+\HCode}{\documentstyle[tex4ht]}}}\makeatother\HCode .a.b.c.\input  main.tex
+ (./main.tex
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2019/12/20 v1.4l Standard LaTeX document class
 (/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
@@ -23,17 +26,31 @@ File: size10.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
 \belowcaptionskip=\skip48
 \bibindent=\dimen134
 )
+(/usr/share/texlive/texmf-dist/tex/generic/tex4ht/tex4ht.sty
+version 2019-03-18-15:24
+Package: tex4ht 
+--------------------------------------
+--- Note --- for _ at preamble, use the command line option `early_'
+--------------------------------------
+--------------------------------------
+--- Note --- for ^ at preamble, use the command line option `early^'
+--------------------------------------
+\tmp:toks=\toks14
+)
+(/usr/share/texlive/texmf-dist/tex/generic/tex4ht/usepackage.4ht
+version 2019-12-19-14:27
+)
 (/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2018/08/11 v1.3c Input encoding file
-\inpenc@prehook=\toks14
-\inpenc@posthook=\toks15
+\inpenc@prehook=\toks15
+\inpenc@posthook=\toks16
 )
 (/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2020/02/11 v2.0o Standard LaTeX package
 )
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
-\@emptytoks=\toks16
+\@emptytoks=\toks17
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
@@ -50,7 +67,7 @@ Package: amstext 2000/06/29 v2.01 AMS text
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks17
+\@emptytoks=\toks18
 \ex@=\dimen135
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
@@ -80,35 +97,35 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
 \dotsspace@=\muskip16
 \c@parentequation=\count182
 \dspbrk@lvl=\count183
-\tag@help=\toks18
+\tag@help=\toks19
 \row@=\count184
 \column@=\count185
 \maxfields@=\count186
-\andhelp@=\toks19
+\andhelp@=\toks20
 \eqnshift@=\dimen138
 \alignsep@=\dimen139
 \tagshift@=\dimen140
 \tagwidth@=\dimen141
 \totwidth@=\dimen142
 \lineht@=\dimen143
-\@envbody=\toks20
+\@envbody=\toks21
 \multlinegap=\skip50
 \multlinetaggap=\skip51
-\mathdisplay@stack=\toks21
+\mathdisplay@stack=\toks22
 LaTeX Info: Redefining \[ on input line 2859.
 LaTeX Info: Redefining \] on input line 2860.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/amscls/amsthm.sty
 Package: amsthm 2017/10/31 v2.20.4
-\thm@style=\toks22
-\thm@bodyfont=\toks23
-\thm@headfont=\toks24
-\thm@notefont=\toks25
-\thm@headpunct=\toks26
+\thm@style=\toks23
+\thm@bodyfont=\toks24
+\thm@headfont=\toks25
+\thm@notefont=\toks26
+\thm@headpunct=\toks27
 \thm@preskip=\skip52
 \thm@postskip=\skip53
 \thm@headsep=\skip54
-\dth@everypar=\toks27
+\dth@everypar=\toks28
 )
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
@@ -125,7 +142,7 @@ Package: mathtools 2020/01/17 v1.23 mathematical typesetting tools
 
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
-\KV@toks@=\toks28
+\KV@toks@=\toks29
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
@@ -167,6 +184,9 @@ LaTeX Info: Redefining \cite on input line 694.
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
 
+(/usr/share/texlive/texmf-dist/tex/generic/tex4ht/usepackage.4ht
+version 2019-12-19-14:27
+)
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
 
@@ -176,10 +196,10 @@ Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 (/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
-Package graphics Info: Driver file: pdftex.def on input line 105.
+Package graphics Info: Driver file: dvips.def on input line 105.
 
-(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
-File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/dvips.def
+File: dvips.def 2017/06/20 v3.1d Graphics/color driver for dvips
 ))
 \Gin@req@height=\dimen153
 \Gin@req@width=\dimen154
@@ -187,7 +207,7 @@ File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
 \lst@mode=\count192
 \lst@gtempboxa=\box47
-\lst@token=\toks29
+\lst@token=\toks30
 \lst@length=\count193
 \lst@currlwidth=\dimen155
 \lst@column=\count194
@@ -229,7 +249,10 @@ Package: iftex 2019/11/07 v1.0c TeX engine tests
 \Gm@layoutheight=\dimen164
 \Gm@layouthoffset=\dimen165
 \Gm@layoutvoffset=\dimen166
-\Gm@dimlist=\toks30
+\Gm@dimlist=\toks31
+)
+(/usr/share/texlive/texmf-dist/tex/generic/tex4ht/usepackage.4ht
+version 2019-12-19-14:27
 )
 (/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
@@ -237,9 +260,8 @@ Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
 (/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
-Package xcolor Info: Driver file: pdftex.def on input line 225.
+Package xcolor Info: Driver file: dvips.def on input line 225.
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
-Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
 Package xcolor Info: Model `RGB' extended on input line 1364.
 Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
 Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
@@ -263,8 +285,8 @@ Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
 
 (/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex
 (/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkvutils.tex
-\XKV@toks=\toks31
-\XKV@tempa@toks=\toks32
+\XKV@toks=\toks32
+\XKV@tempa@toks=\toks33
 )
 \XKV@depth=\count269
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
@@ -276,8 +298,8 @@ Package: mfirstuc 2017/11/14 v2.06 (NLCT)
 Package: etoolbox 2019/09/21 v2.5h e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count270
 )
-\@glsmfirst=\toks33
-\@glsmrest=\toks34
+\@glsmfirst=\toks34
+\@glsmrest=\toks35
 )
 (/usr/share/texlive/texmf-dist/tex/latex/textcase/textcase.sty
 Package: textcase 2019/09/14 v1.00 Text only upper/lower case changing (DPC)
@@ -343,7 +365,7 @@ Package: fp-upn 1996/10/21
 (/usr/share/texlive/texmf-dist/tex/latex/fp/fp-eval.sty
 Package: fp-eval 1995/04/03
 )))
-\@dtl@toks=\toks35
+\@dtl@toks=\toks36
 \@dtl@tmpcount=\count283
 \dtl@tmplength=\skip61
 \dtl@sortresult=\count284
@@ -358,12 +380,12 @@ Package: fp-eval 1995/04/03
 Package: glossaries-compatible-307 2020/02/13 v4.45 (NLCT)
 )
 \gls@level=\count290
-\@gls@tmpb=\toks36
+\@gls@tmpb=\toks37
 \gls@tmplen=\skip62
-\glskeylisttok=\toks37
-\glslabeltok=\toks38
-\glsshorttok=\toks39
-\glslongtok=\toks40
+\glskeylisttok=\toks38
+\glslabeltok=\toks39
+\glsshorttok=\toks40
+\glslongtok=\toks41
 
 (/usr/share/texlive/texmf-dist/tex/latex/glossaries/styles/glossary-hypernav.st
 y
@@ -390,7 +412,7 @@ Package: longtable 2020/01/07 v4.13 Multi-page Table package (DPC)
 \LT@rows=\count293
 \c@LT@tables=\count294
 \c@LT@chunks=\count295
-\LT@p@ftn=\toks41
+\LT@p@ftn=\toks42
 )
 \glsdescwidth=\skip68
 \glspagelistwidth=\skip69
@@ -422,7 +444,7 @@ Package: glossary-tree 2020/02/13 v4.45 (NLCT)
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/tools/enumerate.sty
 Package: enumerate 2015/07/23 v3.00 enumerate extensions (DPC)
-\@enLab=\toks42
+\@enLab=\toks43
 )
 \c@definition=\count297
 \c@theorem=\count298
@@ -430,10 +452,468 @@ Package: enumerate 2015/07/23 v3.00 enumerate extensions (DPC)
 \c@example=\count300
 \c@countCode=\count301
 
-(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
-File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
-\l__kernel_color_stack_int=\count302
-\l__pdf_internal_box=\box54
+(/usr/share/texlive/texmf-dist/tex/generic/tex4ht/tex4ht.4ht
+version 2018-12-30-09:29
+--------------------------------------
+--- Note --- for additional information, use the command line option `info'
+--------------------------------------
+
+::::::::::::::::::::::::::::::::::::::::::
+ TeX4ht info is available in the log file 
+::::::::::::::::::::::::::::::::::::::::::
+) (/usr/share/texlive/texmf-dist/tex/generic/tex4ht/tex4ht.sty
+version 2019-03-18-15:24
+
+--- needs --- tex4ht main ---
+\tmp:cnt=\count302
+\openout15 = `main.tmp'.
+
+(./main.tmp)
+\tmp:dim=\skip74
+--------------------------------------
+--- Note --- for XML code, use the command line option `xml' or `xhtml'
+--------------------------------------
+ (./main.xref)
+\:refout=\write3
+\openout3 = `main.xref'.
+
+
+(/usr/share/texlive/texmf-dist/tex/generic/tex4ht/html4.4ht
+version 2020-02-14-14:21
+--------------------------------------
+--- Note --- to remove the <?xml version=...?> processing instruction use the c
+ommand line option `no-VERSION'
+--------------------------------------
+--------------------------------------
+--- Note --- to remove the DOCTYPE declaration use the command line option `no-
+DOCTYPE'
+--------------------------------------
+)
+(/usr/share/texlive/texmf-dist/tex/generic/tex4ht/html4-math.4ht
+version 2019-12-16-15:21
+)
+--------------------------------------
+--- Note --- for marking of the base font, use the command line option `fonts+'
+
+--------------------------------------
+--------------------------------------
+--- Note --- for non active _, use the command line option `no_'
+--------------------------------------
+--------------------------------------
+--- Note --- for _ of catcode 13, use the command line option `_13'
+--------------------------------------
+--------------------------------------
+--- Note --- for non active ^, use the command line option `no^'
+--------------------------------------
+--------------------------------------
+--- Note --- for ^ of catcode 13, use the command line option `^13'
+--------------------------------------
+
+(/usr/share/texlive/texmf-dist/tex/generic/tex4ht/html4.4ht
+version 2020-02-14-14:21
+--------------------------------------
+--- Note --- for alternative charset, use the command line option `charset=...'
+
+--------------------------------------
+--------------------------------------
+--- Note --- to ignore CSS font decoration, use the `NoFonts' command line opti
+on
+--------------------------------------
+--------------------------------------
+--- Note --- for jpg bitmaps of pictures, use the `jpg' command line option. (C
+haracter bitmaps are controled only by `g' records of tex4ht.env and `-g' switc
+hes of tex4ht.c) 
+--------------------------------------
+--------------------------------------
+--- Note --- for gif bitmaps of pictures, use the `gif' command line option. (C
+haracter bitmaps are controled only by `g' records of tex4ht.env and `-g' switc
+hes of tex4ht.c) 
+--------------------------------------
+--------------------------------------
+--- Note --- for content and toc in 2 frames, use the command line option `fram
+es'
+--------------------------------------
+--------------------------------------
+--- Note --- for content, toc, and footnotes in 3 frames, use the command line 
+option `frames-fn'
+--------------------------------------
+--------------------------------------
+--- Note --- for file extension name xht, use the command line option `xht'
+--------------------------------------
+TeX4ht package options: html
+--------------------------------------
+--- Note --- To print a timestamp, use the command line option timestamp
+--------------------------------------
+--------------------------------------
+--- Note --- to ignore CSS code, use the command line option `-css
+--------------------------------------
+--------------------------------------
+--- Note --- for inline CSS code, use the command line option `css-in'
+--------------------------------------
+--------------------------------------
+--- Note --- for pop ups on mouse over, use the command line option `mouseover'
+
+--------------------------------------
+--------------------------------------
+--- Note --- for addressing images in a subdirectory, use the command line opti
+on `imgdir:.../'
+--------------------------------------
+)
+(/usr/share/texlive/texmf-dist/tex/generic/tex4ht/html4-math.4ht
+version 2019-12-16-15:21
+)
+\:tokwrite=\toks44
+\:tokpage=\toks45
+--------------------------------------
+--- Note --- for back links to toc, use the command line option `sections+'
+--------------------------------------
+--------------------------------------
+--- Note --- for linear crosslinks of pages, use the command line option `next'
+
+--------------------------------------
+\openout15 = `main.4ct'.
+
+\:tocout=\write4
+\openout4 = `main.4tc'.
+
+
+(/usr/share/texlive/texmf-dist/tex/generic/tex4ht/html4.4ht
+version 2020-02-14-14:21
+)
+(/usr/share/texlive/texmf-dist/tex/generic/tex4ht/html4-math.4ht
+version 2019-12-16-15:21
+)
+(/usr/share/texlive/texmf-dist/tex/generic/tex4ht/latex.4ht
+version 2019-08-26-14:22
+LaTeX Info: Redefining \_ on input line 168.
+--------------------------------------
+--- Note --- for links into captions, instead of float heads, use the command l
+ine option `refcaption'
+--------------------------------------
+
+(/usr/share/texlive/texmf-dist/tex/generic/tex4ht/html4.4ht
+version 2020-02-14-14:21
+)
+(/usr/share/texlive/texmf-dist/tex/generic/tex4ht/html4-math.4ht
+version 2019-12-16-15:21
+)
+(/usr/share/texlive/texmf-dist/tex/generic/tex4ht/html4.4ht
+version 2020-02-14-14:21
+--------------------------------------
+--- Note --- For mini tocs immediately aftter the header use the command line o
+ption `minitoc<'
+--------------------------------------
+--------------------------------------
+--- Note --- for enumerated list elements with valued data, use the command lin
+e option `enumerate+'
+--------------------------------------
+--------------------------------------
+--- Note --- for enumerated list elements li's with value attributes, use the c
+ommand line option `enumerate-'
+--------------------------------------
+--------------------------------------
+--- Note --- for CSS2 code, use the command line option `css2'
+--------------------------------------
+--------------------------------------
+--- Note --- for pictorial tabular, use the command line option `pic-tabular'
+--------------------------------------
+--------------------------------------
+--- Note --- for bitmap fbox'es, use the command line option `pic-fbox'
+--------------------------------------
+--------------------------------------
+--- Note --- for bitmap framebox'es, use the command line option `pic-framebox'
+
+--------------------------------------
+--------------------------------------
+--- Note --- for inline footnotes use command line option `fn-in'
+--------------------------------------
+--------------------------------------
+--- Note --- for tracing of latex font commands, use the command line option `f
+onts'
+--------------------------------------
+--------------------------------------
+--- Note --- for width specifications of tabular p entries, use the `p-width' c
+ommand line option or a configuration similar to \Configure{HColWidth}{\HCode{ 
+style="width:\HColWidth"}}
+--------------------------------------
+)
+(/usr/share/texlive/texmf-dist/tex/generic/tex4ht/html4-math.4ht
+version 2019-12-16-15:21
+--------------------------------------
+--- Note --- for pictorial eqnarray, use the command line option `pic-eqnarray'
+
+--------------------------------------
+--------------------------------------
+--- Note --- for pictorial array, use the command line option `pic-array'
+--------------------------------------
+--------------------------------------
+--- Note --- for pictorial $...$ environments, use the command line option `pic
+-m' (not recommended!!)
+--------------------------------------
+--------------------------------------
+--- Note --- for pictorial $...$ and $$...$$ environments with latex alt, use t
+he command line option `pic-m+' (not safe!!)
+--------------------------------------
+--------------------------------------
+--- Note --- for pictorial array, use the command line option `pic-array'
+--------------------------------------
+))
+(/usr/share/texlive/texmf-dist/tex/generic/tex4ht/fontmath.4ht
+version 2018-11-06-15:55
+
+(/usr/share/texlive/texmf-dist/tex/generic/tex4ht/html4.4ht
+version 2020-02-14-14:21
+)
+(/usr/share/texlive/texmf-dist/tex/generic/tex4ht/html4-math.4ht
+version 2019-12-16-15:21
+))
+(/usr/share/texlive/texmf-dist/tex/generic/tex4ht/article.4ht
+(/usr/share/texlive/texmf-dist/tex/generic/tex4ht/html4.4ht
+version 2020-02-14-14:21
+--------------------------------------
+--- Note --- for automatic sectioning pagination, use the command line option `
+1', `2', `3', '4', '5', '6', or '7'
+--------------------------------------
+--------------------------------------
+--- Note --- for files named derived from section titles, use the command line 
+option `sec-filename'
+--------------------------------------
+--------------------------------------
+--- Note --- for i-columns index, use the command line option `index=i' (e.g., 
+index=2)
+--------------------------------------
+)
+(/usr/share/texlive/texmf-dist/tex/generic/tex4ht/html4-math.4ht
+version 2019-12-16-15:21
+))
+(/usr/share/texlive/texmf-dist/tex/generic/tex4ht/inputenc.4ht
+version 2009-05-21-09:32
+
+(/usr/share/texlive/texmf-dist/tex/generic/tex4ht/html4.4ht
+version 2020-02-14-14:21
+)
+(/usr/share/texlive/texmf-dist/tex/generic/tex4ht/html4-math.4ht
+version 2019-12-16-15:21
+))
+(/usr/share/texlive/texmf-dist/tex/generic/tex4ht/amsfonts.4ht
+version 2009-05-21-09:32
+
+(/usr/share/texlive/texmf-dist/tex/generic/tex4ht/html4.4ht
+version 2020-02-14-14:21
+)
+(/usr/share/texlive/texmf-dist/tex/generic/tex4ht/html4-math.4ht
+version 2019-12-16-15:21
+))
+(/usr/share/texlive/texmf-dist/tex/generic/tex4ht/amsmath.4ht
+version 2019-12-29-14:17
+\tmp:muskip=\muskip17
+
+(/usr/share/texlive/texmf-dist/tex/generic/tex4ht/html4.4ht
+version 2020-02-14-14:21
+)
+(/usr/share/texlive/texmf-dist/tex/generic/tex4ht/html4-math.4ht
+version 2019-12-16-15:21
+))
+(/usr/share/texlive/texmf-dist/tex/generic/tex4ht/amstext.4ht
+version 2009-05-21-09:32
+
+(/usr/share/texlive/texmf-dist/tex/generic/tex4ht/html4.4ht
+version 2020-02-14-14:21
+)
+(/usr/share/texlive/texmf-dist/tex/generic/tex4ht/html4-math.4ht
+version 2019-12-16-15:21
+))
+(/usr/share/texlive/texmf-dist/tex/generic/tex4ht/amsbsy.4ht
+version 2009-05-21-09:32
+
+(/usr/share/texlive/texmf-dist/tex/generic/tex4ht/html4.4ht
+version 2020-02-14-14:21
+)
+(/usr/share/texlive/texmf-dist/tex/generic/tex4ht/html4-math.4ht
+version 2019-12-16-15:21
+))
+(/usr/share/texlive/texmf-dist/tex/generic/tex4ht/amsopn.4ht
+version 2009-05-21-09:32
+
+(/usr/share/texlive/texmf-dist/tex/generic/tex4ht/html4.4ht
+version 2020-02-14-14:21
+)
+(/usr/share/texlive/texmf-dist/tex/generic/tex4ht/html4-math.4ht
+version 2019-12-16-15:21
+))
+(/usr/share/texlive/texmf-dist/tex/generic/tex4ht/amsthm.4ht
+version 2009-05-21-09:32
+
+(/usr/share/texlive/texmf-dist/tex/generic/tex4ht/html4.4ht
+version 2020-02-14-14:21
+)
+(/usr/share/texlive/texmf-dist/tex/generic/tex4ht/html4-math.4ht
+version 2019-12-16-15:21
+))
+(/usr/share/texlive/texmf-dist/tex/generic/tex4ht/amssymb.4ht
+version 2009-05-21-09:32
+
+(/usr/share/texlive/texmf-dist/tex/generic/tex4ht/html4.4ht
+version 2020-02-14-14:21
+)
+(/usr/share/texlive/texmf-dist/tex/generic/tex4ht/html4-math.4ht
+version 2019-12-16-15:21
+))
+(/usr/share/texlive/texmf-dist/tex/generic/tex4ht/mathtools.4ht
+version 2009-05-21-09:32
+
+(/usr/share/texlive/texmf-dist/tex/generic/tex4ht/html4.4ht
+version 2020-02-14-14:21
+)
+(/usr/share/texlive/texmf-dist/tex/generic/tex4ht/html4-math.4ht
+version 2019-12-16-15:21
+))
+(/usr/share/texlive/texmf-dist/tex/generic/tex4ht/natbib.4ht
+(/usr/share/texlive/texmf-dist/tex/generic/tex4ht/html4.4ht
+version 2020-02-14-14:21
+)
+(/usr/share/texlive/texmf-dist/tex/generic/tex4ht/html4-math.4ht
+version 2019-12-16-15:21
+))
+(/usr/share/texlive/texmf-dist/tex/generic/tex4ht/graphicx.4ht
+version 2018-10-01-14:24
+
+(/usr/share/texlive/texmf-dist/tex/generic/tex4ht/html4.4ht
+version 2020-02-14-14:21
+)
+(/usr/share/texlive/texmf-dist/tex/generic/tex4ht/html4-math.4ht
+version 2019-12-16-15:21
+))
+(/usr/share/texlive/texmf-dist/tex/generic/tex4ht/graphics.4ht
+(/usr/share/texlive/texmf-dist/tex/generic/tex4ht/html4.4ht
+version 2020-02-14-14:21
+--------------------------------------
+--- Note --- if included graphics are of degraded quality, try the command line
+ options `graphics-num' or `graphics-'. The `num' should provide the density of
+ pixels in the bitmaps (e.g., 110). 
+--------------------------------------
+--------------------------------------
+--- Note --- for key dimensions try the option `Gin-dim'; for key dimensions wh
+en bounding box is unavailable try `Gin-dim+'; neither is recommended
+--------------------------------------
+)
+(/usr/share/texlive/texmf-dist/tex/generic/tex4ht/html4-math.4ht
+version 2019-12-16-15:21
+))
+(/usr/share/texlive/texmf-dist/tex/generic/tex4ht/dvips.4ht
+version 2009-05-21-09:32
+
+(/usr/share/texlive/texmf-dist/tex/generic/tex4ht/html4.4ht
+version 2020-02-14-14:21
+)
+(/usr/share/texlive/texmf-dist/tex/generic/tex4ht/html4-math.4ht
+version 2019-12-16-15:21
+))
+(/usr/share/texlive/texmf-dist/tex/generic/tex4ht/listings.4ht
+version 2020-02-13-13:43
+
+(/usr/share/texlive/texmf-dist/tex/generic/tex4ht/html4.4ht
+version 2020-02-14-14:21
+--------------------------------------
+--- Note --- to ensure proper alignments use fixed size fonts (see listings.dtx
+)
+--------------------------------------
+)
+(/usr/share/texlive/texmf-dist/tex/generic/tex4ht/html4-math.4ht
+version 2019-12-16-15:21
+))
+(/usr/share/texlive/texmf-dist/tex/generic/tex4ht/geometry.4ht
+version 2016-07-01-08:55
+
+(/usr/share/texlive/texmf-dist/tex/generic/tex4ht/html4.4ht
+version 2020-02-14-14:21
+)
+(/usr/share/texlive/texmf-dist/tex/generic/tex4ht/html4-math.4ht
+version 2019-12-16-15:21
+))
+(/usr/share/texlive/texmf-dist/tex/generic/tex4ht/xcolor.4ht
+version 2019-04-09-10:06
+
+(/usr/share/texlive/texmf-dist/tex/generic/tex4ht/color.4ht
+(/usr/share/texlive/texmf-dist/tex/generic/tex4ht/html4.4ht
+version 2020-02-14-14:21
+)
+(/usr/share/texlive/texmf-dist/tex/generic/tex4ht/html4-math.4ht
+version 2019-12-16-15:21
+))
+(/usr/share/texlive/texmf-dist/tex/generic/tex4ht/html4.4ht
+version 2020-02-14-14:21
+)
+(/usr/share/texlive/texmf-dist/tex/generic/tex4ht/html4-math.4ht
+version 2019-12-16-15:21
+))
+(/usr/share/texlive/texmf-dist/tex/generic/tex4ht/color.4ht)
+(/usr/share/texlive/texmf-dist/tex/generic/tex4ht/glossaries.4ht
+version 2009-05-21-09:32
+
+(/usr/share/texlive/texmf-dist/tex/generic/tex4ht/html4.4ht
+version 2020-02-14-14:21
+)
+(/usr/share/texlive/texmf-dist/tex/generic/tex4ht/html4-math.4ht
+version 2019-12-16-15:21
+))
+(/usr/share/texlive/texmf-dist/tex/generic/tex4ht/ifthen.4ht
+version 2009-05-21-09:32
+
+(/usr/share/texlive/texmf-dist/tex/generic/tex4ht/html4.4ht
+version 2020-02-14-14:21
+)
+(/usr/share/texlive/texmf-dist/tex/generic/tex4ht/html4-math.4ht
+version 2019-12-16-15:21
+))
+(/usr/share/texlive/texmf-dist/tex/generic/tex4ht/longtable.4ht
+\LT:box=\box54
+\LT:ebox=\box55
+\tmp:bx=\box56
+
+(/usr/share/texlive/texmf-dist/tex/generic/tex4ht/html4.4ht
+version 2020-02-14-14:21
+--------------------------------------
+--- Note --- for pictorial longtable, use the command line option `pic-longtabl
+e'
+--------------------------------------
+)
+(/usr/share/texlive/texmf-dist/tex/generic/tex4ht/html4-math.4ht
+version 2019-12-16-15:21
+))
+(/usr/share/texlive/texmf-dist/tex/generic/tex4ht/supertabular.4ht
+version 2009-05-21-09:32
+
+(/usr/share/texlive/texmf-dist/tex/generic/tex4ht/html4.4ht
+version 2020-02-14-14:21
+)
+(/usr/share/texlive/texmf-dist/tex/generic/tex4ht/html4-math.4ht
+version 2019-12-16-15:21
+))
+(/usr/share/texlive/texmf-dist/tex/generic/tex4ht/enumerate.4ht
+version 2009-05-21-09:32
+
+(/usr/share/texlive/texmf-dist/tex/generic/tex4ht/html4.4ht
+version 2020-02-14-14:21
+)
+(/usr/share/texlive/texmf-dist/tex/generic/tex4ht/html4-math.4ht
+version 2019-12-16-15:21
+))
+(/usr/share/texlive/texmf-dist/tex/generic/tex4ht/html4.4ht
+version 2020-02-14-14:21
+)
+(/usr/share/texlive/texmf-dist/tex/generic/tex4ht/html4-math.4ht
+version 2019-12-16-15:21
+))
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-dvips.def
+File: l3backend-dvips.def 2020-02-03 L3 backend support: dvips
+\l__pdf_internal_box=\box57
+\g__pdf_backend_object_int=\count303
+\l__pdf_backend_content_box=\box58
+\l__pdf_backend_model_box=\box59
+\g__pdf_backend_annotation_int=\count304
+\g__pdf_backend_link_int=\count305
+\g__pdf_backend_link_sf_int=\count306
 )
 (./main.aux)
 \openout1 = `main.aux'.
@@ -452,34 +932,12 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 70.
 LaTeX Font Info:    ... okay on input line 70.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 70.
 LaTeX Font Info:    ... okay on input line 70.
- (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
-[Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count303
-\scratchdimen=\dimen178
-\scratchbox=\box55
-\nofMPsegments=\count304
-\nofMParguments=\count305
-\everyMPshowfont=\toks43
-\MPscratchCnt=\count306
-\MPscratchDim=\dimen179
-\MPnumerator=\count307
-\makeMPintoPDFobject=\count308
-\everyMPtoPDFconversion=\toks44
-) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
-Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
-Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
-85.
-
-(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
-e
-))
-\c@lstlisting=\count309
+\c@lstlisting=\count307
 
 *geometry* driver: auto-detecting
-*geometry* detected driver: pdftex
+*geometry* detected driver: dvips
 *geometry* verbose mode - [ preamble ] result:
-* driver: pdftex
+* driver: dvips
 * paper: <default>
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
@@ -510,9 +968,13 @@ e
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
+--- file main.css ---
+[1
+
+] [2]
 LaTeX Font Info:    Trying to load font information for U+msa on input line 71.
 
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Trying to load font information for U+msb on input line 71.
@@ -520,65 +982,480 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 71.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) (./main.toc)
-\tf@toc=\write3
-\openout3 = `main.toc'.
+) (./main.4ct)
+[3]
+l. 129 Writing main.idv[1] (main0x.png)
+l. 129 Writing main.idv[2] (main1x.png)
+l. 129 Writing main.idv[3] (main2x.png)
+l. 129 Writing main.idv[4] (main3x.png)
+l. 129 Writing main.idv[5] (main4x.png)
+
+l.146 --- TeX4ht warning --- File `"images/Distributions_Distances.xbb"' not fo
+und ---
+l.146 --- TeX4ht warning --- Cannot determine size of graphic in "images/Distri
+butions_Distances.xbb" (no BoundingBox) ---
+l. 146 --- needs --- images/Distributions_Distances.png ---
+[4] [5
+
+]
+l.154 --- TeX4ht warning --- File `"images/Barycenter.xbb"' not found ---
+l.154 --- TeX4ht warning --- Cannot determine size of graphic in "images/Baryce
+nter.xbb" (no BoundingBox) ---
+l. 154 --- needs --- images/Barycenter.png ---
+[6
+
+]
+l. 179 Writing main.idv[6] (main5x.png)
+l. 186 Writing main.idv[7] (main6x.png)
+l. 195 Writing main.idv[8] (main7x.png)
+ [7
+
+]
+l. 203 Writing main.idv[9] (main8x.png)
+l. 215 Writing main.idv[10] (main9x.png)
+ [8]
+l. 247 Writing main.idv[11] (main10x.png)
+l. 252 Writing main.idv[12] (main11x.png)
+ [9]
+l. 270 Writing main.idv[13] (main12x.png)
+l. 282 Writing main.idv[14] (main13x.png)
+l. 286 Writing main.idv[15] (main14x.png)
+ [10]
+l. 296 Writing main.idv[16] (main15x.png)
+l. 297 Writing main.idv[17] (main16x.png)
+l. 303 Writing main.idv[18] (main17x.png)
+l. 310 Writing main.idv[19] (main18x.png)
+l. 325 Writing main.idv[20] (main19x.png)
+l. 325 Writing main.idv[21] (main20x.png)
+ [11]
+l. 336 Writing main.idv[22] (main21x.png)
+
+! Argument of \math@egroup has an extra }.
+<inserted text> 
+                \par 
+l.336 	\end{align*}
+                   
+? 
+Runaway argument?
+! Paragraph ended before \math@egroup was complete.
+<to be read again> 
+                   \par 
+l.336 	\end{align*}
+                   
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.336 	\end{align*}
+                   
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.336 	\end{align*}
+                   
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.336 	\end{align*}
+                   
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.336 	\end{align*}
+                   
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.336 	\end{align*}
+                   
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.336 	\end{align*}
+                   
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.336 	\end{align*}
+                   
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.336 	\end{align*}
+                   
+? 
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.336 	\end{align*}
+                   
+? 
+! Missing { inserted.
+<inserted text> 
+                {
+l.336 	\end{align*}
+                   
+? 
+! Missing { inserted.
+<inserted text> 
+                {
+l.336 	\end{align*}
+                   
+? 
+! Extra }, or forgotten $.
+\c:halign ->\egroup 
+                    \d:halign 
+l.336 	\end{align*}
+                   
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.336 	\end{align*}
+                   
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.336 	\end{align*}
+                   
+? 
+! Missing $$ inserted.
+<to be read again> 
+                   \@@par 
+l.336 	\end{align*}
+                   
+? 
+! Extra }, or forgotten \endgroup.
+<recently read> }
+                 
+l.336 	\end{align*}
+                   
+? 
+! Extra }, or forgotten \endgroup.
+\mo:p ...\endcsname #1{#3}\csname b:#2\endcsname }
+                                                  
+l.336 	\end{align*}
+                   
+? 
+! Misplaced alignment tab character &.
+\@tempa ->\endgroup &
+                     &
+l.336 	\end{align*}
+                   
+? 
+! Misplaced alignment tab character &.
+\@tempa ->\endgroup &&
+                      
+l.336 	\end{align*}
+                   
+? 
+! Misplaced \omit.
+\omit ->\:omit 
+               \BB:halign \gdef \end:omit {\gdef \end:omit {}\d:halign }
+l.336 	\end{align*}
+                   
+? 
+! Misplaced \cr.
+\cr ->\rR:halign \1cr 
+                      
+l.336 	\end{align*}
+                   
+? 
+! Misplaced \noalign.
+\math@cr@@ ...ffalse }\fi \math@cr@@@ \o:noalign: 
+                                                  {\vskip #1\relax }
+l.336 	\end{align*}
+                   
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.336 	\end{align*}
+                   
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.336 	\end{align*}
+                   
+? 
+! Missing \endgroup inserted.
+<inserted text> 
+                \endgroup 
+l.336 	\end{align*}
+                   
+? 
+! Display math should end with $$.
+<to be read again> 
+                   \vskip 
+l.336 	\end{align*}
+                   
+? 
+! Extra }, or forgotten \endgroup.
+\math@cr@@ ...cr@@@ \o:noalign: {\vskip #1\relax }
+                                                  
+l.336 	\end{align*}
+                   
+? 
+! Misplaced alignment tab character &.
+<argument> ...2}\int _\mathcal X |1 - f| d\mu \\ &
+                                                  = \frac {1}{2}\int _\mathc...
+l.336 	\end{align*}
+                   
+? 
+l. 336 Writing main.idv[23] (main22x.png)
+! Missing $ inserted.
+<inserted text> 
+                $
+l.336 	\end{align*}
+                   
+? 
+! Extra }, or forgotten $.
+\d:frac ->\egroup 
+                  \EndPicture 
+l.336 	\end{align*}
+                   
+? 
+! Extra }, or forgotten $.
+\n:frac : ...p \b:frac \@@over \c:frac #2\d:frac }
+                                                  
+l.336 	\end{align*}
+                   
+? 
+! Argument of \math@egroup has an extra }.
+<inserted text> 
+                \par 
+l.336 	\end{align*}
+                   
+? 
+Runaway argument?
+! Paragraph ended before \math@egroup was complete.
+<to be read again> 
+                   \par 
+l.336 	\end{align*}
+                   
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.336 	\end{align*}
+                   
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.336 	\end{align*}
+                   
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.336 	\end{align*}
+                   
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.336 	\end{align*}
+                   
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.336 	\end{align*}
+                   
+? 
+! Extra }, or forgotten \endgroup.
+\mo:p ...\endcsname #1{#3}\csname b:#2\endcsname }
+                                                  
+l.336 	\end{align*}
+                   
+? 
+l. 336 Writing main.idv[24] (main23x.png)
+! Missing $ inserted.
+<inserted text> 
+                $
+l.336 	\end{align*}
+                   
+? 
+! Misplaced \cr.
+\math@cr@@@ ->\cr 
+                  
+l.336 	\end{align*}
+                   
+? 
+! Misplaced \noalign.
+\math@cr@@ ...ffalse }\fi \math@cr@@@ \o:noalign: 
+                                                  {\vskip #1\relax }
+l.336 	\end{align*}
+                   
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.336 	\end{align*}
+                   
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.336 	\end{align*}
+                   
+? 
+! Extra }, or forgotten \endgroup.
+\math@cr@@ ...cr@@@ \o:noalign: {\vskip #1\relax }
+                                                  
+l.336 	\end{align*}
+                   
+? 
+! Extra }, or forgotten \endgroup.
+\EndMkHalign ->\egroup 
+                       \d:PauseMkHalign \end:m \endgroup \iffalse {\fi \expa...
+l.336 	\end{align*}
+                   
+? 
+! Undefined control sequence.
+\EndMkHalign ->\egroup \d:PauseMkHalign \end:m 
+                                               \endgroup \iffalse {\fi \expa...
+l.336 	\end{align*}
+                   
+? 
+! Undefined control sequence.
+<argument> )M\halign:id 
+                        x\mu:span 
+l.336 	\end{align*}
+                   
+? 
+! Undefined control sequence.
+<argument> \new:span 
+                     ;
+l.336 	\end{align*}
+                   
+? 
+! Undefined control sequence.
+\EndMkHalign ...end:omit \sv:end:omit \relax:shrp 
+                                                  \iffalse }\fi 
+l.336 	\end{align*}
+                   
+? 
+! Undefined control sequence.
+\n:endalign: ...alignConfig \csname b:\align:type 
+                                                  \endcsname \ifingather@ \r...
+l.336 	\end{align*}
+                   
+? 
+l. 336 Writing main.idv[25] (main24x.png)
+
+! LaTeX Error: \begin{proof} on input line 293 ended by \end{align*}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.336 	\end{align*}
+                   
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.336 	\end{align*}
+                   
+? 
+! Display math should end with $$.
+<to be read again> 
+                   \endgroup 
+l.336 	\end{align*}
+                   
+? 
+l. 341 Writing main.idv[26] (main25x.png)
+l. 341 Writing main.idv[27] (main26x.png)
+[12]
+l. 344 Writing main.idv[28] (main27x.png)
 
 
-[1
+! LaTeX Error: \begin{document} ended by \end{proof}.
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-<images/Distributions_Distances.png, id=19, 501.875pt x 301.125pt>
-File: images/Distributions_Distances.png Graphic file (type png)
-<use images/Distributions_Distances.png>
-Package pdftex.def Info: images/Distributions_Distances.png  used on input line
- 146.
-(pdftex.def)             Requested size: 227.62204pt x 136.57558pt.
-<images/Barycenter.png, id=20, 803.0pt x 301.125pt>
-File: images/Barycenter.png Graphic file (type png)
-<use images/Barycenter.png>
-Package pdftex.def Info: images/Barycenter.png  used on input line 154.
-(pdftex.def)             Requested size: 398.33858pt x 149.38126pt.
- [2 <./images/Distributions_Distances.png> <./images/Barycenter.png>] [3]
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.349 \end{proof}
+                 
+? 
+! Extra \endgroup.
+<recently read> \endgroup 
+                          
+l.349 \end{proof}
+                 
+? 
+l.349 --- TeX4ht warning --- \SaveEverypar's: 1 at \begin{proof} and 2 \end{pro
+of} ---
+l. 353 Writing main.idv[29] (main28x.png)
 LaTeX Font Info:    Trying to load font information for U+bbm on input line 353
 .
-
 (/usr/share/texlive/texmf-dist/tex/latex/bbm-macros/ubbm.fd
 File: ubbm.fd 1999/03/15 V 1.2 Font definition for bbm font - TH
-) [4] [5] [6]
-[7] (./main.bbl) [8] (./main.aux) ) 
-Here is how much of TeX's memory you used:
- 10006 strings out of 483183
- 142427 string characters out of 5966293
- 454867 words of memory out of 5000000
- 24829 multiletter control sequences out of 15000+600000
- 543443 words of font info for 68 fonts, out of 8000000 for 9000
- 14 hyphenation exceptions out of 8191
- 51i,20n,37p,1005b,288s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/davi/.texlive2019/texmf-var/fonts/pk
-/ljfour/public/bbm/bbm10.600pk> </home/davi/.texlive2019/texmf-var/fonts/pk/ljf
-our/jknappen/ec/tcrm1000.600pk></usr/share/texlive/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmbx9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex1
-0.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/s
-hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/font
-s/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cms
-y5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/
-share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/s
-hare/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (8 pages, 309781 bytes).
-PDF statistics:
- 119 PDF objects out of 1000 (max. 8388607)
- 85 compressed objects within 1 object stream
- 0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+) [13]
+l. 357 Writing main.idv[30] (main29x.png)
+l. 380 Writing main.idv[31] (main30x.png)
+l. 390 Writing main.idv[32] (main31x.png)
+ [14]
+l. 408 Writing main.idv[33] (main32x.png)
+l. 414 Writing main.idv[34] (main33x.png)
+l. 419 Writing main.idv[35] (main34x.png)
+l. 427 Writing main.idv[36] (main35x.png)
+ [15]
+l. 430 Writing main.idv[37] (main36x.png)
+l. 435 Writing main.idv[38] (main37x.png)
+l. 441 Writing main.idv[39] (main38x.png)
+l. 454 Writing main.idv[40] (main39x.png)
 
+[16]
+l. 458 Writing main.idv[41] (main40x.png)
+l. 466 Writing main.idv[42] (main41x.png)
+l. 472 Writing main.idv[43] (main42x.png)
+ [17]
+l. 479 Writing main.idv[44] (main43x.png)
+l. 498 Writing main.idv[45] (main44x.png)
+l. 498 Writing main.idv[46] (main45x.png)
+l. 498 Writing main.idv[47] (main46x.png)
+l. 498 Writing main.idv[48] (main47x.png)
+l. 498 Writing main.idv[49] (main48x.png)
+ [18]
+l. 518 Writing main.idv[50] (main49x.png)
+ [19]
+l. 534 Writing main.idv[51] (main50x.png)
+l. 540 Writing main.idv[52] (main51x.png)
+l. 544 Writing main.idv[53] (main52x.png)
+ [20]
+l. 570 Writing main.idv[54] (main53x.png)
+l. 576 Writing main.idv[55] (main54x.png)
+l. 586 Writing main.idv[56] (main55x.png)
+l. 593 Writing main.idv[57] (main56x.png)
+ [21]
+l. 602 Writing main.idv[58] (main57x.png)
+l. 610 Writing main.idv[59] (main58x.png)
+l. 616 Writing main.idv[60] (main59x.png)
+l. 624 Writing main.idv[61] (main60x.png)
+ [22]
+l. 631 Writing main.idv[62] (main61x.png)
+l. 641 Writing main.idv[63] (main62x.png)
+ (./main.bbl [23]) [24] (./main.aux) ) 
+Here is how much of TeX's memory you used:
+ 14286 strings out of 483164
+ 196697 string characters out of 5965537
+ 625482 words of memory out of 5000000
+ 28932 multiletter control sequences out of 15000+600000
+ 542992 words of font info for 67 fonts, out of 8000000 for 9000
+ 16 hyphenation exceptions out of 8191
+ 56i,17n,52p,1465b,505s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+Output written on main.dvi (24 pages, 90140 bytes).
